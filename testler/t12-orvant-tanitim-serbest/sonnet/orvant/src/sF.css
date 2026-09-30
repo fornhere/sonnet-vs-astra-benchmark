@@ -1,0 +1,7 @@
+#f-head{position:absolute;left:140px;top:132px;font-family:var(--serif);font-size:112px;line-height:1.0;letter-spacing:-.025em}
+#f-head em{font-style:italic;color:var(--acc)}
+.fc{position:absolute;top:400px;width:390px;height:590px;border-radius:26px;padding:34px 34px}
+.fc[data-i="0"]{left:140px}.fc[data-i="1"]{left:554px}.fc[data-i="2"]{left:968px}.fc[data-i="3"]{left:1382px}
+.fc svg{display:block;width:230px;height:230px;margin:0 0 22px -8px;overflow:visible}
+.fc .fl{font-family:var(--mono);font-size:20px;letter-spacing:.18em;color:var(--acc);margin-bottom:16px;font-weight:500}
+.fc .ft{font-family:var(--sans);font-weight:600;font-size:42px;line-height:1.1;letter-spacing:-.025em}

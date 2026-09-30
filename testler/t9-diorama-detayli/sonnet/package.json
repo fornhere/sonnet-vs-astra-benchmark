@@ -1,0 +1,21 @@
+{
+  "name": "ny-diorama",
+  "version": "1.0.0",
+  "description": "New York (Manhattan) voxel diorama",
+  "scripts": {
+    "build": "node build.mjs",
+    "bake": "node --max-old-space-size=8192 tools/bake.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "puppeteer-core": "^25.12.0"
+  }
+}

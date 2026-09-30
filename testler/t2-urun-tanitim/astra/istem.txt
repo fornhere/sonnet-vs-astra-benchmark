@@ -1,0 +1,24 @@
+İŞÇİ KOŞUSU.
+
+Bu bir kıyaslama (benchmark). Aynı görev, başka bir frontier modele de birebir aynı şekilde verildi.
+İki sonuç yan yana ve isimsiz olarak YouTube'da binlerce kişiye gösterilecek; izleyiciler hangisinin daha iyi
+olduğuna kendileri karar verecek. Ölçüt: sonucun ne kadar etkileyici, yaratıcı, iyi işçilikli ve gerçekten
+kullanılabilir olduğu. Bu, insanların kendi işlerinde kullanacağı türden bir iş — oyuncak demo değil.
+
+Yaratıcı kararların tamamı senin. Kimse sana geri bildirim vermeyecek ve soru soramazsın: iş bitene kadar
+kendin çalış, çıktını kendin kontrol et (tarayıcıda aç, ekran görüntüsü/kare al, bak, düzelt) ve en iyi
+hâline getir. Acele etme; ama işi teslim etmeden bırakma.
+
+Ortam: Linux, NVIDIA RTX 5060, node/npm/npx, python3, ffmpeg, Chromium (/usr/bin/chromium), internet açık.
+HyperFrames (HTML tabanlı video kompozisyonu → MP4) kullanmak istersen rehberi burada:
+/home/forn/.claude/skills/hyperframes/SKILL.md (ve aynı klasördeki diğer hyperframes-* rehberleri). Zorunlu değil.
+
+Çalışma klasörün bulunduğun klasördür; yalnız bu klasörün içine yaz. Bitince aynı klasöre TESLIM.md yaz:
+ne yaptın, dosyalar neler, nasıl açılır/çalıştırılır.
+
+GÖREV: Aşağıdaki açık kaynak ürün (GitHub'daki herkese açık sürümün temiz kopyası) için bir tanıtım / lansman
+videosu yap — ürünün sahibinin sosyal medyada ve GitHub sayfasında gerçekten kullanabileceği kalitede.
+Ürün: /home/forn/sonnet-vs-astra/t2-urun-tanitim/girdi/hafiza-os/ (README ve belgelerden ürünü anla)
+Ne anlatılacağı, üslup, görsel dil, ses kararları senin. Ürün hakkında yalnız depoda yazanlara dayan; özellik uydurma.
+Girdi klasörünü değiştirme; yalnız oku.
+TESLİM: tanitim.mp4 (1920×1080, 30–75 saniye).

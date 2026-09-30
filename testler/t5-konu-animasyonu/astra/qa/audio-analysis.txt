@@ -1,0 +1,30 @@
+[aist#0:0/pcm_s16le @ 0x607108df60c0] Guessed Channel Layout: stereo
+Input #0, wav, from 'gps-film/assets/master.wav':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:01:27.99, bitrate: 1536 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+size=N/A time=00:00:03.70 bitrate=N/A speed= 7.4x elapsed=0:00:00.50    size=N/A time=00:00:08.70 bitrate=N/A speed= 8.7x elapsed=0:00:01.00    size=N/A time=00:00:12.90 bitrate=N/A speed=8.59x elapsed=0:00:01.50    size=N/A time=00:00:20.90 bitrate=N/A speed=10.4x elapsed=0:00:02.00    size=N/A time=00:00:28.80 bitrate=N/A speed=11.5x elapsed=0:00:02.50    size=N/A time=00:00:36.40 bitrate=N/A speed=12.1x elapsed=0:00:03.00    size=N/A time=00:00:44.90 bitrate=N/A speed=12.8x elapsed=0:00:03.50    size=N/A time=00:00:52.10 bitrate=N/A speed=  13x elapsed=0:00:04.00    size=N/A time=00:00:57.00 bitrate=N/A speed=12.7x elapsed=0:00:04.50    size=N/A time=00:01:02.20 bitrate=N/A speed=12.4x elapsed=0:00:05.00    size=N/A time=00:01:12.10 bitrate=N/A speed=13.1x elapsed=0:00:05.50    size=N/A time=00:01:19.80 bitrate=N/A speed=13.3x elapsed=0:00:06.00    [Parsed_loudnorm_0 @ 0x77185c003dc0] 
+{
+	"input_i" : "-15.91",
+	"input_tp" : "-3.06",
+	"input_lra" : "3.90",
+	"input_thresh" : "-26.94",
+	"output_i" : "-16.15",
+	"output_tp" : "-3.27",
+	"output_lra" : "3.40",
+	"output_thresh" : "-27.17",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.15"
+}
+[out#0/null @ 0x607108e27440] video:0KiB audio:65989KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:01:28.00 bitrate=N/A speed=13.9x elapsed=0:00:06.31    

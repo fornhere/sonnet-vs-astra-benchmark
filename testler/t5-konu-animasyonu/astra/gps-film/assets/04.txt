@@ -1,0 +1,1 @@
+Tek bir uzaklık, tek bir adres vermez. Aynı uzaklıktaki bütün noktalar olasıdır. Diğer uyduların ölçümleri eklendikçe olasılıklar daralır.

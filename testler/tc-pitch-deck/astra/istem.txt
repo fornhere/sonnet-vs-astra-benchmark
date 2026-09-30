@@ -1,0 +1,28 @@
+İŞÇİ KOŞUSU.
+
+Bu bir kıyaslama (benchmark). Aynı görev, başka bir frontier modele de birebir aynı şekilde verildi.
+İki sonuç yan yana ve isimsiz olarak YouTube'da binlerce kişiye gösterilecek; izleyiciler hangisinin daha iyi
+olduğuna kendileri karar verecek. Ölçüt: sonucun ne kadar etkileyici, yaratıcı, iyi işçilikli ve gerçekten
+kullanılabilir olduğu. Bu, insanların kendi işlerinde kullanacağı türden bir iş — oyuncak demo değil.
+
+Yaratıcı kararların tamamı senin. Kimse sana geri bildirim vermeyecek ve soru soramazsın: iş bitene kadar
+kendin çalış, çıktını kendin kontrol et (tarayıcıda aç, ekran görüntüsü/kare al, bak, düzelt) ve en iyi
+hâline getir. Acele etme; ama işi teslim etmeden bırakma.
+
+Ortam: Linux, NVIDIA RTX 5060, node/npm/npx, python3, ffmpeg, Chromium (/usr/bin/chromium), internet açık.
+HyperFrames (HTML tabanlı video kompozisyonu → MP4) kullanmak istersen rehberi burada:
+/home/forn/.claude/skills/hyperframes/SKILL.md (ve aynı klasördeki diğer hyperframes-* rehberleri). Zorunlu değil.
+
+Çalışma klasörün bulunduğun klasördür; yalnız bu klasörün içine yaz. Bitince aynı klasöre TESLIM.md yaz:
+ne yaptın, dosyalar neler, nasıl açılır/çalıştırılır.
+
+GÖREV: Aşağıdaki girişim için yatırımcı sunumu (pitch deck) hazırla — tohum yatırım turunda gerçekten
+kullanılabilecek kalitede, yaklaşık 12 slayt. Hikâye, tasarım ve grafikler senin kararın.
+Girişim (kurgusal): "Rota" — Türkiye'deki KOBİ e-ticaret satıcıları için yapay zekâ destekli kargo ve teslimat
+optimizasyonu. Sorun: küçük satıcılar kargo firması/fiyat/teslimat süresi seçimini elle yapıyor, iade ve gecikme
+maliyeti yüksek. Çözüm: sipariş başına en uygun kargo seçimi, paketleme önerisi, gecikme tahmini. Durum: 14 ay,
+310 aktif satıcı, aylık 48.000 gönderi, aylık yinelenen gelir 620.000 TL, aylık büyüme %11, brüt marj %71.
+Ekip: 4 kurucu (2 yazılım, 1 lojistik, 1 satış). İstenen yatırım: 1,2 milyon USD, 18 ay pist.
+Rakamları değiştirme ve yeni rakam uydurma; yoksa "tahmin" diye açıkça işaretle.
+Görsel üretim modeli (image_gen vb.) KULLANMA ve dışarıdan görsel/ikon/font dosyası indirme; tüm görseller kodla (HTML/CSS/SVG/canvas) üretilmeli. Açık lisanslı sistem fontları kullanılabilir.
+TESLİM: sunum.pdf (16:9) ve kaynak dosyalar; ayrıca KONUSMA.md (her slayt için 2–3 cümle sunum notu).

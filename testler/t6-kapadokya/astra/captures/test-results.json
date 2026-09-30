@@ -1,0 +1,24 @@
+{
+  "passed": [
+    "3D scene loads",
+    "Tour switches to free exploration",
+    "W key moves the camera",
+    "Walking follows terrain",
+    "Uçhisar route reaches its viewpoint",
+    "Sunset lighting updates",
+    "Blue hour lighting updates",
+    "Audio can be enabled",
+    "Balloon ride starts",
+    "Photo mode hides interface",
+    "Photo export creates a PNG",
+    "Escape exits photo mode",
+    "Help opens",
+    "Cinematic tour replays",
+    "Tour hands off automatically",
+    "Mobile layout fits viewport",
+    "Direct file:// launch works offline",
+    "No JavaScript or WebGL errors"
+  ],
+  "errors": [],
+  "date": "2026-09-28T23:47:15.841Z"
+}

@@ -1,0 +1,17 @@
+#g-head{position:absolute;left:140px;top:132px;font-family:var(--serif);font-size:112px;line-height:1.0;letter-spacing:-.025em}
+#g-head em{font-style:italic;color:var(--acc)}
+.gn{position:absolute;top:0;width:300px;text-align:center}
+.gn .c{position:absolute;left:102px;top:0;width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:30px;letter-spacing:.04em}
+.gn.on .c{background:var(--paper);color:#07080a;box-shadow:0 0 0 6px rgba(239,235,226,.12)}
+.gn.off .c{border:3px dashed rgba(239,235,226,.4);color:var(--dim);background:#0b0d10}
+.gn .nm{position:absolute;left:0;right:0;top:126px;font-weight:600;font-size:44px;letter-spacing:-.02em}
+.gn.off .nm{color:#b7b9bf}
+.gn .st{position:absolute;left:0;right:0;top:190px;font-family:var(--mono);font-size:20px;letter-spacing:.18em}
+.gn.on .st{color:var(--ok)}.gn.off .st{color:var(--dim)}
+.gn .ds{position:absolute;left:14px;right:14px;top:236px;font-size:29px;line-height:1.28;color:var(--dim);font-weight:500}
+#g-now{position:absolute;left:0;top:0;font-size:20px;color:var(--acc);border:2px solid var(--acc);border-radius:100px;padding:8px 20px;opacity:0;white-space:nowrap;background:rgba(255,90,31,.08)}
+#g-meter{position:absolute;left:160px;right:160px;top:900px;height:70px}
+#g-bar{position:absolute;inset:0;border-radius:32px;border:3px solid var(--line);overflow:hidden;background:rgba(255,255,255,.03)}
+#g-fill{position:absolute;left:0;top:0;bottom:0;width:20%;background:var(--acc);display:flex;align-items:center;padding-left:28px;font-family:var(--mono);font-weight:700;font-size:22px;letter-spacing:.2em;color:#07080a;overflow:hidden;white-space:nowrap}
+#g-rest{position:absolute;right:0;top:0;bottom:0;display:flex;align-items:center;padding-right:28px;font-family:var(--mono);font-weight:700;font-size:22px;letter-spacing:.2em;color:var(--dim)}
+#g-cur{position:absolute;top:-6px;bottom:-6px;left:0;width:6px;margin-left:-3px;background:var(--paper);box-shadow:0 0 24px rgba(255,255,255,.7)}

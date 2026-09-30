@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "cameraSeam": {
+        "positionError": 0,
+        "tangentError": 0.000006523514920560241,
+        "rotationError": 0,
+        "minimumHeight": 3.081612013333333,
+        "minimumRadius": 20.846627647475742
+      }
+    },
+    "Storm slider: 0 and 100",
+    "Dawn slider: full range",
+    "FPS: show/hide",
+    {
+      "audio": {
+        "enabled": true,
+        "status": "running",
+        "layers": 3
+      },
+      "thunderDelay": "1–3 s scheduled; 3.4 s observation, no errors"
+    },
+    "Settings: hide/show",
+    "Orbit drag and return to cinematic",
+    {
+      "png": [
+        1280,
+        720
+      ],
+      "bytes": 1524522
+    },
+    "file:// offline bundle and low mode",
+    "390×844 responsive view"
+  ],
+  "errors": [],
+  "external": []
+}

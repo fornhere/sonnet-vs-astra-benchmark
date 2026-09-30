@@ -1,0 +1,23 @@
+[aist#0:0/pcm_s16le @ 0x5e4faaa760c0] Guessed Channel Layout: stereo
+Input #0, wav, from 'film/assets/soundtrack.wav':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:00:52.00, bitrate: 1536 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s
+[Parsed_volumedetect_0 @ 0x5e4faaaa92c0] n_samples: 0
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+[Parsed_volumedetect_0 @ 0x7e7be8003c80] n_samples: 4992000
+[Parsed_volumedetect_0 @ 0x7e7be8003c80] mean_volume: -15.1 dB
+[Parsed_volumedetect_0 @ 0x7e7be8003c80] max_volume: -1.4 dB
+[Parsed_volumedetect_0 @ 0x7e7be8003c80] histogram_1db: 1417
+[Parsed_volumedetect_0 @ 0x7e7be8003c80] histogram_2db: 4605
+[out#0/null @ 0x5e4faaaa7440] video:0KiB audio:9750KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:52.00 bitrate=N/A speed=2.67e+03x elapsed=0:00:00.01    

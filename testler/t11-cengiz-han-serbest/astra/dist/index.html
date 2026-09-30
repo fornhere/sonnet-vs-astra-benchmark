@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#191b19">
+<meta name="description" content="Moğol bozkırında zamanın ötesine bir yolculuk. Tsonjin Boldog'daki Cengiz Han Atlı Heykeli'nin etkileşimli, üç boyutlu yorumu.">
+<title>Ebedî Bozkır — Cengiz Han</title>
+<link rel="icon" type="image/svg+xml" href="assets/emblem.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="experience" aria-label="Cengiz Han anıtının etkileşimli üç boyutlu deneyimi">
+<div id="canvas-wrap"></div><div class="vignette"></div><div class="grain"></div>
+<div id="loading"><div class="loader-emblem">ᠮ</div><span>BOZKIR UYANIYOR</span><div class="load-line"><i></i></div><small>Işık, taş ve sonsuzluk.</small></div>
+<div id="error" hidden><h2>Bozkıra açılan pencere</h2><p>Bu deneyim WebGL destekli bir tarayıcı gerektirir. Donanım hızlandırmasını açıp sayfayı yeniden yükleyin.</p><button onclick="location.reload()">Yeniden dene</button></div>
+<header class="site-header ui">
+<a class="brand" href="./" aria-label="Ebedî Bozkır ana görünüm"><svg viewBox="0 0 32 44" aria-hidden="true"><path d="M16 1v8m-4-4 4-4 4 4M9 14h14M9 19h14M9 34h14M6 12v28m20-28v28M11 24l5 5 5-5M11 30l5-5 5 5M11 39h10"/></svg><span>EBEDÎ<br>BOZKIR</span></a>
+<div class="location"><span class="live-dot"></span> TSONJIN BOLDOG, MOĞOLİSTAN <span class="coordinates">47°48′ N &nbsp; 107°32′ E</span></div>
+<button id="about-btn" class="text-button">Anıtın hikâyesi <span class="plus">+</span></button>
+</header>
+<section class="hero ui" aria-live="polite">
+<div class="eyebrow"><span class="short-line"></span><span id="chapter-kicker">SONSUZ GÖĞÜN ALTINDA</span></div>
+<h1 id="hero-title">Cengiz<br><em>Han.</em></h1>
+<p class="hero-copy" id="hero-copy">Bir adam. Bir imparatorluk.<br>Bozkırın sessizliğinde yükselen bir efsane.</p>
+<button id="journey-btn" class="journey-button"><span class="play-ring"><svg viewBox="0 0 20 20"><path d="m8 5 7 5-7 5Z"/></svg></span><span id="journey-label">Yolculuğu başlat</span><span class="duration">01:00</span></button>
+<div class="hero-rule"></div>
+<div class="hero-caption"><span>ÇELİĞE İŞLENEN BİR MİRAS</span><span>2008 — ∞</span></div>
+</section>
+<div class="side-label ui"><span>МӨНХ ХӨХ ТЭНГЭР</span><i></i><span>EBEDÎ MAVİ GÖK</span></div>
+<div class="scene-note ui"><span class="note-diamond">◇</span><span id="scene-note">40 metre. Tek bir ufuk.</span></div>
+<div id="hotspots" hidden>
+<button class="hotspot" data-point="crown" aria-label="Cengiz Han figürü hakkında"><span>01</span><b>Hanın bakışı</b></button>
+<button class="hotspot" data-point="horse" aria-label="At figürü hakkında"><span>02</span><b>Bozkırın yoldaşı</b></button>
+<button class="hotspot" data-point="base" aria-label="Kaide hakkında"><span>03</span><b>36 sütun</b></button>
+</div>
+<aside id="detail-card" hidden><button id="close-detail" aria-label="Detayı kapat">×</button><span id="detail-no">01 / DETAY</span><h2 id="detail-title"></h2><p id="detail-copy"></p></aside>
+<div class="explore-hint ui"><svg viewBox="0 0 24 24"><path d="M8 11V6a1.5 1.5 0 0 1 3 0v5-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v6-3a1.5 1.5 0 0 1 3 0v7c0 4-3 6-6 6-3 0-4-1-6-4l-4-5a1.5 1.5 0 0 1 2-2l3 3"/></svg><span>Sürükle ve keşfet <i>·</i> Yakınlaşmak için kaydır</span></div>
+<footer class="control-dock ui">
+<nav class="chapters" aria-label="Kamera görünümleri">
+<button data-chapter="0" class="chapter active" aria-pressed="true"><span class="chapter-num">01</span><span>Bozkır</span><i></i></button>
+<button data-chapter="1" class="chapter" aria-pressed="false"><span class="chapter-num">02</span><span>Anıt</span><i></i></button>
+<button data-chapter="2" class="chapter" aria-pressed="false"><span class="chapter-num">03</span><span>Sonsuzluk</span><i></i></button>
+</nav>
+<div class="light-control"><div class="light-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></svg><span id="light-label">ALTIN SAAT</span></div><input id="time-slider" type="range" min="0" max="100" value="34" aria-label="Günün ışığı: şafak, altın saat, gece"><div class="light-ends"><span>ŞAFAK</span><span>GECE</span></div></div>
+<div class="utility-buttons">
+<button id="details-btn" class="icon-button" aria-label="Anıt detaylarını göster" title="Anıt detayları" aria-pressed="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 10v7m0-10v1"/></svg></button>
+<button id="sound-btn" class="icon-button muted" aria-label="Bozkır sesini aç" title="Bozkır sesi" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3Z"/><path class="sound-waves" d="M16 8a7 7 0 0 1 0 8m3-11a11 11 0 0 1 0 14"/><path class="sound-slash" d="m16 9 6 6m0-6-6 6"/></svg></button>
+<button id="fullscreen-btn" class="icon-button" aria-label="Tam ekran" title="Tam ekran"><svg viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m6 0h5v-5"/></svg></button>
+</div>
+</footer>
+<div class="bottom-meta ui"><span>ANITSAL YOLCULUKLAR <span class="meta-dash">—</span> NO. 001</span><span>GERÇEK ZAMANLI BİR BOZKIR DENEYİMİ</span><button id="hide-ui-btn">Arayüzü gizle <kbd>H</kbd></button></div>
+<button id="restore-ui" hidden>Arayüzü göster <kbd>H</kbd></button>
+<div id="tour-progress"><i></i></div><div id="toast" role="status"></div>
+<div id="about-backdrop" hidden></div>
+<aside id="about-panel" role="dialog" aria-modal="true" aria-labelledby="about-title" hidden>
+<button id="close-about" class="close-button" aria-label="Hikâyeyi kapat">×</button><span class="eyebrow">47°48′ N &nbsp; 107°32′ E</span><h2 id="about-title">Bir ufuktan<br><em>daha büyük.</em></h2><p class="about-lead">Moğol bozkırının ortasında, geçmiş hâlâ doğuya bakıyor.</p>
+<p>Ulan Batur'un yaklaşık 54 kilometre doğusunda, Tsonjin Boldog'da yükselen Cengiz Han Atlı Heykeli, 2008'de açıldı. Paslanmaz çelik yüzeyi, üzerinde değişen gökyüzünü bir ayna gibi taşır.</p>
+<div class="stats"><div><strong>40<span>m</span></strong><small>HEYKEL YÜKSEKLİĞİ</small></div><div><strong>250<span>t</span></strong><small>PASLANMAZ ÇELİK</small></div><div><strong>36</strong><small>KAİDE SÜTUNU</small></div></div>
+<p>Efsaneye göre Cengiz Han, altın bir kırbacı tam burada buldu. Bugün heykelin elindeki kırbaç bu anlatıyı yaşatırken, dairesel kaidenin 36 sütunu Moğol hanlarının soyunu simgeliyor.</p>
+<blockquote>“Bozkırda uzaklık, bir ölçü değil;<br>bir histir.”<cite>EBEDÎ BOZKIR — TASARIM NOTU</cite></blockquote>
+<p class="interpretation">Bu deneyim, anıtın fotoğraflarından esinlenen özgün bir üç boyutlu sanat yorumudur. Fotogrametri veya ölçülü mimari rekonstrüksiyon değildir. Çevre ve ışık sinematik olarak tasarlanmıştır.</p>
+<a class="source-link" href="https://www.amicusmongolia.com/ulaanbaatar/chinggis-genghis-khaan-statue-complex-equestrian" target="_blank" rel="noopener noreferrer">Anıt hakkında kaynak ↗</a>
+<div class="keyboard-help">SÜRÜKLE · DÖNDÜR &nbsp; / &nbsp; KAYDIR · YAKINLAŞ<br>1–3 · GÖRÜNÜMLER &nbsp; / &nbsp; H · ARAYÜZ &nbsp; / &nbsp; ESC · KAPAT</div>
+</aside>
+</main>
+<script defer src="app.js"></script>
+</body></html>

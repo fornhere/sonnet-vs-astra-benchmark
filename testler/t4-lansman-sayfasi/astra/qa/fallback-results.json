@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": [
+    "Local fonts work over file://",
+    "WebGL-free page displays product images",
+    "Fallback images respond to color selection",
+    "All assets load offline without failed requests"
+  ]
+}

@@ -1,0 +1,942 @@
+{
+ "task": "transcribe",
+ "language": "tr",
+ "duration": 83.4,
+ "text": "Yazın hava neden sıcak, kışın neden soğuk? Çoğu kişi şöyle cevap verir, yazın dünya, güneşe daha yakındır. Mantıklı geliyor. Ama yanlış. Dünya, güneşe en çok Ocak ayında yaklaşır, 147 milyon kilometre. Temmuz'da ise 152 milyon. Yani biz kışı yaşarken, dünya güneşe en yakın halindedir. Peki asıl sebep ne? Eğiklik. Üstelik, Dünya'nın dönme ekseni, yörüngesine göre 23,5 derece yatıktır. Üstelik bu eksen, yıl boyu hep aynı yönü gösterir. Dünya Güneş'in etrafında döndükçe, Kuzey Yarımküre bazen Güneş'e eğilir, bazen ondan uzaklaşır. Haziran da Güneş'e döner, yaz. Aralıkta uzaklaşır, kış. Güney Yarımküre'de ise tam tersi. Bu eğiklik iki şeyi değiştirir. Birincisi, ışığın geliş açısı. Kısacası, dik gelen ışık enerjisini küçük bir alanda toplar, eğik gelen ışık aynı enerjiyi geniş bir alana yayar. İkincisi, gün uzunluğu, yazın güneş gökyüzünde uzun kalır, kışın kısa. Kısacası, mevsimleri getiren şey uzaklık değil, eğikliktir. Eksen dik olsaydı, mevsim olmazdı. Bir dahaki yaz sıcağında şunu düşün, dünya şu an güneşten neredeyse en uzak noktasında.",
+ "segments": [
+  {
+   "id": 0,
+   "start": 0.3,
+   "end": 2.94,
+   "text": "Yazın hava neden sıcak, kışın neden soğuk?"
+  },
+  {
+   "id": 1,
+   "start": 3.78,
+   "end": 7.52,
+   "text": "Çoğu kişi şöyle cevap verir, yazın dünya, güneşe daha yakındır."
+  },
+  {
+   "id": 2,
+   "start": 8.64,
+   "end": 9.58,
+   "text": "Mantıklı geliyor."
+  },
+  {
+   "id": 3,
+   "start": 10.26,
+   "end": 11.28,
+   "text": "Ama yanlış."
+  },
+  {
+   "id": 4,
+   "start": 11.94,
+   "end": 16.4,
+   "text": "Dünya, güneşe en çok Ocak ayında yaklaşır, 147 milyon kilometre."
+  },
+  {
+   "id": 5,
+   "start": 17.18,
+   "end": 19.46,
+   "text": "Temmuz'da ise 152 milyon."
+  },
+  {
+   "id": 6,
+   "start": 20.0,
+   "end": 23.82,
+   "text": "Yani biz kışı yaşarken, dünya güneşe en yakın halindedir."
+  },
+  {
+   "id": 7,
+   "start": 24.34,
+   "end": 25.52,
+   "text": "Peki asıl sebep ne?"
+  },
+  {
+   "id": 8,
+   "start": 26.2,
+   "end": 26.92,
+   "text": "Eğiklik."
+  },
+  {
+   "id": 9,
+   "start": 26.92,
+   "end": 31.82,
+   "text": "Üstelik, Dünya'nın dönme ekseni, yörüngesine göre 23,5 derece yatıktır."
+  },
+  {
+   "id": 10,
+   "start": 32.82,
+   "end": 35.82,
+   "text": "Üstelik bu eksen, yıl boyu hep aynı yönü gösterir."
+  },
+  {
+   "id": 11,
+   "start": 36.26,
+   "end": 41.84,
+   "text": "Dünya Güneş'in etrafında döndükçe, Kuzey Yarımküre bazen Güneş'e eğilir, bazen ondan uzaklaşır."
+  },
+  {
+   "id": 12,
+   "start": 42.78,
+   "end": 44.78,
+   "text": "Haziran da Güneş'e döner, yaz."
+  },
+  {
+   "id": 13,
+   "start": 45.68,
+   "end": 47.44,
+   "text": "Aralıkta uzaklaşır, kış."
+  },
+  {
+   "id": 14,
+   "start": 48.31,
+   "end": 50.32,
+   "text": "Güney Yarımküre'de ise tam tersi."
+  },
+  {
+   "id": 15,
+   "start": 50.85,
+   "end": 52.68,
+   "text": "Bu eğiklik iki şeyi değiştirir."
+  },
+  {
+   "id": 16,
+   "start": 53.62,
+   "end": 55.3,
+   "text": "Birincisi, ışığın geliş açısı."
+  },
+  {
+   "id": 17,
+   "start": 55.3,
+   "end": 61.8,
+   "text": "Kısacası, dik gelen ışık enerjisini küçük bir alanda toplar, eğik gelen ışık aynı enerjiyi geniş bir alana yayar."
+  },
+  {
+   "id": 18,
+   "start": 62.72,
+   "end": 67.06,
+   "text": "İkincisi, gün uzunluğu, yazın güneş gökyüzünde uzun kalır, kışın kısa."
+  },
+  {
+   "id": 19,
+   "start": 67.62,
+   "end": 70.92,
+   "text": "Kısacası, mevsimleri getiren şey uzaklık değil, eğikliktir."
+  },
+  {
+   "id": 20,
+   "start": 71.64,
+   "end": 74.16,
+   "text": "Eksen dik olsaydı, mevsim olmazdı."
+  },
+  {
+   "id": 21,
+   "start": 75.05,
+   "end": 80.06,
+   "text": "Bir dahaki yaz sıcağında şunu düşün, dünya şu an güneşten neredeyse en uzak noktasında."
+  }
+ ],
+ "words": [
+  {
+   "word": "Yazın",
+   "start": 0.3,
+   "end": 0.9
+  },
+  {
+   "word": "hava",
+   "start": 0.9,
+   "end": 1.2
+  },
+  {
+   "word": "neden",
+   "start": 1.2,
+   "end": 1.34
+  },
+  {
+   "word": "sıcak,",
+   "start": 1.34,
+   "end": 1.88
+  },
+  {
+   "word": "kışın",
+   "start": 1.92,
+   "end": 2.26
+  },
+  {
+   "word": "neden",
+   "start": 2.26,
+   "end": 2.44
+  },
+  {
+   "word": "soğuk?",
+   "start": 2.44,
+   "end": 2.94
+  },
+  {
+   "word": "Çoğu",
+   "start": 3.78,
+   "end": 4.14
+  },
+  {
+   "word": "kişi",
+   "start": 4.14,
+   "end": 4.36
+  },
+  {
+   "word": "şöyle",
+   "start": 4.36,
+   "end": 4.62
+  },
+  {
+   "word": "cevap",
+   "start": 4.62,
+   "end": 5.1
+  },
+  {
+   "word": "verir,",
+   "start": 5.1,
+   "end": 5.42
+  },
+  {
+   "word": "yazın",
+   "start": 5.46,
+   "end": 5.96
+  },
+  {
+   "word": "dünya,",
+   "start": 5.96,
+   "end": 6.38
+  },
+  {
+   "word": "güneşe",
+   "start": 6.42,
+   "end": 6.8
+  },
+  {
+   "word": "daha",
+   "start": 6.8,
+   "end": 6.96
+  },
+  {
+   "word": "yakındır.",
+   "start": 6.96,
+   "end": 7.52
+  },
+  {
+   "word": "Mantıklı",
+   "start": 8.64,
+   "end": 9.36
+  },
+  {
+   "word": "geliyor.",
+   "start": 9.36,
+   "end": 9.58
+  },
+  {
+   "word": "Ama",
+   "start": 10.26,
+   "end": 10.98
+  },
+  {
+   "word": "yanlış.",
+   "start": 10.98,
+   "end": 11.28
+  },
+  {
+   "word": "Dünya,",
+   "start": 11.94,
+   "end": 12.66
+  },
+  {
+   "word": "güneşe",
+   "start": 12.66,
+   "end": 13.04
+  },
+  {
+   "word": "en",
+   "start": 13.04,
+   "end": 13.2
+  },
+  {
+   "word": "çok",
+   "start": 13.2,
+   "end": 13.4
+  },
+  {
+   "word": "Ocak",
+   "start": 13.4,
+   "end": 13.68
+  },
+  {
+   "word": "ayında",
+   "start": 13.68,
+   "end": 13.96
+  },
+  {
+   "word": "yaklaşır,",
+   "start": 13.96,
+   "end": 14.56
+  },
+  {
+   "word": "147",
+   "start": 14.6,
+   "end": 15.46
+  },
+  {
+   "word": "milyon",
+   "start": 15.46,
+   "end": 15.86
+  },
+  {
+   "word": "kilometre.",
+   "start": 15.86,
+   "end": 16.4
+  },
+  {
+   "word": "Temmuz'da",
+   "start": 17.18,
+   "end": 17.9
+  },
+  {
+   "word": "ise",
+   "start": 17.9,
+   "end": 18.06
+  },
+  {
+   "word": "152",
+   "start": 18.06,
+   "end": 18.82
+  },
+  {
+   "word": "milyon.",
+   "start": 18.82,
+   "end": 19.46
+  },
+  {
+   "word": "Yani",
+   "start": 20.0,
+   "end": 20.72
+  },
+  {
+   "word": "biz",
+   "start": 20.72,
+   "end": 20.94
+  },
+  {
+   "word": "kışı",
+   "start": 20.94,
+   "end": 21.24
+  },
+  {
+   "word": "yaşarken,",
+   "start": 21.24,
+   "end": 21.66
+  },
+  {
+   "word": "dünya",
+   "start": 21.86,
+   "end": 22.32
+  },
+  {
+   "word": "güneşe",
+   "start": 22.32,
+   "end": 22.66
+  },
+  {
+   "word": "en",
+   "start": 22.66,
+   "end": 22.84
+  },
+  {
+   "word": "yakın",
+   "start": 22.84,
+   "end": 23.2
+  },
+  {
+   "word": "halindedir.",
+   "start": 23.2,
+   "end": 23.82
+  },
+  {
+   "word": "Peki",
+   "start": 24.34,
+   "end": 24.7
+  },
+  {
+   "word": "asıl",
+   "start": 24.7,
+   "end": 25.06
+  },
+  {
+   "word": "sebep",
+   "start": 25.06,
+   "end": 25.38
+  },
+  {
+   "word": "ne?",
+   "start": 25.38,
+   "end": 25.52
+  },
+  {
+   "word": "Eğiklik.",
+   "start": 26.2,
+   "end": 26.92
+  },
+  {
+   "word": "Üstelik,",
+   "start": 26.92,
+   "end": 27.04
+  },
+  {
+   "word": "Dünya",
+   "start": 27.04,
+   "end": 28.36
+  },
+  {
+   "word": "'nın",
+   "start": 28.36,
+   "end": 28.46
+  },
+  {
+   "word": "dönme",
+   "start": 28.46,
+   "end": 28.84
+  },
+  {
+   "word": "ekseni,",
+   "start": 28.84,
+   "end": 29.16
+  },
+  {
+   "word": "yörüngesine",
+   "start": 29.28,
+   "end": 30.02
+  },
+  {
+   "word": "göre",
+   "start": 30.02,
+   "end": 30.2
+  },
+  {
+   "word": "23",
+   "start": 30.2,
+   "end": 30.54
+  },
+  {
+   "word": ",5",
+   "start": 30.54,
+   "end": 31.02
+  },
+  {
+   "word": "derece",
+   "start": 31.02,
+   "end": 31.38
+  },
+  {
+   "word": "yatıktır.",
+   "start": 31.38,
+   "end": 31.82
+  },
+  {
+   "word": "Üstelik",
+   "start": 32.82,
+   "end": 33.48
+  },
+  {
+   "word": "bu",
+   "start": 33.48,
+   "end": 33.58
+  },
+  {
+   "word": "eksen,",
+   "start": 33.58,
+   "end": 34.0
+  },
+  {
+   "word": "yıl",
+   "start": 34.04,
+   "end": 34.34
+  },
+  {
+   "word": "boyu",
+   "start": 34.34,
+   "end": 34.68
+  },
+  {
+   "word": "hep",
+   "start": 34.68,
+   "end": 34.8
+  },
+  {
+   "word": "aynı",
+   "start": 34.8,
+   "end": 35.12
+  },
+  {
+   "word": "yönü",
+   "start": 35.12,
+   "end": 35.36
+  },
+  {
+   "word": "gösterir.",
+   "start": 35.36,
+   "end": 35.82
+  },
+  {
+   "word": "Dünya",
+   "start": 36.26,
+   "end": 36.92
+  },
+  {
+   "word": "Güneş",
+   "start": 36.92,
+   "end": 37.2
+  },
+  {
+   "word": "'in",
+   "start": 37.2,
+   "end": 37.24
+  },
+  {
+   "word": "etrafında",
+   "start": 37.24,
+   "end": 37.78
+  },
+  {
+   "word": "döndükçe,",
+   "start": 37.78,
+   "end": 38.32
+  },
+  {
+   "word": "Kuzey",
+   "start": 38.42,
+   "end": 38.74
+  },
+  {
+   "word": "Yarımküre",
+   "start": 38.74,
+   "end": 39.18
+  },
+  {
+   "word": "bazen",
+   "start": 39.18,
+   "end": 39.64
+  },
+  {
+   "word": "Güneş",
+   "start": 39.64,
+   "end": 39.92
+  },
+  {
+   "word": "'e",
+   "start": 39.92,
+   "end": 39.96
+  },
+  {
+   "word": "eğilir,",
+   "start": 39.96,
+   "end": 40.34
+  },
+  {
+   "word": "bazen",
+   "start": 40.38,
+   "end": 40.98
+  },
+  {
+   "word": "ondan",
+   "start": 40.98,
+   "end": 41.12
+  },
+  {
+   "word": "uzaklaşır.",
+   "start": 41.12,
+   "end": 41.84
+  },
+  {
+   "word": "Haziran",
+   "start": 42.78,
+   "end": 43.44
+  },
+  {
+   "word": "da",
+   "start": 43.44,
+   "end": 43.6
+  },
+  {
+   "word": "Güneş",
+   "start": 43.6,
+   "end": 43.94
+  },
+  {
+   "word": "'e",
+   "start": 43.94,
+   "end": 43.98
+  },
+  {
+   "word": "döner,",
+   "start": 43.98,
+   "end": 44.36
+  },
+  {
+   "word": "yaz.",
+   "start": 44.4,
+   "end": 44.78
+  },
+  {
+   "word": "Aralıkta",
+   "start": 45.68,
+   "end": 46.34
+  },
+  {
+   "word": "uzaklaşır,",
+   "start": 46.34,
+   "end": 47.0
+  },
+  {
+   "word": "kış.",
+   "start": 47.04,
+   "end": 47.44
+  },
+  {
+   "word": "Güney",
+   "start": 48.31,
+   "end": 48.64
+  },
+  {
+   "word": "Yarımküre'de",
+   "start": 48.64,
+   "end": 49.28
+  },
+  {
+   "word": "ise",
+   "start": 49.28,
+   "end": 49.4
+  },
+  {
+   "word": "tam",
+   "start": 49.4,
+   "end": 49.74
+  },
+  {
+   "word": "tersi.",
+   "start": 49.74,
+   "end": 50.32
+  },
+  {
+   "word": "Bu",
+   "start": 50.85,
+   "end": 51.18
+  },
+  {
+   "word": "eğiklik",
+   "start": 51.18,
+   "end": 51.6
+  },
+  {
+   "word": "iki",
+   "start": 51.6,
+   "end": 51.82
+  },
+  {
+   "word": "şeyi",
+   "start": 51.82,
+   "end": 52.04
+  },
+  {
+   "word": "değiştirir.",
+   "start": 52.04,
+   "end": 52.68
+  },
+  {
+   "word": "Birincisi,",
+   "start": 53.62,
+   "end": 54.28
+  },
+  {
+   "word": "ışığın",
+   "start": 54.32,
+   "end": 54.68
+  },
+  {
+   "word": "geliş",
+   "start": 54.68,
+   "end": 55.0
+  },
+  {
+   "word": "açısı.",
+   "start": 55.0,
+   "end": 55.3
+  },
+  {
+   "word": "Kısacası,",
+   "start": 55.3,
+   "end": 56.1
+  },
+  {
+   "word": "dik",
+   "start": 56.1,
+   "end": 56.66
+  },
+  {
+   "word": "gelen",
+   "start": 56.66,
+   "end": 56.82
+  },
+  {
+   "word": "ışık",
+   "start": 56.82,
+   "end": 57.24
+  },
+  {
+   "word": "enerjisini",
+   "start": 57.24,
+   "end": 57.74
+  },
+  {
+   "word": "küçük",
+   "start": 57.74,
+   "end": 58.02
+  },
+  {
+   "word": "bir",
+   "start": 58.02,
+   "end": 58.18
+  },
+  {
+   "word": "alanda",
+   "start": 58.18,
+   "end": 58.52
+  },
+  {
+   "word": "toplar,",
+   "start": 58.52,
+   "end": 59.02
+  },
+  {
+   "word": "eğik",
+   "start": 59.06,
+   "end": 59.54
+  },
+  {
+   "word": "gelen",
+   "start": 59.54,
+   "end": 59.7
+  },
+  {
+   "word": "ışık",
+   "start": 59.7,
+   "end": 60.14
+  },
+  {
+   "word": "aynı",
+   "start": 60.14,
+   "end": 60.3
+  },
+  {
+   "word": "enerjiyi",
+   "start": 60.3,
+   "end": 60.82
+  },
+  {
+   "word": "geniş",
+   "start": 60.82,
+   "end": 61.1
+  },
+  {
+   "word": "bir",
+   "start": 61.1,
+   "end": 61.2
+  },
+  {
+   "word": "alana",
+   "start": 61.2,
+   "end": 61.52
+  },
+  {
+   "word": "yayar.",
+   "start": 61.52,
+   "end": 61.8
+  },
+  {
+   "word": "İkincisi,",
+   "start": 62.72,
+   "end": 63.42
+  },
+  {
+   "word": "gün",
+   "start": 63.56,
+   "end": 63.74
+  },
+  {
+   "word": "uzunluğu,",
+   "start": 63.74,
+   "end": 64.22
+  },
+  {
+   "word": "yazın",
+   "start": 64.3,
+   "end": 64.8
+  },
+  {
+   "word": "güneş",
+   "start": 64.8,
+   "end": 65.16
+  },
+  {
+   "word": "gökyüzünde",
+   "start": 65.16,
+   "end": 65.64
+  },
+  {
+   "word": "uzun",
+   "start": 65.64,
+   "end": 66.02
+  },
+  {
+   "word": "kalır,",
+   "start": 66.02,
+   "end": 66.32
+  },
+  {
+   "word": "kışın",
+   "start": 66.36,
+   "end": 66.74
+  },
+  {
+   "word": "kısa.",
+   "start": 66.74,
+   "end": 67.06
+  },
+  {
+   "word": "Kısacası,",
+   "start": 67.62,
+   "end": 68.32
+  },
+  {
+   "word": "mevsimleri",
+   "start": 68.32,
+   "end": 68.88
+  },
+  {
+   "word": "getiren",
+   "start": 68.88,
+   "end": 69.24
+  },
+  {
+   "word": "şey",
+   "start": 69.24,
+   "end": 69.46
+  },
+  {
+   "word": "uzaklık",
+   "start": 69.46,
+   "end": 69.9
+  },
+  {
+   "word": "değil,",
+   "start": 69.9,
+   "end": 70.14
+  },
+  {
+   "word": "eğikliktir.",
+   "start": 70.32,
+   "end": 70.92
+  },
+  {
+   "word": "Eksen",
+   "start": 71.64,
+   "end": 72.34
+  },
+  {
+   "word": "dik",
+   "start": 72.34,
+   "end": 72.7
+  },
+  {
+   "word": "olsaydı,",
+   "start": 72.7,
+   "end": 73.14
+  },
+  {
+   "word": "mevsim",
+   "start": 73.2,
+   "end": 73.68
+  },
+  {
+   "word": "olmazdı.",
+   "start": 73.68,
+   "end": 74.16
+  },
+  {
+   "word": "Bir",
+   "start": 75.05,
+   "end": 75.4
+  },
+  {
+   "word": "dahaki",
+   "start": 75.4,
+   "end": 75.72
+  },
+  {
+   "word": "yaz",
+   "start": 75.72,
+   "end": 75.94
+  },
+  {
+   "word": "sıcağında",
+   "start": 75.94,
+   "end": 76.46
+  },
+  {
+   "word": "şunu",
+   "start": 76.46,
+   "end": 76.66
+  },
+  {
+   "word": "düşün,",
+   "start": 76.66,
+   "end": 76.98
+  },
+  {
+   "word": "dünya",
+   "start": 77.18,
+   "end": 77.68
+  },
+  {
+   "word": "şu",
+   "start": 77.68,
+   "end": 77.78
+  },
+  {
+   "word": "an",
+   "start": 77.78,
+   "end": 77.98
+  },
+  {
+   "word": "güneşten",
+   "start": 77.98,
+   "end": 78.34
+  },
+  {
+   "word": "neredeyse",
+   "start": 78.34,
+   "end": 79.06
+  },
+  {
+   "word": "en",
+   "start": 79.06,
+   "end": 79.28
+  },
+  {
+   "word": "uzak",
+   "start": 79.28,
+   "end": 79.62
+  },
+  {
+   "word": "noktasında.",
+   "start": 79.62,
+   "end": 80.06
+  }
+ ]
+}

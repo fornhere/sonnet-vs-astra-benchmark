@@ -1,0 +1,1 @@
+{"name":"bogaz-gecenin-nobetcisi","version":"1.0.0","private":true,"type":"module","scripts":{"build":"esbuild src/main.js --bundle --minify --format=iife --outfile=dist/app.js","serve":"python3 -m http.server 8080","qa":"node scripts/qa.mjs"},"dependencies":{"three":"0.180.0"},"devDependencies":{"esbuild":"^0.28.2","playwright":"^1.58.2"}}

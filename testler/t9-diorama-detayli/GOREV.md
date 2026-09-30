@@ -1,0 +1,46 @@
+GÖREV: New York'u (Manhattan) tarayıcıda çalışan, gezilebilir bir voxel DIORAMA olarak yap — masa üstünde duran,
+bir maket zanaatkârının elinden çıkmış gibi görünen minyatür bir şehir. Aşağıdaki şartname ZORUNLUDUR; her maddeyi
+karşıla ve TESLIM.md'de madde madde nasıl karşıladığını yaz.
+
+1) TEKNİK
+- Three.js (npm ile YEREL kurulum, çalışma anında CDN yok); index.html file:// ile veya `python3 -m http.server` ile açılır.
+- Voxel geometri: InstancedMesh veya greedy meshing ile birleştirilmiş mesh; görünür voxel yüzü ≤ 400.000.
+- Performans: 1920×1080'de RTX sınıfı GPU'da ≥ 60 fps hedefi; `?q=low` düşük kalite modu. Ekranda küçük fps sayacı (gizlenebilir).
+- Deterministik üretim: sabit tohum (seed); sayfa her açılışta aynı şehri üretir.
+- Modüler kod: src/ altında ayrı modüller (arazi, binalar, simgeler, trafik, ışık, arayüz, kamera, ses).
+
+2) MAKET / DIORAMA
+- Ahşap kaide (kenarında kesit: toprak ve kaya katmanları, su tablası), kaidenin kenarında küçük pirinç isim plakası "NEW YORK".
+- Adanın gerçek siluetine sadık yerleşim: Hudson ve East River, Upper Bay; Manhattan ızgarası (caddeler/sokaklar), Broadway'in diyagonali.
+- Tilt-shift alan derinliği (post-process) ile gerçek minyatür hissi; hafif SSAO/kontakt gölgeler.
+
+3) SİMGE YAPILAR (hepsi tanınır biçimde, doğru konumda)
+Özgürlük Heykeli (Liberty Island), Empire State Building, Chrysler Building, One World Trade Center, Flatiron,
+Brooklyn Köprüsü (asma kabloları dahil), Central Park (göl, çimler, ağaçlar), Times Square (renkli animasyonlu
+panolar), Rockefeller Center, Grand Central. Genel bina dokusu: yüksekliği Midtown ve Financial District'te artan,
+pencereleri olan çeşitli bloklar.
+
+4) CANLILIK
+- Hareketli sarı taksiler ve araçlar ızgarada; Staten Island feribotu; Hudson'da tekneler; Central Park'ta ağaçlar hafif sallanır.
+- Voxel bulutlar süzülür; kuş sürüleri; gece sokak lambaları ve pencereler yanar.
+
+5) IŞIK VE ZAMAN
+- Gün döngüsü kaydırıcısı (şafak → öğlen → gün batımı → gece), varsayılan gün batımı. Gece: pencereler ve Times Square emissive + bloom.
+- Hava durumu seçici: açık / sisli / karlı (voxel kar taneleri).
+
+6) KAMERA VE KEŞİF
+- Orbit kamera (sürükle döndür, tekerlek yakınlaş), sınırlar ile kaideden çıkmaz.
+- Sağda "KEŞFET" paneli: Genel bakış + her simge için satır; tıklayınca ya da 1–9 tuşlarıyla kamera yumuşak (ease-in-out, ~1,5 sn) uçuşla oraya gider.
+- Simgenin üstüne gelince etiket; seçilince 1–2 cümlelik Türkçe bilgi kartı.
+- Boşta 20 sn sonra yavaş otomatik tur (sinematik); herhangi bir girdide durur.
+- Fotoğraf modu (arayüzü gizle, PNG indir).
+
+7) SES
+- İsteğe bağlı, Web Audio ile kodla üretilen şehir ambiyansı (varsayılan kapalı, düğmeyle açılır).
+
+8) SÜREÇ (zorunlu)
+- Her simgede headless Chromium ile ekran görüntüsü al, kendin incele ve tanınmayan/hatalı olanı düzelt; en az 2 düzeltme turu.
+- Konsol hatası sıfır; fps ölçümünü TESLIM.md'ye yaz.
+- Son olarak `onizleme/` klasörüne genel bakış + her simge + gece + karlı ekran görüntülerini koy.
+
+TESLİM: index.html (+ src/, dist/ vb.), onizleme/, TESLIM.md.

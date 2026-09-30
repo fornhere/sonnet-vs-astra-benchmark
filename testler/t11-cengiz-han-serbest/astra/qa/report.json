@@ -1,0 +1,49 @@
+{
+  "errors": [],
+  "results": [
+    [
+      "chapter2",
+      true
+    ],
+    [
+      "night",
+      true
+    ],
+    [
+      "detail",
+      true
+    ],
+    [
+      "story",
+      true
+    ],
+    [
+      "escape",
+      true
+    ],
+    [
+      "audio",
+      true
+    ],
+    [
+      "hide-ui",
+      true
+    ],
+    [
+      "tour-start",
+      true
+    ],
+    [
+      "tour-stop",
+      true
+    ],
+    [
+      "orbit",
+      true
+    ],
+    [
+      "mobile-overflow",
+      true
+    ]
+  ]
+}

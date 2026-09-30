@@ -1,0 +1,10 @@
+[
+{"id":"01","text":"Telefonundaki o küçük mavi nokta... Uzaydan seni izleyen bir kamera mı? Hayır. GPS, aslında zamanı ölçerek yerini bulur."},
+{"id":"02","text":"Uydular sürekli iki bilgi yayınlar: Neredeyim ve saat kaç? Telefonun bu sinyalleri dinler. Konum bulmak için uyduya cevap göndermesi gerekmez."},
+{"id":"03","text":"Sinyal, ışık hızında yol alır. Telefon, sinyalin geliş süresini ölçer; bu süreyi ışık hızıyla çarpar. Böylece uyduya olan uzaklığını hesaplar."},
+{"id":"04","text":"Tek bir uzaklık, tek bir adres vermez. Aynı uzaklıktaki bütün noktalar olasıdır. Diğer uyduların ölçümleri eklendikçe olasılıklar daralır."},
+{"id":"05","text":"Gerçekte bu çemberler üç boyutlu kürelerdir. Telefonun saatindeki hata da hesaba katılır. Üç konum bilgisi ve saat hatası: Dört bilinmeyen için en az dört uydu gerekir."},
+{"id":"06","text":"Zamanlama çok hassastır. Saniyenin yalnızca milyonda biri kadar ölçüm hatası, yaklaşık üç yüz metre mesafe hatası demektir. Bu yüzden uydularda atom saatleri kullanılır."},
+{"id":"07","text":"Yüksek binalar sinyali yansıtabilir. Telefon, uzayan yolu daha büyük bir mesafe sanır. Haritadaki mavi noktanın bazen sıçramasının nedenlerinden biri budur."},
+{"id":"08","text":"Kısacası, GPS seni görmez. Uyduların saatlerini dinler; zamanı mesafeye, mesafeleri konuma çevirir. O küçük mavi noktanın arkasında, işte bu hesap var."}
+]

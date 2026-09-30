@@ -1,0 +1,13 @@
+{
+  "file": "tanitim.mp4",
+  "bytes": 28401059,
+  "sha256": "c67720964ed0ab10cf93b96f4c880312b6e537f270f3711912be4030b5bec059",
+  "duration_seconds": 52,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "video": "H.264",
+  "audio": "AAC stereo 48000 Hz",
+  "source": "URUN.md",
+  "hyperframes": "0.8.91"
+}

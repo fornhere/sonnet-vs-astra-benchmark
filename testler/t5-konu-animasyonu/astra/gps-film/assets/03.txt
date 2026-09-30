@@ -1,0 +1,1 @@
+Sinyal, ışık hızında yol alır. Telefon, sinyalin geliş süresini ölçer; bu süreyi ışık hızıyla çarpar. Böylece uyduya olan uzaklığını hesaplar.

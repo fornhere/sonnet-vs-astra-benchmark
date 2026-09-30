@@ -1,0 +1,60 @@
+{
+  "errors": [],
+  "boxes": [
+    {
+      "id": "s1",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 644.796875
+    },
+    {
+      "id": "s2",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 725.90625
+    },
+    {
+      "id": "s3",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 709.734375
+    },
+    {
+      "id": "s4",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 713.484375
+    },
+    {
+      "id": "s5",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 730.234375
+    },
+    {
+      "id": "s6",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 710.625
+    },
+    {
+      "id": "s7",
+      "height": 792,
+      "scroll": 792,
+      "footer": 740.609375,
+      "last": 734.25
+    }
+  ],
+  "zero": "70.787 TL",
+  "twenty": "-176.904 TL",
+  "mobile": {
+    "width": 390,
+    "scroll": 390
+  }
+}

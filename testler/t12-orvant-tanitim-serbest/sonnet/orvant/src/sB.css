@@ -1,0 +1,10 @@
+#b-halo{left:50%;top:44%;width:1400px;height:1400px;margin:-700px 0 0 -700px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.28) 0%,rgba(255,90,31,.08) 40%,rgba(255,90,31,0) 68%);opacity:0}
+#b-rings{left:0;top:-70px}
+#b-lockup{position:absolute;left:0;right:0;top:250px;display:flex;justify-content:center;align-items:flex-end;gap:2px}
+#b-mark{display:block;margin-bottom:12px;overflow:visible}
+#b-word{display:flex;font-family:var(--serif);font-size:340px;line-height:1;letter-spacing:-.03em}
+#b-word .ch{display:block;overflow:hidden;padding:.05em .02em .16em;margin:-.05em -.02em -.16em}
+#b-word .ch>span{display:block}
+#b-tag1{position:absolute;left:0;right:0;top:668px;text-align:center;font-family:var(--serif);font-size:88px;letter-spacing:-.015em}
+#b-tag1 em{font-style:italic;color:var(--acc)}
+#b-tag2{position:absolute;left:0;right:0;top:806px;text-align:center;font-size:26px;color:var(--dim)}

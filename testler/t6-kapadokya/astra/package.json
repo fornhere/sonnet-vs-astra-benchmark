@@ -1,0 +1,21 @@
+{
+  "name": "kapadokya-zamanin-otesinde",
+  "version": "1.0.0",
+  "description": "Çevrimdışı çalışan sinematik Kapadokya 3D keşif deneyimi",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --format=iife --outfile=app.js",
+    "start": "python3 -m http.server 4173",
+    "test": "node checks/test.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright": "^1.63.0"
+  }
+}

@@ -1,0 +1,12 @@
+#a-rows{position:absolute;left:200px;right:200px;top:250px}
+.a-row{position:relative;height:150px;display:flex;align-items:center;gap:36px}
+.a-row .idx{font-family:var(--mono);font-size:26px;color:var(--dim);width:54px;letter-spacing:.1em}
+.a-row .txt{position:relative;font-family:var(--sans);font-weight:600;font-size:120px;letter-spacing:-.045em;line-height:1;white-space:nowrap}
+.a-row .strike{position:absolute;left:-14px;right:-14px;top:52%;height:8px;background:var(--acc);transform-origin:left;transform:scaleX(0);border-radius:2px}
+.a-row .rule{flex:1;height:2px;background:var(--line);transform-origin:left}
+.a-row .tag{font-family:var(--mono);font-size:22px;letter-spacing:.2em;border:2px solid var(--line);border-radius:100px;padding:10px 22px;color:var(--paper)}
+#a-ptr{left:150px;top:250px;width:10px;height:150px;background:var(--acc);border-radius:3px;box-shadow:0 0 40px rgba(255,90,31,.8);opacity:0}
+.a-cnt{display:inline-block;position:relative;width:76px;height:1.2em;vertical-align:bottom;overflow:hidden;color:var(--acc)}
+.a-cnt b{position:absolute;left:0;top:0;font-weight:500}
+#a-q{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-size:172px;line-height:1.02;letter-spacing:-.025em}
+#a-q em{font-style:italic;color:var(--acc)}

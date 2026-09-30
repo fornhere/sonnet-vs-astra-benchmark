@@ -1,0 +1,1 @@
+Gerçekte bu çemberler üç boyutlu kürelerdir. Telefonun saatindeki hata da hesaba katılır. Üç konum bilgisi ve saat hatası: Dört bilinmeyen için en az dört uydu gerekir.

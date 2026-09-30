@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Manhattan — Voxel Diorama</title>
+<meta name="description" content="Gerçek bina verisiyle inşa edilmiş, tarayıcıda gezilebilir Manhattan voxel dioraması.">
+<style>
+:root{--glass:rgba(14,18,28,.58);--line:rgba(255,255,255,.14);--ink:#eef2f7;--dim:rgba(238,242,247,.62);--acc:#ffc95e}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#080b11;overflow:hidden;color:var(--ink);font-family:"Inter","SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;user-select:none}
+canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;outline:none}
+#ui{position:fixed;inset:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease .3s}
+body.ready #ui{opacity:1}
+#ui .glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-radius:14px;pointer-events:auto}
+/* marka */
+#brand{position:absolute;left:28px;top:24px;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+#brand .k{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--acc);font-weight:600}
+#brand h1{margin:6px 0 4px;font-weight:200;font-size:clamp(30px,4.2vw,58px);letter-spacing:.16em;line-height:1;text-transform:uppercase}
+#brand .s{font-size:12px;color:var(--dim);letter-spacing:.06em}
+/* pusula */
+#compass{position:absolute;right:24px;top:24px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center}
+#compass .n{position:relative;width:100%;height:100%;transition:none}
+#compass .n:before{content:"";position:absolute;left:50%;top:9px;width:0;height:0;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:20px solid #ff6b57}
+#compass .n:after{content:"";position:absolute;left:50%;bottom:9px;width:0;height:0;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:20px solid rgba(255,255,255,.5)}
+#compass b{position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:#fff;z-index:2}
+/* dock */
+#dock{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);padding:12px 18px 12px;display:flex;flex-direction:column;gap:10px;align-items:stretch;min-width:min(620px,92vw)}
+#dock .row{display:flex;align-items:center;gap:12px}
+#clock{font-variant-numeric:tabular-nums;font-size:22px;font-weight:300;letter-spacing:.06em;min-width:66px}
+#tod{flex:1;-webkit-appearance:none;appearance:none;height:26px;background:transparent;cursor:pointer}
+#tod::-webkit-slider-runnable-track{height:6px;border-radius:4px;background:linear-gradient(90deg,#0a1228 0%,#0a1228 20%,#ff9b6a 27%,#8fc4ff 40%,#8fc4ff 66%,#ffb266 76%,#7a4f7a 82%,#0a1228 88%,#0a1228 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+#tod::-moz-range-track{height:6px;border-radius:4px;background:linear-gradient(90deg,#0a1228 0%,#0a1228 20%,#ff9b6a 27%,#8fc4ff 40%,#8fc4ff 66%,#ffb266 76%,#7a4f7a 82%,#0a1228 88%,#0a1228 100%)}
+#tod::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;margin-top:-7px;box-shadow:0 0 0 4px rgba(255,201,94,.35),0 2px 10px rgba(0,0,0,.5)}
+#tod::-moz-range-thumb{width:20px;height:20px;border:none;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,201,94,.35)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+button.chip,button.tool{font:inherit;color:var(--ink);background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.03em;cursor:pointer;transition:background .2s,border-color .2s,transform .1s}
+button.chip:hover,button.tool:hover{background:rgba(255,255,255,.16)}
+button.chip:active,button.tool:active{transform:scale(.97)}
+button.chip.on,button.tool.on{background:rgba(255,201,94,.22);border-color:rgba(255,201,94,.7)}
+#play{width:34px;height:34px;padding:0;border-radius:50%;display:grid;place-items:center}
+/* sol panel */
+#left{position:absolute;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;padding:10px;width:184px}
+#left h4{margin:2px 4px 2px;font-size:10px;letter-spacing:.3em;color:var(--dim);font-weight:600;text-transform:uppercase}
+#left button.tool{border-radius:10px;text-align:left;display:flex;justify-content:space-between;align-items:center}
+#left button.tool i{font-style:normal;color:var(--dim);font-size:11px}
+#tourbtn{background:linear-gradient(135deg,rgba(255,201,94,.28),rgba(255,140,80,.22))!important;border-color:rgba(255,201,94,.7)!important;font-weight:600}
+/* sağ panel */
+#right{position:absolute;right:24px;top:100px;display:flex;flex-direction:column;gap:6px;padding:10px;width:168px}
+#right h4{margin:2px 4px 4px;font-size:10px;letter-spacing:.3em;color:var(--dim);font-weight:600;text-transform:uppercase}
+.sw{display:flex;align-items:center;justify-content:space-between;font-size:12px;cursor:pointer;padding:5px 4px;border-radius:8px}
+.sw:hover{background:rgba(255,255,255,.06)}
+.sw span.t{width:32px;height:18px;border-radius:9px;background:rgba(255,255,255,.16);position:relative;transition:background .2s}
+.sw span.t:after{content:"";position:absolute;left:2px;top:2px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw.on span.t{background:var(--acc)}
+.sw.on span.t:after{transform:translateX(14px)}
+/* kart */
+#card{position:absolute;right:24px;bottom:22px;width:330px;padding:16px 18px 16px;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
+#card.show{opacity:1;transform:none;pointer-events:auto}
+#card .t{font-size:10px;letter-spacing:.32em;color:var(--acc);text-transform:uppercase;font-weight:600}
+#card h3{margin:6px 0 2px;font-size:21px;font-weight:500}
+#card .st{font-size:12px;color:var(--dim);margin-bottom:8px}
+#card p{margin:0;font-size:13px;line-height:1.5;color:rgba(238,242,247,.86)}
+#card .x{position:absolute;right:10px;top:8px;background:none;border:none;color:var(--dim);font-size:20px;cursor:pointer}
+/* tur başlığı */
+#caption{position:absolute;left:50%;bottom:150px;transform:translateX(-50%);text-align:center;width:min(760px,90vw);pointer-events:none;opacity:0;transition:opacity .8s}
+#caption.show{opacity:1}
+#caption .n{font-size:11px;letter-spacing:.5em;color:var(--acc);text-transform:uppercase;font-weight:600}
+#caption h2{margin:8px 0 6px;font-weight:200;font-size:clamp(26px,3.6vw,50px);letter-spacing:.06em;text-shadow:0 3px 26px rgba(0,0,0,.6)}
+#caption p{margin:0;font-size:15px;color:rgba(255,255,255,.86);text-shadow:0 2px 14px rgba(0,0,0,.7)}
+#tourbar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+/* etiketler */
+#labels{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.lb{position:absolute;left:0;top:0;white-space:nowrap;will-change:transform;transform:translate(-9999px,-9999px)}
+.lb.hood{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:rgba(255,255,255,.92);font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.9)}
+.lb.water{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-style:italic;color:rgba(190,225,255,.95);text-shadow:0 1px 8px rgba(0,20,40,.9)}
+.lb.lm{pointer-events:auto;cursor:pointer;display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.02em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+.lb.lm:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 3px rgba(255,201,94,.3),0 0 14px rgba(255,201,94,.9);flex:none}
+.lb.lm:hover{color:var(--acc)}
+.lb.lm.sel:before{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.4),0 0 18px #fff}
+/* yükleme */
+#loader{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 40%,#16202f 0%,#080b11 70%);transition:opacity 1.1s ease,visibility 1.1s;text-align:center}
+#loader.hide{opacity:0;visibility:hidden}
+#loader .k{font-size:11px;letter-spacing:.5em;color:var(--acc);text-transform:uppercase;font-weight:600}
+#loader h1{margin:14px 0 10px;font-weight:100;font-size:clamp(38px,7vw,96px);letter-spacing:.22em;text-transform:uppercase}
+#loader .bar{width:min(320px,70vw);height:2px;background:rgba(255,255,255,.14);margin:22px auto 10px;border-radius:2px;overflow:hidden}
+#loader .bar i{display:block;height:100%;width:0;background:var(--acc);box-shadow:0 0 12px var(--acc);transition:width .4s}
+#loader .m{font-size:12px;color:var(--dim);letter-spacing:.12em;min-height:16px}
+#help{position:absolute;left:50%;top:22px;transform:translateX(-50%);padding:9px 16px;font-size:12px;color:var(--dim);letter-spacing:.03em;opacity:1;transition:opacity 1s;text-align:center}
+#help b{color:var(--ink);font-weight:600}
+body.touring #left,body.touring #right,body.touring #dock,body.touring #help,body.touring #card{opacity:0!important;pointer-events:none!important;transition:opacity .8s}
+#stophint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;color:rgba(255,255,255,.55);text-transform:uppercase;opacity:0;transition:opacity .8s;pointer-events:none}
+body.touring #stophint{opacity:1}
+#credit{position:absolute;left:24px;bottom:8px;font-size:10px;color:rgba(255,255,255,.38);letter-spacing:.05em}
+#fps{position:absolute;left:24px;bottom:24px;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.1em}
+#mtour{display:none}
+@media (max-width:900px){#left,#right{display:none}#brand{left:16px;top:14px}#brand .s{display:none}#dock{bottom:12px;min-width:0;width:calc(100vw - 20px);padding:10px 12px}#dock .row{flex-wrap:wrap;gap:8px}#dock .chips{width:100%;overflow-x:auto;flex-wrap:nowrap!important;justify-content:flex-start;padding-bottom:2px}#dock .chips button{flex:none;white-space:nowrap}#tod{min-width:120px}#card{bottom:150px;right:10px;left:10px;width:auto}#help{display:none}#caption{bottom:190px}#credit{display:none}
+#mtour{display:block;position:absolute;right:24px;top:92px;padding:8px 14px;pointer-events:auto;font-size:12px}#compass{width:50px;height:50px;right:14px;top:14px}}
+</style></head>
+<body>
+<canvas id="c" tabindex="0"></canvas>
+<div id="labels"></div>
+<div id="ui">
+  <div id="brand"><div class="k">New York City</div><h1>Manhattan</h1><div class="s">Gerçek bina verisiyle voxel diorama · 1 blok ≈ 16 m</div></div>
+  <div id="compass" class="glass"><b>N</b><div class="n" id="needle"></div></div>
+  <div id="help" class="glass"><b>Sürükle</b> döndür · <b>Sağ tık</b> kaydır · <b>Tekerlek</b> yakınlaş · <b>Çift tık</b> oraya git · <b>WASD</b> gez · <b>Yer imlerine</b> tıkla</div>
+  <button id="mtour" class="tool glass" onclick="document.getElementById('tourbtn').click()">▶ Tur</button>
+  <div id="left" class="glass">
+    <h4>Keşfet</h4>
+    <button class="tool" id="tourbtn">▶ Şehir Turu <i>T</i></button>
+    <button class="tool" data-view="overview">Genel görünüm <i>1</i></button>
+    <button class="tool" data-view="downtown">Aşağı Manhattan <i>2</i></button>
+    <button class="tool" data-view="midtown">Midtown <i>3</i></button>
+    <button class="tool" data-view="park">Central Park <i>4</i></button>
+    <button class="tool" data-view="bridges">Köprüler <i>5</i></button>
+    <button class="tool" data-view="liberty">Özgürlük Heykeli <i>6</i></button>
+    <button class="tool" data-view="street">Sokak seviyesi <i>7</i></button>
+    <button class="tool" id="photo">Fotoğraf çek <i>P</i></button>
+  </div>
+  <div id="right" class="glass">
+    <h4>Görünüm</h4>
+    <div class="sw on" data-t="labels">Etiketler<span class="t"></span></div>
+    <div class="sw on" data-t="traffic">Trafik &amp; tekneler<span class="t"></span></div>
+    <div class="sw on" data-t="clouds">Bulutlar<span class="t"></span></div>
+    <div class="sw on" data-t="tilt">Maket (tilt-shift)<span class="t"></span></div>
+    <div class="sw on" data-t="bloom">Işıma<span class="t"></span></div>
+    <div class="sw" data-t="snow">Kar yağışı <span style="opacity:.5;font-size:10px">K</span><span class="t"></span></div>
+  </div>
+  <div id="card" class="glass"><button class="x" id="cardx">×</button><div class="t" id="ct"></div><h3 id="cn"></h3><div class="st" id="cs"></div><p id="cp"></p></div>
+  <div id="caption"><div class="n" id="capn"></div><h2 id="capt"></h2><p id="capp"></p></div>
+  <div id="dock" class="glass">
+    <div class="row"><button class="chip" id="play" title="Zamanı akıt">▶</button><div id="clock">17:30</div><input id="tod" type="range" min="0" max="24" step="0.02" value="17.5"><div class="chips" style="flex-wrap:nowrap">
+      <button class="chip" data-tod="6.3">Şafak</button><button class="chip" data-tod="12.5">Öğle</button><button class="chip" data-tod="17.4">Altın saat</button><button class="chip" data-tod="18.85">Gün batımı</button><button class="chip" data-tod="22">Gece</button></div></div>
+  </div>
+  <div id="tourbar"></div><div id="stophint">Turu durdurmak için tıkla veya T</div>
+  <div id="fps"></div><div id="credit">Veri: NYC OpenData bina izleri · © OpenStreetMap katkıcıları (ODbL) · three.js</div>
+</div>
+<div id="loader"><div><div class="k">New York City</div><h1>Manhattan</h1><div class="bar"><i id="lbar"></i></div><div class="m" id="lmsg">Hazırlanıyor…</div></div></div>
+<script src="dist/world-data.js"></script><script src="dist/app.js"></script></body></html>

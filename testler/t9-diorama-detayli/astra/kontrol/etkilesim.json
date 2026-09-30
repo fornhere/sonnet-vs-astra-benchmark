@@ -1,0 +1,24 @@
+{
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:8000/?q=low",
+    "http://127.0.0.1:8000/src/style.css",
+    "http://127.0.0.1:8000/dist/app.js"
+  ],
+  "checks": {
+    "fpsHide": true,
+    "fpsShow": true,
+    "panelSelect": true,
+    "hoverLabel": true,
+    "wheelZoom": true,
+    "orbitMoved": true,
+    "timeControl": "Gece 23:00",
+    "weatherButton": true,
+    "photoKey": true,
+    "photoEscape": true,
+    "autoTour": true,
+    "tourStopsOnInput": true,
+    "mobileNoHorizontalOverflow": true,
+    "mobileSelection": true
+  }
+}

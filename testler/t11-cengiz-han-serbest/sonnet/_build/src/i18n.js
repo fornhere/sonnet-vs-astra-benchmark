@@ -1,0 +1,36 @@
+export const T = {
+  tr: {
+    title: 'Cengiz Han', subtitle: 'Atlı Heykeli', place: 'Tsonjin Boldog · Moğolistan',
+    begin: 'Yolculuğu Başlat', explore: 'Serbest Keşif', loading: 'Çelik dökülüyor…', hint: 'Ses açık, tam ekran önerilir',
+    skip: 'Turu atla', replay: 'Turu yeniden oynat', sound: 'Ses', lang: 'EN', pause: 'Duraklat', play: 'Oynat',
+    hour: 'Saat', views: 'Bakış noktaları', quality: 'Kalite',
+    v: { overview: 'Genel', face: 'Yüz', whip: 'Kamçı', columns: 'Sütunlar', head: 'At başı', side: 'Profil' },
+    ch: {
+      steppe: ['Bozkırın Ortasında', 'Ulan Batur’un 54 km doğusu. Tuul Nehri kıyısında, uçsuz bucaksız otlağın üstünde bir çelik dev yükseliyor.', [['54 km', 'Ulan Batur’un doğusu']]],
+      scale: ['Ölçek', 'Paslanmaz çelikten, kaidesiyle birlikte 50 metreye yakın. Kaidedeki 36 sütun, Cengiz Han’dan Ligdan Han’a 36 hanı temsil eder.', [['40 m', 'heykel yüksekliği'], ['250 t', 'paslanmaz çelik'], ['36', 'sütun']]],
+      gaze: ['Doğuya Bakış', 'Yüzü doğuya, doğduğu Hentii topraklarına dönük. Her sabah güneş önce onun yüzüne vurur.', [['2008', 'tamamlanma yılı']]],
+      whip: ['Altın Kamçı', 'Rivayete göre genç Temüçin, altın kamçıyı tam bu bozkırda buldu. Elindeki kamçı o efsaneyi taşır.', []],
+      deck: ['Seyir Terası', 'Ziyaretçiler atın göğsünden girip yelesindeki teraza çıkar; bakış doğuya, bozkırın ve Hentii dağlarının üzerine uzanır.', []],
+      dusk: ['Gün Batımı', 'Dünyanın en büyük atlı heykeli. Akşam olunca kaidesi ışıklarla yanar, gökyüzü yıldızlarla dolar.', []],
+    },
+    end: 'Serbest keşfe geç', endTitle: 'Tsonjin Boldog',
+    facts: ['Konum · Töv Aymağı, Moğolistan', 'Yapım · 2006–2008', 'Yön · Doğu'],
+  },
+  en: {
+    title: 'Genghis Khan', subtitle: 'Equestrian Statue', place: 'Tsonjin Boldog · Mongolia',
+    begin: 'Begin the Journey', explore: 'Free Explore', loading: 'Pouring the steel…', hint: 'Sound on, fullscreen recommended',
+    skip: 'Skip tour', replay: 'Replay tour', sound: 'Sound', lang: 'TR', pause: 'Pause', play: 'Play',
+    hour: 'Hour', views: 'Viewpoints', quality: 'Quality',
+    v: { overview: 'Overview', face: 'Face', whip: 'Whip', columns: 'Columns', head: 'Horse head', side: 'Profile' },
+    ch: {
+      steppe: ['Out on the Steppe', '54 km east of Ulaanbaatar, on the banks of the Tuul River, a giant of steel rises above the endless grassland.', [['54 km', 'east of Ulaanbaatar']]],
+      scale: ['Scale', 'Stainless steel, nearly 50 metres with its pedestal. The 36 columns of the base stand for the 36 khans from Genghis to Ligdan.', [['40 m', 'statue height'], ['250 t', 'stainless steel'], ['36', 'columns']]],
+      gaze: ['Facing East', 'His gaze turns east, toward Khentii, the land where he was born. Every morning the sun touches his face first.', [['2008', 'completed']]],
+      whip: ['The Golden Whip', 'Legend says young Temüjin found a golden whip on this very steppe. The whip in his hand carries that story.', []],
+      deck: ['The Viewing Deck', 'Visitors enter through the horse’s chest and step out onto the deck at its mane, with the view running east across the steppe toward the Khentii mountains.', []],
+      dusk: ['Dusk', 'The largest equestrian statue in the world. At night its pedestal glows and the sky fills with stars.', []],
+    },
+    end: 'Continue to free explore', endTitle: 'Tsonjin Boldog',
+    facts: ['Location · Töv Province, Mongolia', 'Built · 2006–2008', 'Facing · East'],
+  },
+};

@@ -1,0 +1,36 @@
+{
+  "errors": [],
+  "messages": [
+    {
+      "type": "info",
+      "text": "New York Atelier initialized {boxes: 23731, faces: 142386, landCount: 11765, count: 162, cars: 95}"
+    }
+  ],
+  "requests": [
+    "file:///home/forn/sonnet-vs-astra/t9-diorama-detayli/astra/index.html",
+    "file:///home/forn/sonnet-vs-astra/t9-diorama-detayli/astra/src/style.css",
+    "file:///home/forn/sonnet-vs-astra/t9-diorama-detayli/astra/dist/app.js"
+  ],
+  "photoHidden": true,
+  "download": "New-York-overview-17-5.png",
+  "audioEnabled": "true",
+  "stats": {
+    "boxes": 23731,
+    "faces": 142386,
+    "landCount": 11765,
+    "count": 162,
+    "cars": 95,
+    "quality": "high",
+    "estimatedVisibleVoxelFaces": 154386,
+    "worstCaseVoxelFaces": 149694
+  },
+  "fps": {
+    "samples": 125,
+    "mean": 1.0154750270319453,
+    "p50ms": 950,
+    "p95ms": 2533.199999999997,
+    "drawCalls": 41,
+    "triangles": 292964
+  },
+  "webgl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+}

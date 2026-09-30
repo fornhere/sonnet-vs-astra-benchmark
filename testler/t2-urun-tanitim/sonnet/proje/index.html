@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="UTF-8"/><meta name="viewport" content="width=1920, height=1080"/>
+<title>Hafıza OS — tanıtım</title>
+<script src="assets/gsap.min.js"></script>
+<style>@font-face{font-family:"Instrument Serif";src:url("assets/fonts/InstrumentSerif-Regular.ttf");font-weight:400;font-style:normal}
+@font-face{font-family:"Instrument Serif";src:url("assets/fonts/InstrumentSerif-Italic.ttf");font-weight:400;font-style:italic}
+@font-face{font-family:"JetBrains Mono";src:url("assets/fonts/JetBrainsMono-Regular.ttf");font-weight:400}
+@font-face{font-family:"JetBrains Mono";src:url("assets/fonts/JetBrainsMono-Bold.ttf");font-weight:700}
+@font-face{font-family:"Inter";src:url("assets/fonts/InterTight.ttf");font-weight:100 900}
+:root{--ink:#0C0B09;--panel:#141310;--panel2:#1A1915;--line:#2C2A23;--paper:#F1EADB;--dim:#8F887A;--dim2:#5E5A50;--amber:#F6A93B;--green:#7BD8A4;--red:#F58468;--sky:#86B7FF}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--ink)}
+#root{position:relative;width:100%;height:100%;overflow:hidden;background:var(--ink);color:var(--paper);font-family:"Inter",system-ui,sans-serif}
+.serif{font-family:"Instrument Serif",serif;font-weight:400}
+.mono{font-family:"JetBrains Mono",monospace}
+.amber{color:var(--amber)}.dimc{color:var(--dim)}.green{color:var(--green)}.red{color:var(--red)}
+/* backdrop */
+#bg{position:absolute;inset:0;overflow:hidden}
+#dots{position:absolute;inset:-40px;background-image:radial-gradient(circle,rgba(241,234,219,.13) 1.4px,transparent 1.6px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,#000 20%,transparent 100%);mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,#000 20%,transparent 100%);opacity:.55}
+#glow{position:absolute;left:560px;top:190px;width:800px;height:700px;border-radius:50%;background:radial-gradient(closest-side,rgba(246,169,59,.30),rgba(246,169,59,.10) 55%,transparent 100%);filter:blur(30px);opacity:.35}
+#glow2{position:absolute;left:1180px;top:520px;width:900px;height:800px;border-radius:50%;background:radial-gradient(closest-side,rgba(134,183,255,.10),transparent 100%);filter:blur(30px);opacity:.5}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 85% 80% at 50% 50%,transparent 55%,rgba(0,0,0,.62) 100%);pointer-events:none;z-index:50}
+#grain{position:absolute;inset:-300px;z-index:51;pointer-events:none;opacity:.07;mix-blend-mode:screen;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+/* persistent chrome */
+#chrome{position:absolute;left:0;right:0;top:0;height:110px;z-index:55;pointer-events:none}
+#wm{position:absolute;left:72px;top:40px;display:flex;align-items:center;gap:14px;font-weight:600;font-size:23px;letter-spacing:.01em;color:var(--paper)}
+#wm svg{width:30px;height:30px;color:var(--paper)}
+#chap{position:absolute;right:72px;top:44px;width:600px;height:30px;font-family:"JetBrains Mono",monospace;font-size:20px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.chl{position:absolute;right:0;top:0;white-space:nowrap;opacity:0}
+.chl .n{color:var(--amber);margin-right:16px}
+#prog{position:absolute;left:0;bottom:0;height:4px;width:1920px;background:var(--amber);transform-origin:0 50%;z-index:60;opacity:.9}
+#capwrap{position:absolute;left:0;right:0;bottom:0;height:230px;z-index:45;background:linear-gradient(to top,rgba(8,7,6,.72),transparent);pointer-events:none}
+.cap{position:absolute;left:160px;right:160px;bottom:74px;text-align:center;font-size:38px;font-weight:500;letter-spacing:-.005em;color:var(--paper);text-shadow:0 2px 18px rgba(0,0,0,.7);opacity:0}
+/* scenes */
+.scn{position:absolute;inset:0}
+.sc{position:absolute;inset:0}
+.abs{position:absolute}
+.tag{font-family:"JetBrains Mono",monospace;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.panel{position:absolute;border-radius:22px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.04)}
+.wbar{height:54px;display:flex;align-items:center;gap:9px;padding:0 22px;border-bottom:1px solid var(--line)}
+.wbar i{width:13px;height:13px;border-radius:50%;background:#3A372E;display:block}
+.wbar span{margin-left:14px;font-family:"JetBrains Mono",monospace;font-size:19px;color:var(--dim)}
+.w{display:inline-block;white-space:nowrap}
+.ch{display:inline-block}
+.cursor{display:inline-block;width:.55em;height:1.05em;background:var(--amber);vertical-align:-.16em;margin-left:3px}
+.chip{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 22px;border-radius:14px;border:1px solid var(--line);background:rgba(26,25,21,.85);font-family:"JetBrains Mono",monospace;font-size:22px;color:var(--paper);white-space:nowrap}
+.chip.a{border-color:rgba(246,169,59,.55);color:var(--amber)}
+.chip.g{border-color:rgba(123,216,164,.5);color:var(--green)}
+/* hook */
+#rows{position:absolute;left:140px;top:150px;width:1640px}
+.row{height:80px;display:flex;align-items:center;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:44px;opacity:0;white-space:pre-wrap}
+.row .pr{color:var(--amber);margin-right:26px}
+.row .lb{font-size:21px;color:var(--dim);letter-spacing:.12em;text-transform:uppercase}
+.row .lt{flex:1}
+/* lose */
+#lpanel{left:410px;top:120px;width:1100px;height:440px}
+.tabs{position:absolute;left:24px;top:22px;height:60px;width:1050px}
+.tab{position:absolute;top:0;width:318px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600;color:var(--dim2);border:1px solid var(--line)}
+#tabhl{position:absolute;left:0;top:0;width:318px;height:60px;border-radius:14px;border:2px solid var(--amber);background:rgba(246,169,59,.10);box-shadow:0 0 40px rgba(246,169,59,.25)}
+#ctr{position:absolute;right:26px;top:106px;font-family:"JetBrains Mono",monospace;font-size:21px;color:var(--dim);letter-spacing:.08em}
+#ctr b{color:var(--amber);font-weight:700}
+.ctxl{position:absolute;left:44px;font-family:"JetBrains Mono",monospace;font-size:31px;white-space:pre}
+.ctxl .k{color:var(--dim);display:inline-block;width:190px;font-size:23px;letter-spacing:.06em}
+#lprompt{position:absolute;left:44px;top:158px;font-family:"JetBrains Mono",monospace;font-size:34px;white-space:pre-wrap;width:1000px;line-height:1.5}
+#lprompt .pr{color:var(--amber)}
+.lhead{position:absolute;left:0;right:0;text-align:center;font-size:158px;line-height:1;letter-spacing:-.02em}
+/* title */
+#thead,#ehead{display:flex;align-items:center;justify-content:center;gap:52px}
+#tmark{width:190px;height:190px;color:var(--paper);flex:none}
+#ttitle{font-size:270px;line-height:1;letter-spacing:-.02em;white-space:nowrap;padding-bottom:18px}
+#ttag{position:absolute;left:0;right:0;text-align:center;font-size:86px;line-height:1.1;font-style:italic;top:640px}
+#tchips{position:absolute;left:0;right:0;top:800px;display:flex;justify-content:center;gap:18px}
+/* vault */
+#vwin{left:140px;top:150px;width:930px;height:720px}
+.tl{height:64px;display:flex;align-items:center;padding-left:34px;font-family:"JetBrains Mono",monospace;font-size:29px;position:relative;opacity:0}
+.tl .nm{width:330px;color:var(--paper)}
+.tl .nm em{font-style:normal;color:var(--dim2)}
+.tl .cm{font-family:"Inter",sans-serif;font-size:23px;color:var(--dim);font-weight:500}
+#vhl{position:absolute;top:0;left:14px;right:14px;height:64px;border-radius:12px;background:rgba(246,169,59,.13);border:1px solid rgba(246,169,59,.4);opacity:0}
+.vw{position:absolute;left:1160px;font-size:132px;line-height:1;white-space:nowrap;letter-spacing:-.015em}
+.vw small{font-family:"JetBrains Mono",monospace;font-size:20px;color:var(--amber);letter-spacing:.14em;vertical-align:top;margin-right:18px;position:relative;top:16px}
+/* hub */
+.agent{position:absolute;left:150px;width:600px;height:150px;border-radius:22px;padding:0 34px;display:flex;flex-direction:column;justify-content:center;gap:8px;opacity:0}
+.agent b{font-size:42px;font-weight:600;letter-spacing:-.01em}
+.agent span{font-family:"JetBrains Mono",monospace;font-size:22px;color:var(--dim)}
+.agent.dash{background:transparent;border:2px dashed var(--dim2);box-shadow:none}
+#vnode{position:absolute;left:1180px;top:290px;width:420px;height:420px;border-radius:44px;background:linear-gradient(180deg,#1E1C17,#12110E);border:1.5px solid rgba(246,169,59,.6);box-shadow:0 0 120px rgba(246,169,59,.22),0 40px 100px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0}
+#vnode .big{font-size:96px;line-height:1}
+#vnode .sub{font-family:"JetBrains Mono",monospace;font-size:22px;color:var(--dim);letter-spacing:.06em}
+#hubsvg{position:absolute;left:0;top:0;width:1920px;height:1080px}
+/* recall */
+#cpanel{left:140px;top:140px;width:900px;height:640px}
+.msg{position:absolute;left:34px;right:34px;font-size:30px;line-height:1.42;border-radius:18px;padding:22px 26px;opacity:0}
+.msg.u{background:rgba(241,234,219,.07);border:1px solid var(--line)}
+.msg.a{background:rgba(246,169,59,.07);border:1px solid rgba(246,169,59,.28)}
+.msg .who{font-family:"JetBrains Mono",monospace;font-size:18px;letter-spacing:.16em;text-transform:uppercase;color:#B0A999;margin-bottom:8px;display:block}
+.msg.a .who{color:var(--amber)}
+#src{position:absolute;left:34px;bottom:30px;display:flex;gap:12px}
+.card{position:absolute;left:1120px;width:660px;border-radius:22px;padding:28px 34px;opacity:0}
+.card .k{font-family:"JetBrains Mono",monospace;font-size:19px;letter-spacing:.16em;text-transform:uppercase}
+.card .v{font-size:44px;font-weight:600;letter-spacing:-.015em;margin-top:12px;line-height:1.15;position:relative;display:inline-block}
+.card .s{font-size:23px;color:var(--dim);margin-top:12px;font-family:"JetBrains Mono",monospace}
+#strike{position:absolute;left:-6px;top:52%;height:4px;width:0;background:var(--red);border-radius:2px}
+/* review */
+.node{position:absolute;top:430px;width:340px;height:170px;border-radius:22px;padding:0 30px;display:flex;flex-direction:column;justify-content:center;gap:8px;opacity:0}
+.node b{font-size:40px;font-weight:600;letter-spacing:-.01em}
+.node span{font-family:"JetBrains Mono",monospace;font-size:20px;color:var(--dim);letter-spacing:.03em;line-height:1.35}
+.nfile{position:absolute;top:625px;width:360px;text-align:center;font-family:"JetBrains Mono",monospace;font-size:20px;color:var(--dim);opacity:0;line-height:1.4}
+#rsvg{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#nolabel{position:absolute;left:0;top:222px;width:1920px;text-align:center;opacity:0}
+.rchip{position:absolute;top:760px;width:388px;height:104px;border-radius:18px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 26px;opacity:0}
+.rchip i{width:14px;height:56px;border-radius:7px;display:block}
+.rchip b{font-size:30px;font-weight:600;line-height:1.15}
+.rchip small{display:block;font-family:"JetBrains Mono",monospace;font-size:17px;letter-spacing:.14em;color:var(--dim);margin-bottom:4px;text-transform:uppercase}
+/* install */
+#iterm{left:160px;top:160px;width:1600px;height:250px}
+#icmd{position:absolute;left:38px;top:96px;font-family:"JetBrains Mono",monospace;font-size:26.5px;white-space:pre;letter-spacing:-.01em}
+#icmd .pr{color:var(--green)}
+#iagent{left:160px;top:470px;width:1600px;height:290px}
+#iprompt{position:absolute;left:38px;top:86px;width:1520px;font-size:31px;line-height:1.5;color:var(--paper)}
+#ichips{position:absolute;left:160px;top:810px;display:flex;gap:16px}
+/* proof */
+#p360{position:absolute;left:130px;top:190px;font-size:520px;line-height:.9;height:470px;letter-spacing:-.04em;color:var(--paper)}
+#ptest{position:absolute;left:150px;top:700px;font-size:64px;font-style:italic;color:var(--amber)}
+.os{position:absolute;left:1010px;width:770px;height:132px;border-radius:22px;padding:0 34px;display:flex;align-items:center;justify-content:space-between;opacity:0}
+.os b{font-size:44px;font-weight:600;letter-spacing:-.01em}
+.os .st{font-family:"JetBrains Mono",monospace;font-size:26px;color:var(--green);display:flex;align-items:center;gap:14px}
+.os .bar{position:absolute;left:34px;right:34px;bottom:0;height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.os .bar i{display:block;height:100%;width:100%;background:var(--green);transform-origin:0 50%}
+#pnote{position:absolute;left:150px;top:842px;width:1640px;display:flex;gap:22px;align-items:center;opacity:0;font-size:25px;color:var(--dim);line-height:1.4}
+#pnote .bx{flex:none;padding:8px 16px;border:1px solid rgba(246,169,59,.5);color:var(--amber);border-radius:10px;font-family:"JetBrains Mono",monospace;font-size:17px;letter-spacing:.14em}
+/* end */
+#emark{width:150px;height:150px;color:var(--paper);flex:none}
+#etitle{font-size:230px;line-height:1;letter-spacing:-.02em;white-space:nowrap;padding-bottom:14px}
+#etag{position:absolute;left:0;right:0;text-align:center;font-size:66px;line-height:1.1;font-style:italic;top:590px}
+#eurl{position:absolute;left:0;right:0;top:760px;display:flex;justify-content:center}
+#eurl .chip{height:78px;font-size:34px;padding:0 38px;border-radius:20px}
+#ecmd{position:absolute;left:0;right:0;top:880px;text-align:center;font-family:"JetBrains Mono",monospace;font-size:21px;color:var(--dim);opacity:0}
+
+.tex{position:absolute;inset:0;overflow:hidden}
+.tex div{position:absolute;font-family:"JetBrains Mono",monospace;font-size:27px;color:var(--paper);opacity:.075;white-space:nowrap}
+#iterm{height:214px}
+#iagent{top:434px}
+#ichips{top:790px}
+#iprompt{font-size:28px}
+.tex{-webkit-mask-image:radial-gradient(ellipse 48% 42% at 50% 48%,transparent 35%,#000 100%);mask-image:radial-gradient(ellipse 48% 42% at 50% 48%,transparent 35%,#000 100%)}
+.tex div{opacity:.06!important}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="66.0">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="logo" viewBox="0 0 100 100"><rect x="14" y="7" width="72" height="86" rx="15" fill="none" stroke="currentColor" stroke-width="5.5"/><line x1="30" y1="33" x2="68" y2="33" stroke="#F6A93B" stroke-width="8" stroke-linecap="round"/><line x1="30" y1="52" x2="70" y2="52" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity=".9"/><line x1="30" y1="70" x2="52" y2="70" stroke="currentColor" stroke-width="6" stroke-linecap="round" opacity=".9"/></symbol></defs></svg>
+<div id="bg"><div id="glow"></div><div id="glow2"></div><div id="dots"></div></div>
+
+<div id="chrome">
+  <div id="wm"><svg viewBox="0 0 100 100"><use href="#logo"/></svg><span>Hafıza OS</span></div>
+  <div id="chap"><span class="chl" id="chl1"><span class="n">01</span>KASA</span><span class="chl" id="chl2"><span class="n">02</span>AJANLAR</span><span class="chl" id="chl3"><span class="n">03</span>KAYNAK</span><span class="chl" id="chl4"><span class="n">04</span>İNCELEME</span><span class="chl" id="chl5"><span class="n">05</span>KURULUM</span><span class="chl" id="chl6"><span class="n">06</span>GÜVENCE</span></div>
+</div>
+
+<!-- 1 HOOK -->
+<section id="s-hook" class="clip scn" data-start="0.0" data-duration="4.8"><div class="sc">
+  <div class="tag abs" style="left:140px;top:104px">// her sohbet, sıfırdan</div>
+  <div id="rows"></div>
+</div></section>
+
+<!-- 2 LOSE -->
+<section id="s-lose" class="clip scn" data-start="4.4" data-duration="4.6"><div class="sc">
+  <div id="lpanel" class="panel">
+    <div class="tabs">
+      <div id="tabhl"></div>
+      <div class="tab" style="left:0">Claude Code</div>
+      <div class="tab" style="left:336px">Codex</div>
+      <div class="tab" style="left:672px">Antigravity</div>
+    </div>
+    <div id="ctr">bağlam · <b id="ctrn">3</b> kayıt</div>
+    <div id="lctx">
+      <div class="ctxl" style="top:150px"><span class="k">tercih</span><span class="v">kısa ve açık anlat</span></div>
+      <div class="ctxl" style="top:228px"><span class="k">karar</span><span class="v">fiyat sayfası: tek sütun</span></div>
+      <div class="ctxl" style="top:306px"><span class="k">açık iş</span><span class="v">mobil menü testi</span></div>
+    </div>
+    <div id="lprompt"></div>
+  </div>
+  <div class="lhead serif" id="lh1" style="top:610px">Ajan değişir.</div>
+  <div class="lhead serif" id="lh2" style="top:780px"><em>Bağlam</em> kaybolur.</div>
+</div></section>
+
+<!-- 3 TITLE -->
+<section id="s-title" class="clip scn" data-start="8.6" data-duration="7.1"><div class="sc"><div class="tex" id="tex1"></div>
+  <div id="thead" class="abs" style="left:0;top:210px;width:1920px;height:300px">
+    <svg id="tmark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+    <div id="ttitle" class="serif">Hafıza OS</div>
+  </div>
+  <div id="ttag" class="serif"></div>
+  <div id="tchips">
+    <span class="chip a">AÇIK KAYNAK</span><span class="chip">MIT</span><span class="chip">DÜZ MARKDOWN</span><span class="chip">SENİN DİSKİNDE</span>
+  </div>
+</div></section>
+
+<!-- 4 VAULT -->
+<section id="s-vault" class="clip scn" data-start="15.3" data-duration="7.2"><div class="sc">
+  <div id="vwin" class="panel">
+    <div class="wbar"><i></i><i></i><i></i><span>~/Hafiza</span></div>
+    <div id="vtree" style="position:relative;padding-top:14px">
+      <div id="vhl"></div>
+    </div>
+  </div>
+  <div class="vw serif" id="vw1" style="top:190px"><small>01</small>Tercihlerin</div>
+  <div class="vw serif" id="vw2" style="top:340px"><small>02</small>Kararların</div>
+  <div class="vw serif" id="vw3" style="top:490px"><small>03</small>İşlerin</div>
+  <div class="vw serif" id="vw4" style="top:640px"><small>04</small>Kaynakların</div>
+  <div id="vchips" class="abs" style="left:1160px;top:820px;display:flex;gap:14px">
+    <span class="chip a" id="vc1">yerel</span><span class="chip" id="vc2">düz metin</span><span class="chip" id="vc3">Obsidian isteğe bağlı</span>
+  </div>
+</div></section>
+
+<!-- 5 HUB -->
+<section id="s-hub" class="clip scn" data-start="22.1" data-duration="5.3"><div class="sc">
+  <svg id="hubsvg" viewBox="0 0 1920 1080"></svg>
+  <div class="agent panel" id="ag1" style="top:150px"><b>Claude Code</b><span>~/.claude/CLAUDE.md</span></div>
+  <div class="agent panel" id="ag2" style="top:340px"><b>Codex</b><span>~/.codex/AGENTS.md</span></div>
+  <div class="agent panel" id="ag3" style="top:530px"><b>Antigravity CLI</b><span>~/.gemini/GEMINI.md</span></div>
+  <div class="agent dash" id="ag4" style="top:720px"><b class="dimc">Diğer ajanlar</b><span>seçilen Markdown · yalnız yönerge</span></div>
+  <div id="vnode"><svg viewBox="0 0 100 100" style="width:120px;height:120px;color:var(--paper)"><use href="#logo"/></svg><div class="big serif">Hafiza/</div><div class="sub">tek kasa · düz Markdown</div></div>
+</div></section>
+
+<!-- 6 RECALL -->
+<section id="s-recall" class="clip scn" data-start="27.0" data-duration="8.9"><div class="sc">
+  <div id="cpanel" class="panel">
+    <div class="wbar"><i></i><i></i><i></i><span>yeni sohbet · Hafıza OS bağlı</span></div>
+    <div class="msg u" id="mu" style="top:88px"><span class="who">sen</span><span id="mut"></span></div>
+    <div class="msg a" id="ma" style="top:300px"><span class="who">ajan</span><span id="mat"></span></div>
+    <div id="src">
+      <span class="chip a" id="sc1">projeler/web-sitesi.md</span>
+      <span class="chip" id="sc2">12 Eylül</span>
+      <span class="chip g" id="sc3">sürüm 3 ✓</span>
+    </div>
+  </div>
+  <div class="tag abs" id="ornek" style="left:1120px;top:118px;opacity:0">örnek senaryo · kaynak denetimi</div>
+  <div class="card panel" id="cold" style="top:168px;border-color:rgba(234,106,80,.3)">
+    <div class="k red">ESKİ · 3 Eylül</div>
+    <div class="v dimc"><span id="oldtxt">Üç sütunlu düzen</span><i id="strike"></i></div>
+    <div class="s">güncel karar sayılmaz</div>
+  </div>
+  <div id="rarrow" class="abs mono" style="left:1120px;top:410px;width:660px;text-align:center;font-size:34px;color:var(--dim);opacity:0">↓ yerini aldı</div>
+  <div class="card panel" id="cnew" style="top:480px;border-color:rgba(123,216,164,.55);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 80px rgba(123,216,164,.12)">
+    <div class="k green">GÜNCEL · 12 Eylül</div>
+    <div class="v">Tek sütun, sade düzen</div>
+    <div class="s">kaynak yolu ve sürüm doğrulandı ✓</div>
+  </div>
+  <div id="rcmd" class="abs mono" style="left:140px;top:826px;font-size:21px;color:var(--dim);white-space:pre;opacity:0"><span class="amber">$</span> python3 araclar/hafiza.py --vault . context 'ilgili karar' --limit 5 --char-budget 1200</div>
+</div></section>
+
+<!-- 7 REVIEW -->
+<section id="s-review" class="clip scn" data-start="35.5" data-duration="10.5"><div class="sc">
+  <svg id="rsvg" viewBox="0 0 1920 1080"></svg>
+  <div id="nolabel"><span class="chip" style="border-color:rgba(234,106,80,.6);color:var(--red);height:56px;font-size:24px;background:#141210">✕ doğrudan yazmaz</span></div>
+  <div class="node panel" id="n1" style="left:85px"><b>Görev ajanı</b><span>yeni bilgi önerir</span></div>
+  <div class="node panel" id="n2" style="left:555px;border-color:rgba(246,169,59,.5)"><b class="amber">Kaynaklı aday</b><span>öneri · onaylı gerçek değil</span></div>
+  <div class="node panel" id="n3" style="left:1025px"><b>İnceleme</b><span>kaynak · kalıcılık · kapsam · çelişki</span></div>
+  <div class="node panel" id="n4" style="left:1495px;border-color:rgba(123,216,164,.55)"><b class="green">Katalog</b><span>kanonik kayıt</span></div>
+  <div class="nfile" id="f2" style="left:545px">gelen-kutusu/<br>hafıza-adayları.jsonl</div>
+  <div class="nfile" id="f4" style="left:1485px">zihin/<br>hafıza-kataloğu.jsonl</div>
+  <div class="rchip" id="rc1" style="left:85px"><i style="background:var(--paper)"></i><div><small>1</small><b>Kaynak</b></div></div>
+  <div class="rchip" id="rc2" style="left:535px"><i style="background:var(--amber)"></i><div><small>2</small><b>Öneri</b></div></div>
+  <div class="rchip" id="rc3" style="left:985px"><i style="background:var(--sky)"></i><div><small>3</small><b>Senin kararın</b></div></div>
+  <div class="rchip" id="rc4" style="left:1435px"><i style="background:var(--green)"></i><div><small>4</small><b>Doğrulanmış sonuç</b></div></div>
+</div></section>
+
+<!-- 8 INSTALL -->
+<section id="s-install" class="clip scn" data-start="45.6" data-duration="6.2"><div class="sc">
+  <div id="iterm" class="panel">
+    <div class="wbar"><i></i><i></i><i></i><span>Linux / macOS · tek komut</span></div>
+    <div id="icmd"></div>
+  </div>
+  <div id="iagent" class="panel">
+    <div class="wbar"><i></i><i></i><i></i><span>ya da: ajanına yapıştır</span></div>
+    <div id="iprompt"></div>
+  </div>
+  <div id="ichips">
+    <span class="chip a" id="ic1">Claude Code · Codex · Antigravity</span>
+    <span class="chip" id="ic2">Python 3.10+</span>
+    <span class="chip" id="ic3">Mem0 &amp; Jev isteğe bağlı · Enter ile atla</span>
+  </div>
+</div></section>
+
+<!-- 9 PROOF -->
+<section id="s-proof" class="clip scn" data-start="51.4" data-duration="8.5"><div class="sc">
+  <div id="p360" class="serif">0</div>
+  <div id="ptest" class="serif">testlik paket</div>
+  <div class="os panel" id="os1" style="top:150px"><b>Linux</b><div class="st"><span>başarılı</span><span>✓</span></div><div class="bar"><i></i></div></div>
+  <div class="os panel" id="os2" style="top:308px"><b>macOS</b><div class="st"><span>başarılı</span><span>✓</span></div><div class="bar"><i></i></div></div>
+  <div class="os panel" id="os3" style="top:466px"><b>Windows</b><div class="st"><span>başarılı</span><span>✓</span></div><div class="bar"><i></i></div></div>
+  <div id="pchips" class="abs" style="left:1010px;top:640px;display:flex;gap:14px"><span class="chip a" id="pc1">MIT · açık kaynak</span><span class="chip" id="pc2">sürüm 2026.09.19.1</span></div>
+  <div id="pskip" class="abs" style="left:1010px;top:724px;font-size:22px;color:var(--dim);opacity:0;width:770px;line-height:1.4">İşletim sistemine özgü bir test diğer platformda atlanır.</div>
+  <div id="pnote"><span class="bx">DÜRÜST SINIR</span><span>Kurulum, bütün sohbetlerini otomatik hatırlama garantisi değildir: yönerge okuma, kaynaklı geri çağırma ve oturum kaydı ayrı katmanlardır.</span></div>
+</div></section>
+
+<!-- 10 END -->
+<section id="s-end" class="clip scn" data-start="59.5" data-duration="6.5"><div class="sc"><div class="tex" id="tex2"></div>
+  <div id="ehead" class="abs" style="left:0;top:190px;width:1920px;height:260px">
+    <svg id="emark" viewBox="0 0 100 100"><use href="#logo"/></svg>
+    <div id="etitle" class="serif">Hafıza OS</div>
+  </div>
+  <div id="etag" class="serif"><span>Ajanlar değişsin,</span> <span class="amber">hafızan aynı yerde kalsın.</span></div>
+  <div id="eurl"><span class="chip a" id="eurlc"><span id="eurlt"></span></span></div>
+  <div id="ecmd">curl -fsSL https://raw.githubusercontent.com/fornhere/hafiza-os/main/install.sh | bash</div>
+</div></section>
+
+<div id="capwrap"></div>
+<div id="vig"></div>
+<div id="grain"></div>
+<div id="prog"></div>
+
+</div>
+<script>
+const C = {
+ "scenes": [
+  {
+   "id": "hook",
+   "start": 0.0,
+   "end": 4.4,
+   "dur": 4.4
+  },
+  {
+   "id": "lose",
+   "start": 4.4,
+   "end": 8.6,
+   "dur": 4.2
+  },
+  {
+   "id": "title",
+   "start": 8.6,
+   "end": 15.3,
+   "dur": 6.7
+  },
+  {
+   "id": "vault",
+   "start": 15.3,
+   "end": 22.1,
+   "dur": 6.8
+  },
+  {
+   "id": "hub",
+   "start": 22.1,
+   "end": 27.0,
+   "dur": 4.9
+  },
+  {
+   "id": "recall",
+   "start": 27.0,
+   "end": 35.5,
+   "dur": 8.5
+  },
+  {
+   "id": "review",
+   "start": 35.5,
+   "end": 45.6,
+   "dur": 10.1
+  },
+  {
+   "id": "install",
+   "start": 45.6,
+   "end": 51.4,
+   "dur": 5.8
+  },
+  {
+   "id": "proof",
+   "start": 51.4,
+   "end": 59.5,
+   "dur": 8.1
+  },
+  {
+   "id": "end",
+   "start": 59.5,
+   "end": 66.0,
+   "dur": 6.5
+  }
+ ],
+ "vo": [
+  {
+   "line": "l1",
+   "start": 0.6,
+   "end": 3.91,
+   "words": [
+    {
+     "w": "Her",
+     "s": 0.6,
+     "e": 0.981
+    },
+    {
+     "w": "yeni",
+     "s": 1.017,
+     "e": 1.231
+    },
+    {
+     "w": "sohbette",
+     "s": 1.231,
+     "e": 1.874
+    },
+    {
+     "w": "aynı",
+     "s": 2.04,
+     "e": 2.314
+    },
+    {
+     "w": "şeyleri",
+     "s": 2.314,
+     "e": 2.707
+    },
+    {
+     "w": "baştan",
+     "s": 2.707,
+     "e": 3.112
+    },
+    {
+     "w": "anlatıyorsun",
+     "s": 3.112,
+     "e": 3.91
+    }
+   ]
+  },
+  {
+   "line": "l2",
+   "start": 4.8,
+   "end": 8.119,
+   "words": [
+    {
+     "w": "Ajan",
+     "s": 4.8,
+     "e": 5.348
+    },
+    {
+     "w": "değişir",
+     "s": 5.348,
+     "e": 5.824
+    },
+    {
+     "w": "Bağlam",
+     "s": 6.917,
+     "e": 7.571
+    },
+    {
+     "w": "kaybolur",
+     "s": 7.583,
+     "e": 8.119
+    }
+   ]
+  },
+  {
+   "line": "l3",
+   "start": 9.1,
+   "end": 14.133,
+   "words": [
+    {
+     "w": "Hafıza",
+     "s": 9.1,
+     "e": 9.743
+    },
+    {
+     "w": "OS",
+     "s": 9.743,
+     "e": 10.136
+    },
+    {
+     "w": "Ajanlar",
+     "s": 11.121,
+     "e": 11.859
+    },
+    {
+     "w": "değişsin",
+     "s": 11.859,
+     "e": 12.431
+    },
+    {
+     "w": "hafızan",
+     "s": 12.55,
+     "e": 13.05
+    },
+    {
+     "w": "aynı",
+     "s": 13.062,
+     "e": 13.348
+    },
+    {
+     "w": "yerde",
+     "s": 13.348,
+     "e": 13.645
+    },
+    {
+     "w": "kalsın",
+     "s": 13.645,
+     "e": 14.133
+    }
+   ]
+  },
+  {
+   "line": "l4",
+   "start": 15.75,
+   "end": 21.5,
+   "words": [
+    {
+     "w": "Tercihlerin",
+     "s": 15.75,
+     "e": 16.679
+    },
+    {
+     "w": "kararların",
+     "s": 16.774,
+     "e": 17.405
+    },
+    {
+     "w": "işlerin",
+     "s": 17.524,
+     "e": 17.964
+    },
+    {
+     "w": "ve",
+     "s": 17.964,
+     "e": 18.071
+    },
+    {
+     "w": "kaynakların",
+     "s": 18.071,
+     "e": 18.798
+    },
+    {
+     "w": "kendi",
+     "s": 18.917,
+     "e": 19.214
+    },
+    {
+     "w": "bilgisayarında",
+     "s": 19.214,
+     "e": 19.929
+    },
+    {
+     "w": "düz",
+     "s": 19.929,
+     "e": 20.167
+    },
+    {
+     "w": "Markdown",
+     "s": 20.167,
+     "e": 20.583
+    },
+    {
+     "w": "dosyalarında",
+     "s": 20.583,
+     "e": 21.202
+    },
+    {
+     "w": "durur",
+     "s": 21.202,
+     "e": 21.5
+    }
+   ]
+  },
+  {
+   "line": "l5",
+   "start": 22.5,
+   "end": 26.298,
+   "words": [
+    {
+     "w": "Claude",
+     "s": 22.5,
+     "e": 22.94
+    },
+    {
+     "w": "Code",
+     "s": 22.94,
+     "e": 23.238
+    },
+    {
+     "w": "Codex",
+     "s": 23.333,
+     "e": 23.726
+    },
+    {
+     "w": "Antigravity",
+     "s": 23.845,
+     "e": 24.631
+    },
+    {
+     "w": "hepsi",
+     "s": 24.774,
+     "e": 25.131
+    },
+    {
+     "w": "aynı",
+     "s": 25.131,
+     "e": 25.429
+    },
+    {
+     "w": "kasaya",
+     "s": 25.429,
+     "e": 25.809
+    },
+    {
+     "w": "bağlanır",
+     "s": 25.809,
+     "e": 26.298
+    }
+   ]
+  },
+  {
+   "line": "l6",
+   "start": 27.4,
+   "end": 34.493,
+   "words": [
+    {
+     "w": "Ajan",
+     "s": 27.4,
+     "e": 28.007
+    },
+    {
+     "w": "hatırlarken",
+     "s": 28.007,
+     "e": 28.686
+    },
+    {
+     "w": "kaynağını",
+     "s": 28.698,
+     "e": 29.209
+    },
+    {
+     "w": "gösterir",
+     "s": 29.209,
+     "e": 29.745
+    },
+    {
+     "w": "dosya",
+     "s": 29.912,
+     "e": 30.329
+    },
+    {
+     "w": "yolu",
+     "s": 30.329,
+     "e": 30.59
+    },
+    {
+     "w": "sürüm",
+     "s": 30.721,
+     "e": 31.15
+    },
+    {
+     "w": "Eski",
+     "s": 32.195,
+     "e": 32.576
+    },
+    {
+     "w": "bilgi",
+     "s": 32.6,
+     "e": 32.993
+    },
+    {
+     "w": "güncel",
+     "s": 33.136,
+     "e": 33.564
+    },
+    {
+     "w": "karar",
+     "s": 33.564,
+     "e": 33.874
+    },
+    {
+     "w": "sayılmaz",
+     "s": 33.874,
+     "e": 34.493
+    }
+   ]
+  },
+  {
+   "line": "l7",
+   "start": 35.9,
+   "end": 44.886,
+   "words": [
+    {
+     "w": "Yeni",
+     "s": 35.9,
+     "e": 36.305
+    },
+    {
+     "w": "bilgi",
+     "s": 36.317,
+     "e": 36.59
+    },
+    {
+     "w": "doğrudan",
+     "s": 36.59,
+     "e": 37.055
+    },
+    {
+     "w": "yazılmaz",
+     "s": 37.055,
+     "e": 37.662
+    },
+    {
+     "w": "kaynaklı",
+     "s": 37.829,
+     "e": 38.329
+    },
+    {
+     "w": "aday",
+     "s": 38.34,
+     "e": 38.59
+    },
+    {
+     "w": "olarak",
+     "s": 38.59,
+     "e": 38.9
+    },
+    {
+     "w": "incelemeden",
+     "s": 38.912,
+     "e": 39.531
+    },
+    {
+     "w": "geçer",
+     "s": 39.531,
+     "e": 39.948
+    },
+    {
+     "w": "Kaynak",
+     "s": 41.064,
+     "e": 41.66
+    },
+    {
+     "w": "öneri",
+     "s": 41.814,
+     "e": 42.183
+    },
+    {
+     "w": "senin",
+     "s": 42.279,
+     "e": 42.6
+    },
+    {
+     "w": "kararın",
+     "s": 42.6,
+     "e": 43.124
+    },
+    {
+     "w": "ve",
+     "s": 43.124,
+     "e": 43.255
+    },
+    {
+     "w": "doğrulanmış",
+     "s": 43.255,
+     "e": 43.862
+    },
+    {
+     "w": "sonuç",
+     "s": 43.862,
+     "e": 44.219
+    },
+    {
+     "w": "ayrı",
+     "s": 44.219,
+     "e": 44.445
+    },
+    {
+     "w": "tutulur",
+     "s": 44.445,
+     "e": 44.886
+    }
+   ]
+  },
+  {
+   "line": "l8",
+   "start": 46.0,
+   "end": 50.724,
+   "words": [
+    {
+     "w": "Tek",
+     "s": 46.0,
+     "e": 46.179
+    },
+    {
+     "w": "bir",
+     "s": 46.393,
+     "e": 46.583
+    },
+    {
+     "w": "komutla",
+     "s": 46.583,
+     "e": 47.036
+    },
+    {
+     "w": "kur",
+     "s": 47.036,
+     "e": 47.298
+    },
+    {
+     "w": "Ya",
+     "s": 48.414,
+     "e": 48.688
+    },
+    {
+     "w": "da",
+     "s": 48.7,
+     "e": 48.831
+    },
+    {
+     "w": "depoyu",
+     "s": 48.855,
+     "e": 49.2
+    },
+    {
+     "w": "ajanına",
+     "s": 49.2,
+     "e": 49.7
+    },
+    {
+     "w": "ver",
+     "s": 49.7,
+     "e": 49.95
+    },
+    {
+     "w": "o",
+     "s": 50.14,
+     "e": 50.236
+    },
+    {
+     "w": "kursun",
+     "s": 50.236,
+     "e": 50.724
+    }
+   ]
+  },
+  {
+   "line": "l9",
+   "start": 51.8,
+   "end": 59.06,
+   "words": [
+    {
+     "w": "Açık",
+     "s": 51.8,
+     "e": 52.3
+    },
+    {
+     "w": "kaynak",
+     "s": 52.3,
+     "e": 52.788
+    },
+    {
+     "w": "Em",
+     "s": 52.931,
+     "e": 53.11
+    },
+    {
+     "w": "Ay",
+     "s": 53.121,
+     "e": 53.276
+    },
+    {
+     "w": "Ti",
+     "s": 53.276,
+     "e": 53.395
+    },
+    {
+     "w": "lisanslı",
+     "s": 53.395,
+     "e": 54.002
+    },
+    {
+     "w": "Linux",
+     "s": 55.143,
+     "e": 55.821
+    },
+    {
+     "w": "macOS",
+     "s": 55.988,
+     "e": 56.44
+    },
+    {
+     "w": "ve",
+     "s": 56.452,
+     "e": 56.559
+    },
+    {
+     "w": "Windows'ta",
+     "s": 56.559,
+     "e": 57.131
+    },
+    {
+     "w": "üç",
+     "s": 57.179,
+     "e": 57.321
+    },
+    {
+     "w": "yüz",
+     "s": 57.357,
+     "e": 57.571
+    },
+    {
+     "w": "altmış",
+     "s": 57.571,
+     "e": 57.857
+    },
+    {
+     "w": "testlik",
+     "s": 57.857,
+     "e": 58.226
+    },
+    {
+     "w": "paket",
+     "s": 58.226,
+     "e": 58.548
+    },
+    {
+     "w": "başarılı",
+     "s": 58.548,
+     "e": 59.06
+    }
+   ]
+  },
+  {
+   "line": "l10",
+   "start": 59.9,
+   "end": 62.802,
+   "words": [
+    {
+     "w": "Hafıza",
+     "s": 59.9,
+     "e": 60.543
+    },
+    {
+     "w": "OS",
+     "s": 60.543,
+     "e": 60.936
+    },
+    {
+     "w": "Şimdi",
+     "s": 61.921,
+     "e": 62.267
+    },
+    {
+     "w": "GitHub'da",
+     "s": 62.267,
+     "e": 62.802
+    }
+   ]
+  }
+ ],
+ "caps": [
+  {
+   "s": 0.55,
+   "e": 4.16,
+   "t": "Her yeni sohbette, aynı şeyleri baştan anlatıyorsun.",
+   "l": "l1"
+  },
+  {
+   "s": 4.75,
+   "e": 6.074,
+   "t": "Ajan değişir.",
+   "l": "l2"
+  },
+  {
+   "s": 6.867,
+   "e": 8.369,
+   "t": "Bağlam kaybolur.",
+   "l": "l2"
+  },
+  {
+   "s": 9.05,
+   "e": 10.386,
+   "t": "Hafıza OS.",
+   "l": "l3"
+  },
+  {
+   "s": 11.071,
+   "e": 14.383,
+   "t": "Ajanlar değişsin, hafızan aynı yerde kalsın.",
+   "l": "l3"
+  },
+  {
+   "s": 15.7,
+   "e": 18.847,
+   "t": "Tercihlerin, kararların, işlerin ve kaynakların,",
+   "l": "l4"
+  },
+  {
+   "s": 18.867,
+   "e": 21.75,
+   "t": "kendi bilgisayarında düz Markdown dosyalarında durur.",
+   "l": "l4"
+  },
+  {
+   "s": 22.45,
+   "e": 26.548,
+   "t": "Claude Code, Codex, Antigravity: hepsi aynı kasaya bağlanır.",
+   "l": "l5"
+  },
+  {
+   "s": 27.35,
+   "e": 29.842,
+   "t": "Ajan hatırlarken kaynağını gösterir:",
+   "l": "l6"
+  },
+  {
+   "s": 29.862,
+   "e": 31.4,
+   "t": "dosya yolu, sürüm.",
+   "l": "l6"
+  },
+  {
+   "s": 32.145,
+   "e": 34.743,
+   "t": "Eski bilgi, güncel karar sayılmaz.",
+   "l": "l6"
+  },
+  {
+   "s": 35.85,
+   "e": 40.198,
+   "t": "Yeni bilgi doğrudan yazılmaz; kaynaklı aday olarak incelemeden geçer.",
+   "l": "l7"
+  },
+  {
+   "s": 41.014,
+   "e": 45.136,
+   "t": "Kaynak, öneri, senin kararın ve doğrulanmış sonuç ayrı tutulur.",
+   "l": "l7"
+  },
+  {
+   "s": 45.95,
+   "e": 47.548,
+   "t": "Tek bir komutla kur.",
+   "l": "l8"
+  },
+  {
+   "s": 48.364,
+   "e": 50.974,
+   "t": "Ya da depoyu ajanına ver, o kursun.",
+   "l": "l8"
+  },
+  {
+   "s": 51.75,
+   "e": 54.252,
+   "t": "Açık kaynak, MIT lisanslı.",
+   "l": "l9"
+  },
+  {
+   "s": 55.093,
+   "e": 59.31,
+   "t": "Linux, macOS ve Windows'ta 360 testlik paket başarılı.",
+   "l": "l9"
+  },
+  {
+   "s": 59.85,
+   "e": 63.052,
+   "t": "Hafıza OS. Şimdi GitHub'da.",
+   "l": "l10"
+  }
+ ],
+ "total": 66.0
+};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const S = {}, E = {}, V = {};
+C.scenes.forEach(s => { S[s.id] = s.start; E[s.id] = s.end; });
+C.vo.forEach(v => { V[v.line] = v.words; });
+const TOTAL = C.total;
+const tl = gsap.timeline({ paused: true });
+const OUT = "power3.out", IO = "power2.inOut";
+const TYPES = [], HITS = [];
+const hit = (t, k, g) => HITS.push({ t, k, g: g || 1 });
+
+/* ---------- helpers ---------- */
+function show(el, t, o = {}) {
+  const { y = 22, x = 0, dur = 0.6, scale = 1, ease = OUT } = o;
+  tl.fromTo(el, { opacity: 0, y, x, scale }, { opacity: 1, y: 0, x: 0, scale: 1, duration: dur, ease }, t);
+}
+function hide(el, t, dur = 0.35) { tl.to(el, { opacity: 0, duration: dur, ease: "power2.in" }, t); }
+function splitChars(el) {
+  const txt = el.textContent; el.textContent = "";
+  const words = txt.split(" ");
+  words.forEach((w, wi) => {
+    const ws = document.createElement("span"); ws.className = "w";
+    [...w].forEach(c => { const s = document.createElement("span"); s.className = "ch"; s.textContent = c; ws.appendChild(s); });
+    el.appendChild(ws);
+    if (wi < words.length - 1) el.appendChild(document.createTextNode(" "));
+  });
+  return [...el.querySelectorAll(".ch")];
+}
+function typeInto(el, text, t0, cps, opt = {}) {
+  el.textContent = "";
+  const chars = [];
+  if (opt.prefix) { const p = document.createElement("span"); p.className = "pr"; p.textContent = opt.prefix; p.style.display = "none"; el.appendChild(p); chars.push(p); }
+  [...text].forEach(c => { const s = document.createElement("span"); s.textContent = c; s.style.display = "none"; el.appendChild(s); chars.push(s); });
+  const cur = document.createElement("span"); cur.className = "cursor"; cur.style.display = "none"; el.appendChild(cur);
+  tl.set(cur, { display: "inline-block" }, t0);
+  tl.fromTo(chars, { display: "none" }, { display: "inline", duration: 0.001, stagger: 1 / cps }, t0);
+  const end = t0 + chars.length / cps;
+  if (opt.keepCursor) {
+    tl.fromTo(cur, { opacity: 1 }, { opacity: 0, duration: 0.001, repeat: 12, repeatDelay: 0.42, yoyo: true }, end + 0.2);
+  } else { tl.set(cur, { display: "none" }, end + 0.35); }
+  TYPES.push({ t: t0, n: text.length, cps });
+  return { chars, cur, end };
+}
+function draw(path, t, dur = 0.7, ease = IO) {
+  const L = path.getTotalLength();
+  path.style.strokeDasharray = L;
+  tl.fromTo(path, { strokeDashoffset: L }, { strokeDashoffset: 0, duration: dur, ease }, t);
+  return L;
+}
+const NS = "http://www.w3.org/2000/svg";
+function mk(tag, attrs, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; }
+function pulse(path, circ, t, dur) {
+  const L = path.getTotalLength(), o = { p: 0 };
+  tl.set(circ, { opacity: 1 }, t);
+  tl.fromTo(o, { p: 0 }, { p: 1, duration: dur, ease: "power1.inOut", onUpdate() { const pt = path.getPointAtLength(o.p * L); circ.setAttribute("cx", pt.x); circ.setAttribute("cy", pt.y); } }, t);
+  tl.set(circ, { opacity: 0 }, t + dur);
+}
+
+/* ---------- scene enter / exit ---------- */
+C.scenes.forEach((s, i) => {
+  const sc = $("#s-" + s.id + " .sc");
+  const last = i === C.scenes.length - 1;
+  tl.fromTo(sc, { opacity: 0, scale: i ? 1.03 : 1 }, { opacity: 1, scale: 1, duration: i ? 0.55 : 0.4, ease: OUT }, s.start);
+  if (!last) tl.to(sc, { opacity: 0, scale: 0.985, duration: 0.42, ease: "power2.in" }, s.end);
+  else tl.to(sc, { opacity: 0, duration: 0.55, ease: "power2.in" }, s.end - 0.55);
+  if (i) hit(s.start - 0.05, "whoosh");
+});
+
+/* ---------- backdrop drift ---------- */
+tl.to("#glow", { opacity: 0.22, duration: 1.2 }, 0.2);
+tl.to("#glow", { x: 340, y: 70, opacity: 0.55, scale: 1.5, duration: 1.5, ease: OUT }, S.title);
+tl.to("#glow", { x: -500, y: 70, opacity: 0.22, scale: 1, duration: 1.4, ease: IO }, S.vault);
+tl.to("#glow", { x: 640, y: 50, opacity: 0.28, duration: 1.4, ease: IO }, S.hub);
+tl.to("#glow", { x: -40, y: 110, opacity: 0.3, duration: 1.4, ease: IO }, S.recall);
+tl.to("#glow", { x: 340, y: -30, opacity: 0.25, duration: 1.4, ease: IO }, S.review);
+tl.to("#glow", { x: 0, y: 110, opacity: 0.2, duration: 1.4, ease: IO }, S.install);
+tl.to("#glow", { x: -460, y: 10, opacity: 0.3, duration: 1.4, ease: IO }, S.proof);
+tl.to("#glow", { x: 0, y: -10, opacity: 0.6, scale: 1.4, duration: 1.6, ease: OUT }, S.end);
+tl.fromTo("#grain", { x: 0, y: 0 }, { x: -300, y: -300, duration: TOTAL, ease: "steps(" + Math.round(TOTAL * 12) + ")" }, 0);
+tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: TOTAL, ease: "none" }, 0);
+
+/* ---------- chrome ---------- */
+tl.fromTo("#chrome", { opacity: 0 }, { opacity: 1, duration: 0.5 }, S.vault + 0.2);
+tl.to("#chrome", { opacity: 0, duration: 0.4 }, E.proof);
+const chapAt = [null, S.vault, S.hub, S.recall, S.review, S.install, S.proof];
+for (let i = 1; i <= 6; i++) {
+  const el = $("#chl" + i);
+  const end = i < 6 ? chapAt[i + 1] : E.proof;
+  tl.fromTo(el, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.4 }, chapAt[i] + 0.25);
+  tl.to(el, { opacity: 0, y: -8, duration: 0.3 }, end);
+}
+
+/* ---------- captions ---------- */
+const capHide = new Set(["l2", "l3", "l10"]);
+C.caps.forEach(c => {
+  if (capHide.has(c.l)) return;
+  const d = document.createElement("div"); d.className = "cap"; d.textContent = c.t; $("#capwrap").appendChild(d);
+  tl.fromTo(d, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.25, ease: OUT }, c.s);
+  tl.to(d, { opacity: 0, duration: 0.2 }, c.e - 0.05);
+});
+
+/* ================= 1 HOOK ================= */
+{
+  const rows = $("#rows"), agents = ["Claude Code", "Codex", "Antigravity"];
+  const T = [0.2, 1.30, 1.66, 2.0, 2.3, 2.58, 2.84, 3.08, 3.3];
+  const els = [];
+  for (let i = 0; i < 9; i++) {
+    const r = document.createElement("div"); r.className = "row";
+    r.innerHTML = '<span class="pr">›</span><span class="lt"></span><span class="lb">' + agents[i % 3] + ' · #' + String(i + 1).padStart(2, "0") + '</span>';
+    rows.appendChild(r); els.push(r);
+  }
+  els.forEach((r, i) => {
+    const t = T[i];
+    if (i === 0) {
+      tl.fromTo(r, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3, ease: OUT }, t);
+      typeInto(r.querySelector(".lt"), "Önce sana projemi anlatayım…", t + 0.15, 30);
+    } else {
+      r.querySelector(".lt").textContent = "Önce sana projemi anlatayım…";
+      tl.fromTo(r, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.28, ease: OUT }, t);
+      hit(t, "tick", 0.7);
+    }
+    for (let j = 0; j < i; j++) tl.to(els[j], { opacity: Math.max(0.16, 1 - 0.15 * (i - j)), duration: 0.3 }, t);
+  });
+}
+
+/* ================= 2 LOSE ================= */
+{
+  const t0 = S.lose;
+  const tabs = $$(".tab"), hl = $("#tabhl"), ctrn = $("#ctrn");
+  tabs[0].style.color = "var(--paper)";
+  const ctx = $$(".ctxl .v"), ks = $$(".ctxl .k");
+  const chars = ctx.map(v => splitChars(v));
+  show("#lpanel", t0 + 0.1, { y: 30, dur: 0.7 });
+  chars.forEach((cs, i) => tl.fromTo(cs, { opacity: 0 }, { opacity: 1, duration: 0.01, stagger: 0.018 }, t0 + 0.3 + i * 0.1));
+  // switch to Codex
+  const sw1 = 5.35, sw2 = 6.75;
+  const switchTab = (idx, t) => {
+    tl.to(hl, { x: idx * 336, duration: 0.45, ease: "power3.inOut" }, t);
+    tabs.forEach((tb, k) => tl.to(tb, { color: k === idx ? "#F1EADB" : "#5E5A50", duration: 0.3 }, t));
+    hit(t, "tick");
+  };
+  switchTab(1, sw1);
+  chars.forEach((cs, i) => tl.to(cs, { opacity: 0, y: (k) => -6 - (k % 4) * 4, duration: 0.5, ease: "power2.in", stagger: { each: 0.012, from: "end" } }, sw1 + 0.05 + i * 0.05));
+  tl.to(ks, { opacity: 0, duration: 0.4 }, sw1 + 0.1);
+  const cnt = { v: 3 };
+  tl.to(cnt, { v: 0, duration: 0.5, ease: "none", onUpdate() { ctrn.textContent = Math.round(cnt.v); } }, sw1 + 0.1);
+  const lp = $("#lprompt");
+  const ty1 = typeInto(lp, "Önce sana projemi anlatayım…", sw1 + 0.75, 30, { prefix: "› " });
+  // switch to Antigravity: prompt dissolves and is typed again
+  switchTab(2, sw2);
+  const pch = ty1.chars;
+  tl.to(pch, { opacity: 0, y: (k) => -4 - (k % 3) * 3, duration: 0.45, ease: "power2.in", stagger: { each: 0.01, from: "end" } }, sw2 + 0.05);
+  // second typing in a fresh element
+  const lp2 = document.createElement("div"); lp2.id = "lprompt2"; lp2.style.cssText = "position:absolute;left:44px;top:158px;font-family:'JetBrains Mono',monospace;font-size:34px;white-space:pre-wrap;width:1000px"; lp.parentNode.appendChild(lp2);
+  typeInto(lp2, "Önce sana projemi anlatayım…", sw2 + 0.7, 30, { prefix: "› ", keepCursor: true });
+  // headline
+  const h1 = splitChars($("#lh1")), h2 = splitChars($("#lh2"));
+  const w = V.l2;
+  tl.fromTo(h1, { opacity: 0, y: 50, rotate: 4 }, { opacity: 1, y: 0, rotate: 0, duration: 0.6, ease: OUT, stagger: 0.035 }, w[0].s - 0.05);
+  tl.fromTo(h2, { opacity: 0, y: 50, rotate: 4 }, { opacity: 1, y: 0, rotate: 0, duration: 0.6, ease: OUT, stagger: 0.035 }, w[2].s - 0.05);
+  const kay = h2.slice(7);
+  tl.to(kay, { opacity: 0, y: (k) => 8 + (k % 3) * 6, duration: 0.7, ease: "power2.in", stagger: { each: 0.06, from: "start" } }, w[3].e + 0.05);
+  hit(w[2].s, "deny");
+}
+
+/* ================= 3 TITLE ================= */
+{
+  const t0 = S.title, w = V.l3;
+  tl.fromTo("#tmark", { opacity: 0, scale: 0.6, rotate: -8 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.9, ease: "back.out(1.6)" }, t0 + 0.25);
+  const tc = splitChars($("#ttitle"));
+  tl.fromTo(tc, { opacity: 0, y: 120, rotate: 6 }, { opacity: 1, y: 0, rotate: 0, duration: 0.9, ease: "expo.out", stagger: 0.06 }, w[0].s - 0.15);
+  hit(w[0].s - 0.1, "chime");
+  const tg = $("#ttag");
+  const words = "Ajanlar değişsin, hafızan aynı yerde kalsın.".split(" ");
+  const spans = words.map((wd, i) => { const s = document.createElement("span"); s.className = "w" + (i >= 2 ? " amber" : ""); s.textContent = wd; tg.appendChild(s); if (i < words.length - 1) tg.appendChild(document.createTextNode(" ")); return s; });
+  spans.forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 26, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: OUT }, w[i + 2].s - 0.08));
+  const chips = $$("#tchips .chip");
+  tl.fromTo(chips, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: OUT, stagger: 0.12 }, w[7].s + 0.15);
+    tl.to("#thead", { scale: 1.035, duration: 6, ease: "none" }, t0);
+}
+
+/* ================= 4 VAULT ================= */
+{
+  const t0 = S.vault, w = V.l4;
+  show("#vwin", t0 + 0.15, { y: 40, dur: 0.8 });
+  const items = [
+    ["Hafiza/", "", "", true],
+    ["├ agents.md", "", "kasa kuralları ve çalışma biçimi"],
+    ["├ zihin/", "", "kimlik · kaynaklı hafıza · açık işler"],
+    ["├ komuta/", "", "öncelikler · ajan brief'i"],
+    ["├ projeler/", "", "süren işler"],
+    ["├ günlük/", "", "tarihli kayıtlar"],
+    ["├ gelen-kutusu/", "", "henüz ayıklanmamış girdiler"],
+    ["├ araclar/", "", "yerel erişim ve bakım araçları"],
+    ["└ arşiv/", "", "kapanmış işler"],
+  ];
+  const tree = $("#vtree"), lines = [];
+  items.forEach((it, i) => {
+    const d = document.createElement("div"); d.className = "tl";
+    d.innerHTML = '<span class="nm">' + (i === 0 ? '<span class="amber">' + it[0] + '</span>' : it[0]) + '</span><span class="cm">' + it[2] + '</span>';
+    tree.appendChild(d); lines.push(d);
+    tl.fromTo(d, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: OUT }, t0 + 0.55 + i * 0.16);
+  });
+  const vw = ["#vw1", "#vw2", "#vw3", "#vw4"];
+  [0, 1, 2, 4].forEach((wi, k) => {
+    tl.fromTo(vw[k], { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.7, ease: "expo.out" }, w[wi].s - 0.1);
+    hit(w[wi].s, "tick");
+  });
+  // sweep highlight down the tree on "dosyalarında durur"
+  const hl = $("#vhl"), y0 = 14 + 64 * 1, step = 64;
+  tl.set(hl, { y: 14 + 64 }, 0);
+  tl.fromTo(hl, { opacity: 0 }, { opacity: 1, duration: 0.3 }, w[8].s);
+  for (let i = 1; i < lines.length; i++) tl.to(hl, { y: 14 + 64 * i, duration: 0.3, ease: "power2.inOut" }, w[8].s + 0.3 + (i - 1) * 0.3);
+  tl.to(hl, { opacity: 0, duration: 0.4 }, w[10].e + 0.5);
+  tl.fromTo("#vc1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: OUT }, w[5].s);
+  tl.fromTo("#vc2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: OUT }, w[7].s);
+  tl.fromTo("#vc3", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: OUT }, w[9].s);
+}
+
+/* ================= 5 HUB ================= */
+{
+  const t0 = S.hub, w = V.l5;
+  const svg = $("#hubsvg");
+  const ys = [225, 415, 605, 795];
+  tl.fromTo("#vnode", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.4)" }, t0 + 0.2);
+  const ag = ["#ag1", "#ag2", "#ag3", "#ag4"];
+  const appear = [w[0].s - 0.15, w[2].s - 0.15, w[3].s - 0.15, w[7].e - 0.6];
+  const paths = [];
+  ys.forEach((y, i) => {
+    const p = mk("path", { d: `M760,${y} C 960,${y} 1000,500 1180,500`, fill: "none", stroke: i < 3 ? "rgba(246,169,59,.55)" : "rgba(143,136,122,.5)", "stroke-width": 3, "stroke-linecap": "round" }, svg);
+    if (i === 3) p.setAttribute("stroke-dasharray", "4 12");
+    paths.push(p);
+    tl.fromTo(ag[i], { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.65, ease: OUT }, appear[i]);
+    if (i < 3) draw(p, appear[i] + 0.2, 0.7);
+    else tl.fromTo(p, { opacity: 0 }, { opacity: 1, duration: 0.6 }, appear[i] + 0.2);
+    hit(appear[i], "tick");
+  });
+  // flowing pulses from all three to the vault on "hepsi aynı kasaya bağlanır"
+  [0, 1, 2].forEach(i => {
+    for (let r = 0; r < 2; r++) {
+      const c = mk("circle", { r: 8, fill: "#F6A93B", opacity: 0, cx: 760, cy: ys[i] }, svg);
+      pulse(paths[i], c, w[4].s + r * 0.9 + i * 0.12, 0.95);
+    }
+  });
+  hit(w[7].s, "chime", 0.8);
+  tl.to("#vnode", { boxShadow: "0 0 200px rgba(246,169,59,.38), 0 40px 100px rgba(0,0,0,.6)", duration: 0.8 }, w[7].s - 0.3);
+}
+
+/* ================= 6 RECALL ================= */
+{
+  const t0 = S.recall, w = V.l6;
+  show("#cpanel", t0 + 0.1, { y: 34, dur: 0.7 });
+  show("#ornek", t0 + 0.4, { y: 10, dur: 0.5 });
+  tl.fromTo("#mu", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: OUT }, t0 + 0.4);
+  typeInto($("#mut"), "Bu projede son kararımız neydi? Kaynağını bul, açık kalan işi söyle ve oradan devam edelim.", t0 + 0.7, 62);
+  tl.fromTo("#ma", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: OUT }, t0 + 2.2);
+  const ma = $("#mat");
+  typeInto(ma, "Son karar: fiyat sayfasında tek sütun. Açık iş: mobil menü testi.", t0 + 2.55, 46);
+  ma.parentNode.style.top = "290px";
+  ["#sc1", "#sc2", "#sc3"].forEach((s, i) => {
+    tl.fromTo(s, { opacity: 0, y: 16, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.5)" }, w[4 + i].s - 0.05);
+    hit(w[4 + i].s, "tick");
+  });
+  tl.fromTo("#rcmd", { opacity: 0 }, { opacity: 0.85, duration: 0.6 }, t0 + 0.9);
+  // stale vs current
+  tl.fromTo("#cold", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.6, ease: OUT }, w[7].s - 0.1);
+  tl.fromTo("#strike", { width: 0 }, { width: "104%", duration: 0.5, ease: IO }, w[9].s);
+  tl.to("#cold", { opacity: 0.5, duration: 0.5 }, w[9].s + 0.6);
+  hit(w[9].s, "deny", 0.8);
+  tl.fromTo("#rarrow", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4 }, w[10].e);
+  tl.fromTo("#cnew", { opacity: 0, x: 50, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.7, ease: "back.out(1.3)" }, w[11].s);
+  hit(w[11].s + 0.1, "success");
+}
+
+/* ================= 7 REVIEW ================= */
+{
+  const t0 = S.review, w = V.l7;
+  const svg = $("#rsvg");
+  const nodes = ["#n1", "#n2", "#n3", "#n4"];
+  tl.fromTo("#n1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: OUT }, w[0].s - 0.1);
+  tl.fromTo("#n4", { opacity: 0.0, y: 30 }, { opacity: 0.38, y: 0, duration: 0.6, ease: OUT }, w[0].s + 0.1);
+  // forbidden direct arc
+  const arc = mk("path", { d: "M255,425 C 255,190 1665,190 1665,425", fill: "none", stroke: "#EA6A50", "stroke-width": 3.5, "stroke-dasharray": "14 12", "stroke-linecap": "round" }, svg);
+  tl.fromTo(arc, { opacity: 0, strokeDashoffset: 0 }, { opacity: 0.95, duration: 0.3 }, w[2].s);
+  const arcL = arc.getTotalLength();
+  const mask = mk("path", { d: "M255,425 C 255,190 1665,190 1665,425", fill: "none", stroke: "#0C0B09", "stroke-width": 9 }, svg);
+  mask.style.strokeDasharray = arcL;
+  tl.fromTo(mask, { strokeDashoffset: 0 }, { strokeDashoffset: -arcL, duration: 0.8, ease: IO }, w[2].s);
+  tl.fromTo("#nolabel", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2)" }, w[3].s);
+  hit(w[3].s + 0.1, "deny");
+  tl.to([arc, mask, "#nolabel"], { opacity: 0.4, duration: 0.6 }, w[8].e + 0.9);
+  // real path
+  const arrows = [[425, 555], [895, 1025], [1365, 1495]];
+  const heads = [];
+  arrows.forEach(([x1, x2], i) => {
+    const p = mk("path", { d: `M${x1 + 6},515 L${x2 - 16},515`, stroke: "rgba(246,169,59,.85)", "stroke-width": 4, fill: "none", "stroke-linecap": "round" }, svg);
+    const h = mk("path", { d: `M${x2 - 26},503 L${x2 - 8},515 L${x2 - 26},527`, stroke: "rgba(246,169,59,.95)", "stroke-width": 4, fill: "none", "stroke-linecap": "round", "stroke-linejoin": "round", opacity: 0 }, svg);
+    heads.push([p, h]);
+  });
+  const nodeT = [w[0].s, w[4].s - 0.1, w[7].s - 0.1, w[8].s - 0.1];
+  tl.fromTo("#n2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: OUT }, nodeT[1]);
+  tl.fromTo("#f2", { opacity: 0 }, { opacity: 1, duration: 0.5 }, nodeT[1] + 0.3);
+  tl.fromTo("#n3", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: OUT }, nodeT[2]);
+  tl.to("#n4", { opacity: 1, duration: 0.6 }, nodeT[3]);
+  tl.fromTo("#f4", { opacity: 0 }, { opacity: 1, duration: 0.5 }, nodeT[3] + 0.3);
+  [nodeT[1], nodeT[2], nodeT[3]].forEach((t, i) => {
+    draw(heads[i][0], t - 0.05, 0.4);
+    tl.fromTo(heads[i][1], { opacity: 0 }, { opacity: 1, duration: 0.15 }, t + 0.35);
+    hit(t, "tick");
+  });
+  // four separated kinds
+  [10, 11, 13, 15].forEach((wi, k) => {
+    const t = [w[9].s, w[10].s, w[11].s, w[14].s][k];
+    tl.fromTo("#rc" + (k + 1), { opacity: 0, y: 36, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.5)" }, t - 0.05);
+    hit(t, "tick");
+  });
+  hit(w[15].e, "success", 0.9);
+}
+
+/* ================= 8 INSTALL ================= */
+{
+  const t0 = S.install, w = V.l8;
+  show("#iterm", t0 + 0.15, { y: 34, dur: 0.7 });
+  typeInto($("#icmd"), "curl -fsSL https://raw.githubusercontent.com/fornhere/hafiza-os/main/install.sh | bash", t0 + 0.75, 62, { prefix: "$ ", keepCursor: false });
+  show("#iagent", w[4].s - 0.2, { y: 34, dur: 0.7 });
+  typeInto($("#iprompt"), "https://github.com/fornhere/hafiza-os adresindeki hafıza sistemini bilgisayarıma kur. Önce depodaki AJANLA-KURULUM.md yönergesini oku ve uygula. Kişisel dosyalarımın üzerine yazma.", w[4].s + 0.35, 82);
+  ["#ic1", "#ic2", "#ic3"].forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: OUT }, w[8].s + 0.2 + i * 0.25));
+}
+
+/* ================= 9 PROOF ================= */
+{
+  const t0 = S.proof, w = V.l9;
+  tl.fromTo("#pc1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: OUT }, w[0].s);
+  tl.fromTo("#pc2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: OUT }, w[5].s);
+  ["#os1", "#os2", "#os3"].forEach((s, i) => {
+    const t = [w[6].s, w[7].s, w[9].s][i] - 0.15;
+    tl.fromTo(s, { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.6, ease: OUT }, t);
+    tl.fromTo(s + " .bar i", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: IO }, t + 0.25);
+    hit(t + 0.5, "tick");
+  });
+  const cnt = { v: 0 }, el = $("#p360");
+  tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.4 }, w[10].s - 0.3);
+  tl.to(cnt, { v: 360, duration: (w[12].e - w[10].s) + 0.1, ease: "power2.out", onUpdate() { el.textContent = Math.round(cnt.v); } }, w[10].s - 0.05);
+  tl.fromTo("#ptest", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: OUT }, w[13].s);
+  tl.fromTo("#pskip", { opacity: 0 }, { opacity: 1, duration: 0.6 }, w[15].s);
+  hit(w[12].e, "success");
+  tl.fromTo("#pnote", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: OUT }, w[14].s);
+}
+
+/* ================= 10 END ================= */
+{
+  const t0 = S.end, w = V.l10;
+  tl.fromTo("#emark", { opacity: 0, scale: 0.6, rotate: -8 }, { opacity: 1, scale: 1, rotate: 0, duration: 0.9, ease: "back.out(1.6)" }, t0 + 0.55);
+  const ec = splitChars($("#etitle"));
+  tl.fromTo(ec, { opacity: 0, y: 100, rotate: 5 }, { opacity: 1, y: 0, rotate: 0, duration: 0.9, ease: "expo.out", stagger: 0.05 }, t0 + 0.45);
+  hit(t0 + 0.45, "chime");
+  tl.fromTo("#etag", { opacity: 0, y: 22, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: OUT }, w[2].s - 0.1);
+  tl.fromTo("#eurlc", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: OUT }, w[3].s - 0.15);
+  typeInto($("#eurlt"), "github.com/fornhere/hafiza-os", w[3].s + 0.1, 26);
+  tl.fromTo("#ecmd", { opacity: 0 }, { opacity: 0.9, duration: 0.7 }, w[3].e + 0.4);
+  tl.to("#s-end .sc", { scale: 1.02, duration: 6.4, ease: "none" }, t0 + 0.2);
+}
+
+
+/* ---------- file-name texture behind title / end ---------- */
+{
+  const names = ["agents.md","zihin/çekirdek.md","zihin/hafıza-sistemi.md","zihin/açık-işler.md","komuta/ajan-isletimi.md","BILGI-AGI.md","KONU-SENTEZI.md","HAFIZA-DONGUSU.md","SISTEM.md","ENTEGRASYONLAR.md","CODEX.md","KULLANIM.md","JEV.md","MIMARI.md","hafıza-kataloğu.jsonl","hafıza-adayları.jsonl"];
+  [["#tex1", S.title, 7.1], ["#tex2", S.end, 6.6]].forEach(([sel, t0, dur], k) => {
+    const host = $(sel); let n = 0;
+    for (let col = 0; col < 4; col++) for (let r = 0; r < 12; r++) {
+      const d = document.createElement("div");
+      d.textContent = names[(n * 5 + col * 3 + k) % names.length]; n++;
+      d.style.left = (40 + col * 480 + ((r * 37) % 60)) + "px"; d.style.top = (r * 96 - 40) + "px";
+      host.appendChild(d);
+    }
+    tl.fromTo(host, { y: 0 }, { y: -110, duration: dur + 0.6, ease: "none" }, t0);
+  });
+}
+
+window.__cues = { TYPES, HITS };
+document.documentElement.setAttribute("data-sfx", JSON.stringify(window.__cues));
+window.__timelines = window.__timelines || {};
+window.__timelines["main"] = tl;
+
+</script>
+</body></html>

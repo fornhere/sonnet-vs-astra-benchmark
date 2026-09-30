@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e8ddc6" />
+    <title>New York — Küçük Dünya Atölyesi</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%23404c3d%27/%3E%3Ctext x=%2732%27 y=%2742%27 text-anchor=%27middle%27 font-size=%2728%27 font-family=%27Georgia%27 fill=%27%23f4e7bd%27%3ENY%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main
+      id="world"
+      aria-label="Gezilebilir üç boyutlu Manhattan dioraması"
+    ></main>
+    <div id="loading">
+      <div class="loading-mark">NY<span>▦</span></div>
+      <p>Bir şehir, parça parça.</p>
+      <small>MANHATTAN MAKETİ HAZIRLANIYOR</small>
+    </div>
+    <header class="ui masthead">
+      <div class="eyebrow">
+        <span class="brand-icon">▦</span> KÜÇÜK DÜNYA ATÖLYESİ
+        <span class="issue">NO. 001</span>
+      </div>
+      <h1>New York<span class="title-period">.</span></h1>
+      <p>Bir adanın içinde, binlerce hikâye.</p>
+      <div class="edition"><span></span> MANHATTAN · VOXEL DİORAMA</div>
+    </header>
+    <div class="ui top-right">
+      <span id="fps" title="F tuşuyla gizle">— FPS</span
+      ><button
+        id="sound"
+        class="icon-btn"
+        aria-label="Şehir ambiyansını aç"
+        title="Şehir ambiyansı · varsayılan kapalı"
+      >
+        <svg viewBox="0 0 24 24">
+          <path d="M5 10v4h4l5 4V6l-5 4H5zM18 9l4 6m0-6-4 6" /></svg
+        ><span>Ses kapalı</span></button
+      ><button id="photo" class="icon-btn" title="Fotoğraf modu · P">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 7h5l2-3h4l2 3h5v13H3z" />
+          <circle cx="12" cy="13" r="4" /></svg
+        ><span>Fotoğraf</span>
+      </button>
+    </div>
+    <aside class="ui explorer" aria-label="Simge yapıları keşfet">
+      <div class="panel-title">
+        <span>KEŞFET</span><span class="panel-count">10 DURAK</span>
+      </div>
+      <button class="place active" data-place="overview">
+        <span class="place-num">↗</span
+        ><span class="place-text"
+          >Genel bakış<small>Bütün şehir, tek maket</small></span
+        ><span class="place-arrow">↗</span>
+      </button>
+      <div class="place-divider"></div>
+      <div id="places"></div>
+      <div class="explorer-foot">
+        <span class="tiny-key">1–9</span><span class="tiny-key">0</span> ile bir
+        yere ışınlan
+      </div>
+    </aside>
+    <section class="ui info-card" id="info" aria-live="polite" hidden>
+      <button id="close-info" aria-label="Bilgi kartını kapat">×</button>
+      <div class="eyebrow" id="info-en"></div>
+      <h2 id="info-name"></h2>
+      <p id="info-text"></p>
+      <div class="card-foot">
+        <span class="card-dot"></span> <span id="info-coord"></span
+        ><button id="next-place">Sonraki durak ↗</button>
+      </div>
+    </section>
+    <div class="ui map-note" id="map-note">
+      <div class="compass">
+        <span>N</span
+        ><svg viewBox="0 0 40 40"><path d="M20 4L13 32l7-7 7 7z" /></svg>
+      </div>
+      <div>
+        <span class="note-label">40° 45′ N &nbsp; 73° 59′ W</span
+        ><span class="note-caption">New York, küçük bir dünya.</span>
+        <div class="scale-line"><i></i><small>YORUMLANMIŞ ÖLÇEK</small></div>
+      </div>
+    </div>
+    <section class="ui bottom-controls" aria-label="Işık ve hava durumu">
+      <div class="time-block">
+        <div class="time-head">
+          <span class="control-label">GÜNÜN IŞIĞI</span
+          ><span id="time-name">Gün batımı <b>17:30</b></span>
+        </div>
+        <div class="slider-row">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"
+            /></svg
+          ><input
+            id="time"
+            type="range"
+            min="5"
+            max="23"
+            step="0.05"
+            value="17.5"
+            aria-label="Günün saati"
+          /><svg viewBox="0 0 24 24">
+            <path d="M18 17A9 9 0 0 1 7 4a9 9 0 1 0 11 13z" />
+          </svg>
+        </div>
+        <div class="time-ticks">
+          <span>Şafak</span><span>Öğlen</span><span>Gün batımı</span
+          ><span>Gece</span>
+        </div>
+      </div>
+      <div class="controls-divider"></div>
+      <div class="weather-block">
+        <span class="control-label">HAVA DURUMU</span>
+        <div class="weather-options">
+          <button data-weather="clear" class="active" aria-pressed="true">
+            ☀ <span>Açık</span></button
+          ><button data-weather="fog" aria-pressed="false">
+            ≋ <span>Sisli</span></button
+          ><button data-weather="snow" aria-pressed="false">
+            ❄ <span>Karlı</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="ui footer">
+      <div class="gestures">
+        <span>↔</span> Sürükle · döndür <i></i><span>↕</span> Kaydır · yaklaş
+        <i></i><span>⇧</span> Sağ sürükle · taşı
+      </div>
+      <div class="tour-status" id="tour-status"><span></span> CANLI MAKET</div>
+      <div class="footer-right">EL İŞÇİLİĞİ RUHU. DİJİTAL DÜNYA.</div>
+    </footer>
+    <div id="hover-label" hidden></div>
+    <div id="toast" role="status"></div>
+    <div id="photo-dock" hidden>
+      <span>FOTOĞRAF MODU</span><button id="download">↓ PNG indir</button
+      ><button id="exit-photo">Geri dön <kbd>Esc</kbd></button>
+    </div>
+    <script src="dist/app.js"></script>
+  </body>
+</html>

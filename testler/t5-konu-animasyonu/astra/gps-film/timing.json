@@ -1,0 +1,231 @@
+{
+  "duration": 87.985,
+  "scenes": [
+    {
+      "id": "01",
+      "text": "Telefonundaki o küçük mavi nokta... Uzaydan seni izleyen bir kamera mı? Hayır. GPS, aslında zamanı ölçerek yerini bulur.",
+      "start": 0,
+      "duration": 9.963,
+      "voiceStart": 0.15,
+      "voiceDuration": 9.613061
+    },
+    {
+      "id": "02",
+      "text": "Uydular sürekli iki bilgi yayınlar: Neredeyim ve saat kaç? Telefonun bu sinyalleri dinler. Konum bulmak için uyduya cevap göndermesi gerekmez.",
+      "start": 9.963,
+      "duration": 9.623,
+      "voiceStart": 10.113,
+      "voiceDuration": 9.273469
+    },
+    {
+      "id": "03",
+      "text": "Sinyal, ışık hızında yol alır. Telefon, sinyalin geliş süresini ölçer; bu süreyi ışık hızıyla çarpar. Böylece uyduya olan uzaklığını hesaplar.",
+      "start": 19.587,
+      "duration": 11.086,
+      "voiceStart": 19.737,
+      "voiceDuration": 10.736327
+    },
+    {
+      "id": "04",
+      "text": "Tek bir uzaklık, tek bir adres vermez. Aynı uzaklıktaki bütün noktalar olasıdır. Diğer uyduların ölçümleri eklendikçe olasılıklar daralır.",
+      "start": 30.673,
+      "duration": 9.963,
+      "voiceStart": 30.823,
+      "voiceDuration": 9.613061
+    },
+    {
+      "id": "05",
+      "text": "Gerçekte bu çemberler üç boyutlu kürelerdir. Telefonun saatindeki hata da hesaba katılır. Üç konum bilgisi ve saat hatası: Dört bilinmeyen için en az dört uydu gerekir.",
+      "start": 40.636,
+      "duration": 12.784,
+      "voiceStart": 40.786,
+      "voiceDuration": 12.434286
+    },
+    {
+      "id": "06",
+      "text": "Zamanlama çok hassastır. Saniyenin yalnızca milyonda biri kadar ölçüm hatası, yaklaşık üç yüz metre mesafe hatası demektir. Bu yüzden uydularda atom saatleri kullanılır.",
+      "start": 53.42,
+      "duration": 12.053,
+      "voiceStart": 53.57,
+      "voiceDuration": 11.702857
+    },
+    {
+      "id": "07",
+      "text": "Yüksek binalar sinyali yansıtabilir. Telefon, uzayan yolu daha büyük bir mesafe sanır. Haritadaki mavi noktanın bazen sıçramasının nedenlerinden biri budur.",
+      "start": 65.473,
+      "duration": 10.851,
+      "voiceStart": 65.623,
+      "voiceDuration": 10.501224
+    },
+    {
+      "id": "08",
+      "text": "Kısacası, GPS seni görmez. Uyduların saatlerini dinler; zamanı mesafeye, mesafeleri konuma çevirir. O küçük mavi noktanın arkasında, işte bu hesap var.",
+      "start": 76.324,
+      "duration": 11.661,
+      "voiceStart": 76.474,
+      "voiceDuration": 11.31102
+    }
+  ],
+  "captions": [
+    {
+      "text": "Telefonundaki o küçük mavi nokta...",
+      "start": 0.39380952380952383,
+      "end": 3.0128571428571425
+    },
+    {
+      "text": "Uzaydan seni izleyen bir kamera mı?",
+      "start": 3.0347619047619045,
+      "end": 5.390000000000001
+    },
+    {
+      "text": "Hayır.",
+      "start": 5.391904761904762,
+      "end": 6.1414285714285715
+    },
+    {
+      "text": "GPS, aslında zamanı ölçerek yerini bulur.",
+      "start": 6.286190476190476,
+      "end": 9.69095238095238
+    },
+    {
+      "text": "Uydular sürekli iki bilgi yayınlar:",
+      "start": 10.356870523809524,
+      "end": 12.427346714285713
+    },
+    {
+      "text": "Neredeyim ve saat kaç?",
+      "start": 12.551156238095238,
+      "end": 14.15401338095238
+    },
+    {
+      "text": "Telefonun bu sinyalleri dinler.",
+      "start": 14.298775285714285,
+      "end": 16.226394333333335
+    },
+    {
+      "text": "Konum bulmak için uyduya cevap göndermesi gerekmez.",
+      "start": 16.37115623809524,
+      "end": 19.277822904761905
+    },
+    {
+      "text": "Sinyal, ışık hızında yol alır.",
+      "start": 20.021291904761902,
+      "end": 22.43653
+    },
+    {
+      "text": "Telefon, sinyalin geliş süresini ölçer; bu süreyi ışık",
+      "start": 22.621291904761904,
+      "end": 26.601958571428572
+    },
+    {
+      "text": "hızıyla çarpar.",
+      "start": 26.522244285714283,
+      "end": 27.638434761904758
+    },
+    {
+      "text": "Böylece uyduya olan uzaklığını hesaplar.",
+      "start": 27.782244285714285,
+      "end": 30.464149047619046
+    },
+    {
+      "text": "Tek bir uzaklık, tek bir adres vermez.",
+      "start": 31.107618904761903,
+      "end": 33.70571414285714
+    },
+    {
+      "text": "Aynı uzaklıktaki bütün noktalar olasıdır.",
+      "start": 33.82952366666667,
+      "end": 36.30666652380952
+    },
+    {
+      "text": "Diğer uyduların ölçümleri eklendikçe olasılıklar daralır.",
+      "start": 36.47142842857143,
+      "end": 40.309523666666664
+    },
+    {
+      "text": "Gerçekte bu çemberler üç boyutlu kürelerdir.",
+      "start": 41.07067990476191,
+      "end": 44.055441809523806
+    },
+    {
+      "text": "Telefonun saatindeki hata da hesaba katılır.",
+      "start": 44.199251333333336,
+      "end": 47.34687038095238
+    },
+    {
+      "text": "Üç konum bilgisi ve saat hatası:",
+      "start": 47.368775142857146,
+      "end": 49.865918
+    },
+    {
+      "text": "Dört bilinmeyen için en az dört uydu gerekir.",
+      "start": 50.09163228571429,
+      "end": 53.19829895238095
+    },
+    {
+      "text": "Zamanlama çok hassastır.",
+      "start": 53.85496590476191,
+      "end": 55.64068019047619
+    },
+    {
+      "text": "Saniyenin yalnızca milyonda biri kadar ölçüm hatası, yaklaşık",
+      "start": 55.764489714285716,
+      "end": 59.86639447619048
+    },
+    {
+      "text": "üç yüz metre mesafe hatası demektir.",
+      "start": 59.78734685714286,
+      "end": 62.16258495238095
+    },
+    {
+      "text": "Bu yüzden uydularda atom saatleri kullanılır.",
+      "start": 62.42829923809524,
+      "end": 65.25782304761906
+    },
+    {
+      "text": "Yüksek binalar sinyali yansıtabilir.",
+      "start": 65.90782290476191,
+      "end": 68.18115623809526
+    },
+    {
+      "text": "Telefon, uzayan yolu daha büyük bir mesafe sanır.",
+      "start": 68.38591814285715,
+      "end": 71.75734671428573
+    },
+    {
+      "text": "Haritadaki mavi noktanın bazen sıçramasının nedenlerinden",
+      "start": 71.92115623809525,
+      "end": 75.25163242857144
+    },
+    {
+      "text": "biri budur.",
+      "start": 75.17258480952381,
+      "end": 76.10755727470037
+    },
+    {
+      "text": "Kısacası, GPS seni görmez.",
+      "start": 76.71809452380953,
+      "end": 79.01238023809525
+    },
+    {
+      "text": "Uyduların saatlerini dinler; zamanı mesafeye, mesafeleri",
+      "start": 79.15618976190477,
+      "end": 83.05523738095239
+    },
+    {
+      "text": "konuma çevirir.",
+      "start": 82.97618976190478,
+      "end": 84.01047547619049
+    },
+    {
+      "text": "O küçük mavi noktanın arkasında, işte bu hesap",
+      "start": 84.07333261904763,
+      "end": 87.1999992857143
+    },
+    {
+      "text": "var.",
+      "start": 87.20190404761905,
+      "end": 87.66380880952383
+    }
+  ]
+}

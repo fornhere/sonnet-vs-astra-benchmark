@@ -1,0 +1,3 @@
+Birinci görsel inceleme, 1920×1080, 0 / 10 / 20 / 30 / 40 / 49 saniye ve fareyle serbest kamera.
+Gözlenen sorunlar: Gece için fazla parlak kule; sert kenarlı koniler; iri köşeli kayalar ve görünür silindir taban; 20. saniyede kesilen alem; taşlarda farklı doku ölçekleri; fazla sayıda vapur çizim çağrısı.
+Uygulanan düzeltmeler: Pozlama ve ışık şiddeti düşürüldü, spot gölgesi eklendi; dünya koordinatlı taş/sıva shader'ı; düzgün kayalık temeli; yumuşayan hüzme; kamera yolu açıldı; vapur malzemelerine göre birleştirildi.

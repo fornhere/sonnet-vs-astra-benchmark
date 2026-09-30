@@ -1,0 +1,887 @@
+[
+  {
+    "size": "300x250",
+    "width": 300,
+    "height": 250,
+    "animated": true,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 17,
+        "baseline": 30,
+        "size": 26,
+        "width": 84.63
+      },
+      {
+        "text": "YENİ SONBAHAR HARMANI",
+        "x": 18,
+        "baseline": 54,
+        "size": 7.5,
+        "width": 115.01
+      },
+      {
+        "text": "Demini",
+        "x": 16,
+        "baseline": 102,
+        "size": 43,
+        "width": 149.43
+      },
+      {
+        "text": "Al.",
+        "x": 14,
+        "baseline": 149,
+        "size": 47.300000000000004,
+        "width": 62.67
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 18,
+        "baseline": 172,
+        "size": 12,
+        "width": 92.09
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 32.36,
+        "baseline": 206.16,
+        "size": 11,
+        "width": 71.39
+      },
+      {
+        "text": "İlk hafta atölyede",
+        "x": 172.89,
+        "baseline": 220,
+        "size": 8,
+        "width": 60.22
+      },
+      {
+        "text": "%20 indirim",
+        "x": 166.55,
+        "baseline": 235,
+        "size": 13,
+        "width": 72.9
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 18,
+        "baseline": 238,
+        "size": 8.5,
+        "width": 71.11
+      }
+    ]
+  },
+  {
+    "size": "336x280",
+    "width": 336,
+    "height": 280,
+    "animated": false,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 17,
+        "baseline": 30,
+        "size": 26,
+        "width": 84.63
+      },
+      {
+        "text": "YENİ SONBAHAR HARMANI",
+        "x": 18,
+        "baseline": 54,
+        "size": 7.5,
+        "width": 115.01
+      },
+      {
+        "text": "Demini",
+        "x": 16,
+        "baseline": 102,
+        "size": 43,
+        "width": 149.43
+      },
+      {
+        "text": "Al.",
+        "x": 14,
+        "baseline": 149,
+        "size": 47.300000000000004,
+        "width": 62.67
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 18,
+        "baseline": 172,
+        "size": 12,
+        "width": 92.09
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 32.36,
+        "baseline": 206.16,
+        "size": 11,
+        "width": 71.39
+      },
+      {
+        "text": "İlk hafta atölyede",
+        "x": 172.89,
+        "baseline": 220,
+        "size": 8,
+        "width": 60.22
+      },
+      {
+        "text": "%20 indirim",
+        "x": 166.55,
+        "baseline": 235,
+        "size": 13,
+        "width": 72.9
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 18,
+        "baseline": 238,
+        "size": 8.5,
+        "width": 71.11
+      }
+    ]
+  },
+  {
+    "size": "728x90",
+    "width": 728,
+    "height": 90,
+    "animated": true,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 17,
+        "baseline": 40,
+        "size": 30,
+        "width": 97.65
+      },
+      {
+        "text": "KADIKÖY · 2024",
+        "x": 19,
+        "baseline": 60,
+        "size": 8,
+        "width": 73.62
+      },
+      {
+        "text": "Demini",
+        "x": 155,
+        "baseline": 49,
+        "size": 42,
+        "width": 145.95
+      },
+      {
+        "text": "Al.",
+        "x": 309.77,
+        "baseline": 49,
+        "size": 42,
+        "width": 54.77
+      },
+      {
+        "text": "Kadıköy Akşamı · Yeni sonbahar harmanı",
+        "x": 157,
+        "baseline": 72,
+        "size": 10.5,
+        "width": 192.3
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 590.32,
+        "baseline": 38.42,
+        "size": 11.5,
+        "width": 74.64
+      },
+      {
+        "text": "İlk hafta atölyede %20 indirim",
+        "x": 580.03,
+        "baseline": 71,
+        "size": 9,
+        "width": 125.94
+      }
+    ]
+  },
+  {
+    "size": "970x250",
+    "width": 970,
+    "height": 250,
+    "animated": true,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 26,
+        "baseline": 40,
+        "size": 34,
+        "width": 110.67
+      },
+      {
+        "text": "EKİM / YENİ SONBAHAR HARMANI",
+        "x": 29,
+        "baseline": 68,
+        "size": 9,
+        "width": 183.77
+      },
+      {
+        "text": "Demini",
+        "x": 23,
+        "baseline": 147,
+        "size": 78,
+        "width": 271.05
+      },
+      {
+        "text": "Al.",
+        "x": 310.43,
+        "baseline": 147,
+        "size": 78,
+        "width": 101.71
+      },
+      {
+        "text": "Şehrin acelesi var. Çayın acelesi yok.",
+        "x": 29,
+        "baseline": 180,
+        "size": 17,
+        "width": 279.96
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 30,
+        "baseline": 219,
+        "size": 16,
+        "width": 122.78
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 274,
+        "baseline": 219,
+        "size": 11,
+        "width": 92.03
+      },
+      {
+        "text": "İLK HAFTA",
+        "x": 829.0,
+        "baseline": 49,
+        "size": 10,
+        "width": 63.99
+      },
+      {
+        "text": "%20",
+        "x": 799.85,
+        "baseline": 102,
+        "size": 55,
+        "width": 120.3
+      },
+      {
+        "text": "atölye indirimi",
+        "x": 815.55,
+        "baseline": 128,
+        "size": 15,
+        "width": 90.9
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 793.64,
+        "baseline": 184.09,
+        "size": 14,
+        "width": 90.86
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 831.28,
+        "baseline": 223,
+        "size": 10,
+        "width": 59.43
+      }
+    ]
+  },
+  {
+    "size": "300x600",
+    "width": 300,
+    "height": 600,
+    "animated": true,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 23,
+        "baseline": 45,
+        "size": 35,
+        "width": 113.93
+      },
+      {
+        "text": "YENİ SONBAHAR HARMANI",
+        "x": 25,
+        "baseline": 78,
+        "size": 9,
+        "width": 140.01
+      },
+      {
+        "text": "Demini",
+        "x": 20,
+        "baseline": 139,
+        "size": 64,
+        "width": 222.4
+      },
+      {
+        "text": "Al.",
+        "x": 18,
+        "baseline": 207,
+        "size": 70.4,
+        "width": 93.27
+      },
+      {
+        "text": "Şehrin acelesi var.",
+        "x": 25,
+        "baseline": 241,
+        "size": 14,
+        "width": 113.85
+      },
+      {
+        "text": "Çayın acelesi yok.",
+        "x": 25,
+        "baseline": 261,
+        "size": 14,
+        "width": 112.81
+      },
+      {
+        "text": "Kadıköy",
+        "x": 25,
+        "baseline": 299,
+        "size": 17,
+        "width": 65.28
+      },
+      {
+        "text": "Akşamı",
+        "x": 25,
+        "baseline": 321,
+        "size": 17,
+        "width": 60.45
+      },
+      {
+        "text": "İLK HAFTA",
+        "x": -22.26,
+        "baseline": -18.48,
+        "size": 7.140000000000001,
+        "width": 44.51
+      },
+      {
+        "text": "%20",
+        "x": -28.39,
+        "baseline": 6.3,
+        "size": 26.46,
+        "width": 56.78
+      },
+      {
+        "text": "ATÖLYE İNDİRİMİ",
+        "x": -25.13,
+        "baseline": 20.16,
+        "size": 5.7540000000000004,
+        "width": 50.27
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 43.16,
+        "baseline": 557.46,
+        "size": 14,
+        "width": 90.86
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 24,
+        "baseline": 591,
+        "size": 9,
+        "width": 75.29
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 223.51,
+        "baseline": 591,
+        "size": 9,
+        "width": 53.49
+      }
+    ]
+  },
+  {
+    "size": "160x600",
+    "width": 160,
+    "height": 600,
+    "animated": false,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 13,
+        "baseline": 36,
+        "size": 28,
+        "width": 91.14
+      },
+      {
+        "text": "YENİ SONBAHAR HARMANI",
+        "x": 15,
+        "baseline": 65,
+        "size": 6.5,
+        "width": 92.08
+      },
+      {
+        "text": "Demini",
+        "x": 10,
+        "baseline": 113,
+        "size": 37,
+        "width": 128.57
+      },
+      {
+        "text": "Al.",
+        "x": 8,
+        "baseline": 164,
+        "size": 40.7,
+        "width": 53.92
+      },
+      {
+        "text": "Şehrin acelesi var.",
+        "x": 15,
+        "baseline": 193,
+        "size": 10.5,
+        "width": 85.39
+      },
+      {
+        "text": "Çayın acelesi yok.",
+        "x": 15,
+        "baseline": 209,
+        "size": 10.5,
+        "width": 84.61
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 30.12,
+        "baseline": 472,
+        "size": 13,
+        "width": 99.76
+      },
+      {
+        "text": "İlk hafta atölyede",
+        "x": 42.36,
+        "baseline": 499,
+        "size": 10,
+        "width": 75.28
+      },
+      {
+        "text": "%20 indirim",
+        "x": 29.53,
+        "baseline": 522,
+        "size": 18,
+        "width": 100.94
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 29.8,
+        "baseline": 564.05,
+        "size": 11,
+        "width": 71.39
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 56.23,
+        "baseline": 593,
+        "size": 8,
+        "width": 47.54
+      }
+    ]
+  },
+  {
+    "size": "320x50",
+    "width": 320,
+    "height": 50,
+    "animated": false,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 10,
+        "baseline": 30,
+        "size": 24,
+        "width": 78.12
+      },
+      {
+        "text": "Demini",
+        "x": 104,
+        "baseline": 28,
+        "size": 21,
+        "width": 72.98
+      },
+      {
+        "text": "Al.",
+        "x": 181.39,
+        "baseline": 28,
+        "size": 21,
+        "width": 27.38
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 106,
+        "baseline": 42,
+        "size": 8,
+        "width": 57.38
+      },
+      {
+        "text": "Keşfet",
+        "x": 247.4,
+        "baseline": 28.9,
+        "size": 11,
+        "width": 33.25
+      }
+    ]
+  },
+  {
+    "size": "1080x1080",
+    "width": 1080,
+    "height": 1080,
+    "animated": true,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 58,
+        "baseline": 85,
+        "size": 58,
+        "width": 188.79
+      },
+      {
+        "text": "KADIKÖY, İSTANBUL",
+        "x": 846.66,
+        "baseline": 59,
+        "size": 14,
+        "width": 171.34
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 867.41,
+        "baseline": 85,
+        "size": 18,
+        "width": 150.59
+      },
+      {
+        "text": "EKİM / YENİ SONBAHAR HARMANI",
+        "x": 64,
+        "baseline": 179,
+        "size": 15,
+        "width": 304.04
+      },
+      {
+        "text": "Demini",
+        "x": 49,
+        "baseline": 328,
+        "size": 151,
+        "width": 524.73
+      },
+      {
+        "text": "Al.",
+        "x": 47,
+        "baseline": 485,
+        "size": 166.10000000000002,
+        "width": 220.07
+      },
+      {
+        "text": "Şehrin acelesi var.",
+        "x": 65,
+        "baseline": 555,
+        "size": 28,
+        "width": 227.7
+      },
+      {
+        "text": "Çayın acelesi yok.",
+        "x": 65,
+        "baseline": 594,
+        "size": 28,
+        "width": 225.62
+      },
+      {
+        "text": "Kadıköy",
+        "x": 65,
+        "baseline": 704,
+        "size": 32,
+        "width": 122.88
+      },
+      {
+        "text": "Akşamı",
+        "x": 65,
+        "baseline": 744,
+        "size": 32,
+        "width": 113.79
+      },
+      {
+        "text": "Akşamın en güzel hâli, ince belli.",
+        "x": 65,
+        "baseline": 785,
+        "size": 16,
+        "width": 231.54
+      },
+      {
+        "text": "İLK HAFTA",
+        "x": -48.22,
+        "baseline": -40.04,
+        "size": 15.47,
+        "width": 96.44
+      },
+      {
+        "text": "%20",
+        "x": -61.51,
+        "baseline": 13.65,
+        "size": 57.33,
+        "width": 123.01
+      },
+      {
+        "text": "ATÖLYE İNDİRİMİ",
+        "x": -54.46,
+        "baseline": 43.68,
+        "size": 12.467,
+        "width": 108.91
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 96.04,
+        "baseline": 918.99,
+        "size": 23,
+        "width": 149.27
+      },
+      {
+        "text": "Moda Cd. No: 42 · Kadıköy",
+        "x": 64,
+        "baseline": 1028,
+        "size": 17,
+        "width": 202.81
+      },
+      {
+        "text": "@demlik.kadikoy",
+        "x": 528.07,
+        "baseline": 1028,
+        "size": 17,
+        "width": 127.86
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 907.43,
+        "baseline": 1028,
+        "size": 17,
+        "width": 110.57
+      }
+    ]
+  },
+  {
+    "size": "1080x1920",
+    "width": 1080,
+    "height": 1920,
+    "animated": false,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 76,
+        "baseline": 224,
+        "size": 73,
+        "width": 237.62
+      },
+      {
+        "text": "ÇAY ACELE SEVMEZ.",
+        "x": 805.26,
+        "baseline": 220,
+        "size": 16,
+        "width": 196.74
+      },
+      {
+        "text": "EKİM / YENİ SONBAHAR HARMANI",
+        "x": 82,
+        "baseline": 330,
+        "size": 20,
+        "width": 387.38
+      },
+      {
+        "text": "Demini",
+        "x": 64,
+        "baseline": 499,
+        "size": 187,
+        "width": 649.82
+      },
+      {
+        "text": "Al.",
+        "x": 62,
+        "baseline": 690,
+        "size": 205.70000000000002,
+        "width": 272.53
+      },
+      {
+        "text": "Şehrin acelesi var.",
+        "x": 84,
+        "baseline": 772,
+        "size": 36,
+        "width": 292.75
+      },
+      {
+        "text": "Çayın acelesi yok.",
+        "x": 84,
+        "baseline": 824,
+        "size": 36,
+        "width": 290.09
+      },
+      {
+        "text": "Kadıköy",
+        "x": 84,
+        "baseline": 955,
+        "size": 43,
+        "width": 165.12
+      },
+      {
+        "text": "Akşamı",
+        "x": 84,
+        "baseline": 1010,
+        "size": 43,
+        "width": 152.91
+      },
+      {
+        "text": "İLK HAFTA",
+        "x": -62.0,
+        "baseline": -51.48,
+        "size": 19.89,
+        "width": 124.0
+      },
+      {
+        "text": "%20",
+        "x": -79.08,
+        "baseline": 17.55,
+        "size": 73.71,
+        "width": 158.16
+      },
+      {
+        "text": "ATÖLYE İNDİRİMİ",
+        "x": -70.01,
+        "baseline": 56.16,
+        "size": 16.029,
+        "width": 140.03
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 128.0,
+        "baseline": 1643.0,
+        "size": 33,
+        "width": 214.17
+      },
+      {
+        "text": "Moda Cd. No: 42 · Kadıköy",
+        "x": 80,
+        "baseline": 1740,
+        "size": 25,
+        "width": 298.25
+      },
+      {
+        "text": "@demlik.kadikoy",
+        "x": 80,
+        "baseline": 1780,
+        "size": 25,
+        "width": 188.03
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 837.4,
+        "baseline": 1780,
+        "size": 25,
+        "width": 162.6
+      }
+    ]
+  },
+  {
+    "size": "1200x628",
+    "width": 1200,
+    "height": 628,
+    "animated": false,
+    "labels": [
+      {
+        "text": "demlik",
+        "x": 48,
+        "baseline": 63,
+        "size": 45,
+        "width": 146.48
+      },
+      {
+        "text": "EKİM / YENİ SONBAHAR HARMANI",
+        "x": 51,
+        "baseline": 112,
+        "size": 12,
+        "width": 241.88
+      },
+      {
+        "text": "Demini",
+        "x": 40,
+        "baseline": 235,
+        "size": 117,
+        "width": 406.57
+      },
+      {
+        "text": "Al.",
+        "x": 38,
+        "baseline": 355,
+        "size": 128.70000000000002,
+        "width": 170.52
+      },
+      {
+        "text": "Şehrin acelesi var. Çayın acelesi yok.",
+        "x": 53,
+        "baseline": 415,
+        "size": 23,
+        "width": 378.76
+      },
+      {
+        "text": "Kadıköy Akşamı",
+        "x": 53,
+        "baseline": 467,
+        "size": 26,
+        "width": 199.52
+      },
+      {
+        "text": "Demini keşfet",
+        "x": 76.36,
+        "baseline": 548.91,
+        "size": 18,
+        "width": 116.82
+      },
+      {
+        "text": "Çay acele sevmez.",
+        "x": 350,
+        "baseline": 547,
+        "size": 15,
+        "width": 125.49
+      },
+      {
+        "text": "İLK HAFTA",
+        "x": -41.33,
+        "baseline": -34.32,
+        "size": 13.260000000000002,
+        "width": 82.67
+      },
+      {
+        "text": "%20",
+        "x": -52.72,
+        "baseline": 11.7,
+        "size": 49.14,
+        "width": 105.44
+      },
+      {
+        "text": "ATÖLYE İNDİRİMİ",
+        "x": -46.68,
+        "baseline": 37.44,
+        "size": 10.686,
+        "width": 93.35
+      },
+      {
+        "text": "Moda Cd. No: 42 · Kadıköy",
+        "x": 51,
+        "baseline": 606,
+        "size": 13,
+        "width": 155.09
+      },
+      {
+        "text": "@demlik.kadikoy",
+        "x": 668.11,
+        "baseline": 606,
+        "size": 13,
+        "width": 97.77
+      },
+      {
+        "text": "demlik.com.tr",
+        "x": 1065.45,
+        "baseline": 606,
+        "size": 13,
+        "width": 84.55
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "kiz-kulesi-firtina",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Firtinali gecede Kiz Kulesi - Three.js gercek zamanli sinematik animasyon",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "serve": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "puppeteer-core": "*"
+  }
+}

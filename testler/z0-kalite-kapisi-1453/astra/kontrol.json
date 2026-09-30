@@ -1,0 +1,26 @@
+{
+  "blender": "5.2.1 LTS",
+  "scene_file": "sahne.blend",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "resolution_percentage": 100,
+  "render_engine": "CYCLES",
+  "samples": 96,
+  "cameras": 1,
+  "active_camera": "Sarayburnu • tek sabit bakış",
+  "objects": 481,
+  "meshes": 120,
+  "materials": 31,
+  "external_images": [],
+  "linked_libraries": [],
+  "render_path": "//kare.png",
+  "png": {
+    "width": 1920,
+    "height": 1080,
+    "bytes": 2162666,
+    "chunk_crcs": "passed",
+    "decompression": "passed"
+  }
+}

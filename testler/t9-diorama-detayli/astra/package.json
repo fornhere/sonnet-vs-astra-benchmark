@@ -1,0 +1,20 @@
+{
+  "name": "new-york-atelier-diorama",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=iife --minify --outfile=dist/app.js",
+    "start": "python3 -m http.server 8000",
+    "check": "node kontrol/verify.cjs",
+    "bench": "node kontrol/performance.cjs",
+    "check:ui": "node kontrol/interactions.cjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright": "1.63.0",
+    "prettier": "3.9.9"
+  }
+}

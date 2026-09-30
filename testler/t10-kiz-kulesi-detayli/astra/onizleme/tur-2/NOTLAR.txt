@@ -1,0 +1,5 @@
+İkinci görsel inceleme. Bu klasör üretim ara aşamasıdır; son kareler ../final/ içindedir.
+Gözlenen sorunlar: Taş ve sıva shader'larının aynı program önbelleğini paylaşması; hüzmelerin çok zayıf kalması; uzaktaki kentte atmosfer eksikliği; fener ışığının sert çekirdeği.
+Düzeltmeler: Ayrı shader önbellek anahtarları; hacim içinde 16 örnekli ışık integrali; hareketli alçak sis bankaları; daha yumuşak kaynak halesi ve ince yatay ışık saçağı. Bayrak eklendi, telefon ekranında atmosfer paneli varsayılan kapatıldı.
+Ek hata düzeltmeleri: Shader metni ile #define arasında eksik satır sonu giderildi. Kamera zamanlaması gerçek geçen zamana bağlandı. PNG dışa aktarımı düşük kalitede de ekranın tam piksel boyutuna yükseltildi.
+Son konsol ve işlev sonuçları: ../islev-testleri.json ve ../final/rapor.json

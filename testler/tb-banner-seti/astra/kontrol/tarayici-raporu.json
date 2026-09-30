@@ -1,0 +1,249 @@
+{
+  "errors": [],
+  "externalRequests": [],
+  "results": [
+    {
+      "size": "300x250",
+      "bytes": 25746,
+      "scrollWidth": 300,
+      "scrollHeight": 250,
+      "adSize": "width=300,height=250",
+      "exit": "https://demlik.com.tr/",
+      "animations": [
+        {
+          "duration": 1400,
+          "currentTime": 14000
+        },
+        {
+          "duration": 13200,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1349.9999999999998,
+          "currentTime": 14000
+        },
+        {
+          "duration": 950,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1950,
+          "currentTime": 14000
+        }
+      ],
+      "reducedMotionAnimationCount": 0
+    },
+    {
+      "size": "728x90",
+      "bytes": 25026,
+      "scrollWidth": 728,
+      "scrollHeight": 90,
+      "adSize": "width=728,height=90",
+      "exit": "https://demlik.com.tr/",
+      "animations": [
+        {
+          "duration": 1400,
+          "currentTime": 14000
+        },
+        {
+          "duration": 13200,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1349.9999999999998,
+          "currentTime": 14000
+        },
+        {
+          "duration": 950,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1950,
+          "currentTime": 14000
+        }
+      ],
+      "reducedMotionAnimationCount": 0
+    },
+    {
+      "size": "970x250",
+      "bytes": 29565,
+      "scrollWidth": 970,
+      "scrollHeight": 250,
+      "adSize": "width=970,height=250",
+      "exit": "https://demlik.com.tr/",
+      "animations": [
+        {
+          "duration": 1400,
+          "currentTime": 14000
+        },
+        {
+          "duration": 13200,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1349.9999999999998,
+          "currentTime": 14000
+        },
+        {
+          "duration": 950,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1950,
+          "currentTime": 14000
+        }
+      ],
+      "reducedMotionAnimationCount": 0
+    },
+    {
+      "size": "300x600",
+      "bytes": 29665,
+      "scrollWidth": 300,
+      "scrollHeight": 600,
+      "adSize": "width=300,height=600",
+      "exit": "https://demlik.com.tr/",
+      "animations": [
+        {
+          "duration": 1400,
+          "currentTime": 14000
+        },
+        {
+          "duration": 13200,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1349.9999999999998,
+          "currentTime": 14000
+        },
+        {
+          "duration": 950,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1750,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1950,
+          "currentTime": 14000
+        }
+      ],
+      "reducedMotionAnimationCount": 0
+    },
+    {
+      "size": "1080x1080",
+      "bytes": 39621,
+      "scrollWidth": 1080,
+      "scrollHeight": 1080,
+      "adSize": "width=1080,height=1080",
+      "exit": "https://demlik.com.tr/",
+      "animations": [
+        {
+          "duration": 1400,
+          "currentTime": 14000
+        },
+        {
+          "duration": 13200,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1349.9999999999998,
+          "currentTime": 14000
+        },
+        {
+          "duration": 950,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1750,
+          "currentTime": 14000
+        },
+        {
+          "duration": 1950,
+          "currentTime": 14000
+        }
+      ],
+      "reducedMotionAnimationCount": 0
+    },
+    {
+      "previewWidth": 1440,
+      "before": {
+        "pageWidth": 1440,
+        "viewport": 1440,
+        "cards": 10,
+        "images": true
+      },
+      "after": {
+        "playing": 5,
+        "frames": [
+          {
+            "width": 300,
+            "parent": 300,
+            "loaded": true
+          },
+          {
+            "width": 970,
+            "parent": 970,
+            "loaded": true
+          },
+          {
+            "width": 728,
+            "parent": 728,
+            "loaded": true
+          },
+          {
+            "width": 300,
+            "parent": 300,
+            "loaded": true
+          },
+          {
+            "width": 543,
+            "parent": 543,
+            "loaded": true
+          }
+        ]
+      },
+      "stopped": 0
+    },
+    {
+      "previewWidth": 390,
+      "before": {
+        "pageWidth": 390,
+        "viewport": 390,
+        "cards": 10,
+        "images": true
+      },
+      "after": {
+        "playing": 5,
+        "frames": [
+          {
+            "width": 300,
+            "parent": 300,
+            "loaded": true
+          },
+          {
+            "width": 322,
+            "parent": 322,
+            "loaded": true
+          },
+          {
+            "width": 322,
+            "parent": 322,
+            "loaded": true
+          },
+          {
+            "width": 300,
+            "parent": 300,
+            "loaded": true
+          },
+          {
+            "width": 322,
+            "parent": 322,
+            "loaded": true
+          }
+        ]
+      },
+      "stopped": 0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "duration": 52,
+  "ended": true,
+  "error": null,
+  "quality": {
+    "totalVideoFrames": 3120,
+    "droppedVideoFrames": 12,
+    "corruptedVideoFrames": 0
+  }
+}

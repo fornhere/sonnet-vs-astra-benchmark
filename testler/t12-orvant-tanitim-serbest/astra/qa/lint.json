@@ -1,0 +1,21 @@
+{
+  "ok": false,
+  "errorCount": 1,
+  "warningCount": 0,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "audio_src_not_found",
+      "severity": "error",
+      "file": "/home/forn/sonnet-vs-astra/t12-orvant-tanitim-serbest/astra/film/index.html",
+      "message": "<audio> element references file(s) not found in the project: assets/soundtrack.wav. The rendered video will be silent.",
+      "fixHint": "Add the file \"assets/soundtrack.wav\" to the project directory, or update the src attribute to point to an existing file."
+    }
+  ],
+  "filesScanned": 7,
+  "_meta": {
+    "version": "0.8.91",
+    "latestVersion": "0.8.86",
+    "updateAvailable": false
+  }
+}

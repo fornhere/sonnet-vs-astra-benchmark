@@ -1,0 +1,4 @@
+fonttools==4.66.1
+brotli==1.2.0
+pillow==12.3.0
+pypdf==6.19.0

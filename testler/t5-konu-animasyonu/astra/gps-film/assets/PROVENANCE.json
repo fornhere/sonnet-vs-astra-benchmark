@@ -1,0 +1,6 @@
+{
+  "voices": {"provider":"HeyGen Starfish","voice":"Orson - Firm & Measured","voice_id":"00e3d285aba44b27a83c47c02c9c2d9c","language":"tr","files":"vo-01.wav through vo-08.wav","word_timings":"matching .json files"},
+  "music_sfx": {"origin":"original procedural synthesis","source":"../../scripts/audio.py","mix":"master.wav"},
+  "geography": {"origin":"Natural Earth 110m Admin 0 countries","url":"https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson","license":"public domain","source":"world.json","derived":"land.js"},
+  "fonts": {"family":"Noto Sans and Noto Serif","license":"SIL OFL","license_file":"LICENSE"}
+}

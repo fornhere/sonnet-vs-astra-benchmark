@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Mevsimler Neden Oluşur?</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Bricolage"; font-weight: 200 800; font-style: normal;
+        src: url("assets/brico-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: "Bricolage"; font-weight: 200 800; font-style: normal;
+        src: url("assets/brico-ext.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+      @font-face { font-family: "InterV"; font-weight: 100 900; font-style: normal;
+        src: url("assets/inter-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: "InterV"; font-weight: 100 900; font-style: normal;
+        src: url("assets/inter-ext.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+      :root {
+        --cream: #f6f1e7; --amber: #ffb52e; --amber2: #ff7a1a; --ice: #7fcfff; --ice2: #3d8bff;
+        --red: #ff4b5c; --mint: #57e6b8; --ink: #04060f;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ink); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; color: var(--cream);
+        font-family: "InterV", system-ui, sans-serif;
+        background: radial-gradient(1400px 900px at 62% 42%, #0d1638 0%, #070b1f 48%, #03050d 100%); }
+      canvas#gl { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+      .scene { position: absolute; inset: 0; opacity: 0; }
+      .abs { position: absolute; }
+      .disp { font-family: "Bricolage", "InterV", sans-serif; font-weight: 800; letter-spacing: -0.025em; line-height: 0.98; }
+      .kicker { font-family: "InterV"; font-weight: 700; font-size: 26px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(246,241,231,0.62); }
+      .pill { display: inline-block; font-weight: 800; font-size: 30px; letter-spacing: 0.12em; padding: 12px 26px; border-radius: 999px; }
+      .w { display: inline-block; }
+      .amber { color: var(--amber); }
+      .ice { color: var(--ice); }
+      .red { color: var(--red); }
+      .mint { color: var(--mint); }
+
+      /* HUD */
+      #hud-l { left: 72px; top: 52px; display: flex; align-items: center; gap: 16px; }
+      #hud-l .dot { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #9ad7ff, #2c73ff 60%, #0b2f80); box-shadow: 0 0 18px rgba(80,160,255,.7); }
+      #hud-r { right: 72px; top: 52px; text-align: right; }
+      #prog { left: 0; bottom: 0; width: 1920px; height: 6px; background: linear-gradient(90deg, var(--ice2), var(--amber)); transform-origin: 0 50%; }
+      #vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+      #flash { position: absolute; inset: 0; background: rgba(255,60,80,0.5); opacity: 0; pointer-events: none; }
+
+      /* altyazı */
+      #capwrap { position: absolute; left: 0; right: 0; bottom: 58px; height: 90px; }
+      .cap { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); white-space: nowrap; opacity: 0;
+        font-family: "InterV"; font-weight: 650; font-size: 43px; letter-spacing: -0.005em; color: rgba(246,241,231,0.72);
+        padding: 14px 36px 16px; border-radius: 22px; background: rgba(4,7,20,0.62); border: 1px solid rgba(255,255,255,0.09); }
+      .cap .cw { display: inline-block; margin: 0 0.13em; }
+
+      /* S1 */
+      #s1-title { left: 116px; top: 168px; font-size: 168px; }
+      #s1-title .ln { display: block; overflow: visible; padding-bottom: 6px; }
+      #q-label { left: 120px; top: 232px; color: var(--red); background: rgba(255,75,92,0.12); border: 2px solid rgba(255,75,92,0.55); }
+      #q { left: 116px; top: 330px; font-size: 128px; }
+      #q .ql { position: relative; display: block; width: max-content; }
+      #q .strike { position: absolute; left: -14px; right: -14px; top: 54%; height: 14px; border-radius: 7px; background: var(--red); transform-origin: 0 50%; box-shadow: 0 0 24px rgba(255,75,92,.8); }
+      #stamp { left: 850px; top: 640px; font-size: 176px; color: var(--red); border: 12px solid var(--red); border-radius: 22px; padding: 4px 44px 12px; background: rgba(30,0,8,0.55); text-shadow: 0 0 40px rgba(255,75,92,.5); box-shadow: 0 0 60px rgba(255,75,92,.45), inset 0 0 40px rgba(255,75,92,.25); }
+
+      /* S2 */
+      .rowtag { font-size: 30px; }
+      .bignum { font-size: 118px; font-weight: 800; }
+      .bignum small { font-size: 46px; font-weight: 700; letter-spacing: 0; margin-left: 14px; color: rgba(246,241,231,.75); }
+      #br-text { left: 1560px; top: 440px; width: 330px; }
+      #br-text .pct { font-size: 128px; color: var(--mint); }
+      #br-text .sub { font-family: "InterV"; font-weight: 600; font-size: 34px; line-height: 1.25; color: rgba(246,241,231,.85); letter-spacing: 0; }
+      #verdict { left: 340px; top: 808px; font-size: 62px; }
+
+      /* S3 */
+      #s3-r { left: 1180px; top: 150px; width: 700px; }
+      #s3-h { font-size: 150px; margin-top: 18px; }
+      #s3-num { font-size: 280px; color: var(--amber); margin-top: 22px; letter-spacing: -0.04em; }
+      #s3-note { font-family: "InterV"; font-weight: 600; font-size: 40px; line-height: 1.3; color: rgba(246,241,231,.88); margin-top: 6px; }
+
+      /* S4 */
+      .card { width: 460px; z-index: 5; padding: 22px 32px 24px; border-radius: 28px; background: rgba(8,12,32,0.7); border: 2px solid rgba(255,255,255,.14); backdrop-filter: blur(6px); }
+      .card .d { font-weight: 800; font-size: 26px; letter-spacing: .2em; color: rgba(246,241,231,.6); }
+      .card .t { font-size: 32px; font-weight: 650; line-height: 1.2; margin-top: 2px; color: rgba(246,241,231,.94); }
+      .card .big { font-size: 104px; margin-top: 2px; }
+      .card .s2 { font-size: 30px; font-weight: 700; margin-top: 8px; }
+
+      /* S5 */
+      .hdr { font-size: 34px; }
+      .meter { position: relative; height: 34px; border-radius: 17px; background: rgba(255,255,255,.1); overflow: hidden; }
+      .meter i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 17px; transform-origin: 0 50%; }
+      .lbl { font-family: "InterV"; font-weight: 650; font-size: 34px; color: rgba(246,241,231,.9); }
+      .chip { display: inline-flex; align-items: center; gap: 18px; font-size: 44px; padding: 14px 34px 14px 16px; border-radius: 999px; background: rgba(255,255,255,.07); border: 2px solid rgba(255,255,255,.16); font-weight: 700; }
+      .chip b { display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--amber); color: #1a1000; font-family: "Bricolage"; font-weight: 800; font-size: 40px; }
+
+      /* S6 */
+      #s6-a { left: 116px; top: 250px; font-size: 156px; }
+      #s6-a .old { position: relative; display: inline-block; color: rgba(246,241,231,.38); }
+      #s6-a .old i { position: absolute; left: -10px; right: -10px; top: 56%; height: 14px; border-radius: 7px; background: var(--red); transform-origin: 0 50%; }
+      #s6-b { left: 116px; top: 330px; font-size: 168px; color: var(--mint); }
+      #s6-c { left: 116px; top: 700px; }
+      #end { inset: 0; display: grid; place-items: center; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1920" data-height="1080" data-duration="83.4">
+      <canvas id="gl" width="1920" height="1080"></canvas>
+
+      <!-- SAHNE 1 -->
+      <div id="sc1" class="scene">
+        <div id="s1-title" class="abs disp">
+          <span class="ln"><span class="w" id="t1a">Yazın</span> <span class="w" id="t1b">hava</span></span>
+          <span class="ln"><span class="w amber" id="t1c" style="display:inline-block">neden</span> <span class="w amber" id="t1d">sıcak,</span></span>
+          <span class="ln"><span class="w" id="t1e">kışın</span> <span class="w ice" id="t1f">neden</span></span>
+          <span class="ln"><span class="w ice" id="t1g">soğuk?</span></span>
+        </div>
+        <div id="q-label" class="abs pill">YAYGIN CEVAP</div>
+        <div id="q" class="abs disp">
+          <span class="ql"><span class="w" id="qa">“Yazın</span> <span class="w" id="qb">Dünya,</span><i class="strike"></i></span>
+          <span class="ql"><span class="w" id="qc">Güneş’e</span> <span class="w" id="qd">daha</span><i class="strike"></i></span>
+          <span class="ql"><span class="w" id="qe">yakındır.”</span><i class="strike"></i></span>
+        </div>
+        <div id="stamp" class="abs disp">YANLIŞ</div>
+      </div>
+
+      <!-- SAHNE 2 -->
+      <div id="sc2" class="scene">
+        <div class="abs kicker" style="left:340px; top:118px">Dünya – Güneş mesafesi</div>
+
+        <div id="r1tag" class="abs pill rowtag ice" style="left:340px; top:190px; background:rgba(127,207,255,.14); border:2px solid rgba(127,207,255,.5)">OCAK · KUZEYDE KIŞ</div>
+        <div id="r1num" class="abs disp bignum" style="left:340px; top:258px; width:1000px"><span id="n1">0</span><small>milyon km</small></div>
+
+        <div id="r2tag" class="abs pill rowtag amber" style="left:340px; top:500px; background:rgba(255,181,46,.14); border:2px solid rgba(255,181,46,.5)">TEMMUZ · KUZEYDE YAZ</div>
+        <div id="r2num" class="abs disp bignum" style="left:340px; top:568px; width:1000px"><span id="n2">0</span><small>milyon km</small></div>
+
+        <div id="br-text" class="abs">
+          <div class="disp pct">%3</div>
+          <div class="sub">sadece bu kadar fark var</div>
+        </div>
+        <div id="verdict" class="abs disp">Kış: Dünya Güneş’e <span style="color:var(--mint)">en yakın!</span></div>
+      </div>
+
+      <!-- SAHNE 3 -->
+      <div id="sc3" class="scene">
+        <div id="s3-r" class="abs">
+          <div id="s3-k" class="kicker">Asıl sebep</div>
+          <div id="s3-h" class="disp">Eksen<br />eğikliği</div>
+          <div id="s3-num" class="disp"><span id="n3">0,0</span>°</div>
+          <div id="s3-note">Dönme ekseni, yörünge düzlemine dik doğruya göre yatıktır.</div>
+        </div>
+      </div>
+
+      <!-- SAHNE 4 -->
+      <div id="sc4" class="scene">
+        <div class="abs kicker" style="left:0; right:0; top:120px; text-align:center">Dünya’nın bir yılı</div>
+        <div id="c-jun" class="abs card" style="left:1400px; top:104px; border-color:rgba(255,181,46,.55)">
+          <div class="d">21 HAZİRAN</div>
+          <div class="disp big amber">YAZ</div>
+          <div class="t">Kuzey Güneş’e dönük</div>
+          <div class="s2 ice" id="c-jun-s">Güney: kış</div>
+        </div>
+        <div id="c-dec" class="abs card" style="left:60px; top:104px; border-color:rgba(127,207,255,.55)">
+          <div class="d">21 ARALIK</div>
+          <div class="disp big ice">KIŞ</div>
+          <div class="t">Kuzey Güneş’ten uzak</div>
+          <div class="s2 amber" id="c-dec-s">Güney: yaz</div>
+        </div>
+      </div>
+
+      <!-- SAHNE 5 -->
+      <div id="sc5" class="scene">
+        <div id="s5-chips" class="abs" style="left:0; right:0; top:112px; display:flex; justify-content:center; gap:34px">
+          <div id="chip1" class="chip disp"><b>1</b>Işığın geliş açısı</div>
+          <div id="chip2" class="chip disp"><b>2</b>Gün uzunluğu</div>
+        </div>
+        <div id="s5a" class="abs" style="inset:0">
+          <div id="pa-yaz" class="abs" style="left:150px; top:250px; width:760px; height:640px">
+            <div class="hdr disp amber" style="position:absolute; left:0; top:0">YAZ · Güneş yüksekte</div>
+            <svg width="760" height="470" viewBox="0 0 760 470" style="position:absolute; left:0; top:60px" id="svg-yaz"></svg>
+            <div class="abs lbl" style="left:0; top:552px">Birim alana düşen enerji</div>
+            <div class="abs meter" style="left:0; top:598px; width:520px"><i id="m-yaz" style="width:96%; background:linear-gradient(90deg,#ff7a1a,#ffd45e)"></i></div>
+            <div id="pct-yaz" class="abs disp amber" style="left:552px; top:560px; font-size:64px">%96</div>
+          </div>
+          <div id="pa-kis" class="abs" style="left:1010px; top:250px; width:760px; height:640px">
+            <div class="hdr disp ice" style="position:absolute; left:0; top:0">KIŞ · Güneş alçakta</div>
+            <svg width="760" height="470" viewBox="0 0 760 470" style="position:absolute; left:0; top:60px" id="svg-kis"></svg>
+            <div class="abs lbl" style="left:0; top:552px">Birim alana düşen enerji</div>
+            <div class="abs meter" style="left:0; top:598px; width:520px"><i id="m-kis" style="width:45%; background:linear-gradient(90deg,#3d8bff,#7fcfff)"></i></div>
+            <div id="pct-kis" class="abs disp ice" style="left:552px; top:560px; font-size:64px">%45</div>
+          </div>
+        </div>
+        <div id="s5b" class="abs" style="inset:0">
+          <svg id="svg-dial" width="1920" height="900" viewBox="0 0 1920 900" style="position:absolute; left:0; top:160px"></svg>
+          <div class="abs hdr disp amber" id="dh-yaz" style="left:250px; width:620px; text-align:center; top:240px">YAZ · 21 Haziran</div>
+          <div class="abs hdr disp ice" id="dh-kis" style="left:1050px; width:620px; text-align:center; top:240px">KIŞ · 21 Aralık</div>
+          <div class="abs disp" id="dn-yaz" style="left:250px; width:620px; text-align:center; top:512px; font-size:110px; line-height:1"><span id="dyv">0</span><span style="font-size:50px; margin-left:10px; color:rgba(246,241,231,.75)">saat</span></div>
+          <div class="abs disp" id="dn-kis" style="left:1050px; width:620px; text-align:center; top:512px; font-size:110px; line-height:1"><span id="dkv">0</span><span style="font-size:50px; margin-left:10px; color:rgba(246,241,231,.75)">saat</span></div>
+          <div class="abs lbl" id="dnote" style="left:0; right:0; text-align:center; top:884px; font-size:28px; color:rgba(246,241,231,.55)">Gündüz süresi, Ankara için yaklaşık değerlerdir.</div>
+        </div>
+      </div>
+
+      <!-- SAHNE 6 -->
+      <div id="sc6" class="scene">
+        <div id="s6-a" class="abs disp">
+          <span class="ln" style="display:block"><span class="old"><span class="w" id="u1">uzaklık</span><i></i></span><span class="w" id="u2" style="color:rgba(246,241,231,.38)"> değil,</span></span>
+        </div>
+        <div id="s6-b" class="abs disp"><span class="w" id="e1">EĞİKLİK</span></div>
+        
+        <div id="nomev" class="abs disp" style="left:116px; top:210px; font-size:136px; line-height:1.02"><div id="nm1"><span style="color:rgba(246,241,231,.55)">Eğiklik </span><span class="amber">0°</span></div><div id="nm2" style="color:var(--red)">mevsim yok</div></div>
+        <div id="jul" class="abs" style="left:1330px; top:100px; width:540px">
+          <div class="pill amber" style="background:rgba(255,181,46,.14); border:2px solid rgba(255,181,46,.5); font-size:28px">TEMMUZ · KUZEYDE YAZ</div>
+          <div class="disp" style="font-size:104px; margin-top:14px">152,1<small style="font-size:44px; margin-left:12px; color:rgba(246,241,231,.75)">milyon km</small></div>
+          <div class="lbl" style="font-size:38px; margin-top:6px">Yılın en uzak noktası</div>
+        </div>
+        <div id="end" class="abs">
+          <div class="disp" style="font-size:132px; line-height:1.02">Mevsimler<br /><span class="amber">uzaklıktan</span> değil,<br /><span class="mint">eğiklikten</span> gelir.</div>
+          <div class="kicker" style="margin-top:44px; font-size:30px">23,5° eğiklik · dört mevsim</div>
+        </div>
+      </div>
+
+      <audio id="mix" src="audio/mix.wav" data-start="0" data-duration="83.4" data-track-index="1" data-volume="1"></audio>
+      <div id="vig"></div>
+      <div id="flash"></div>
+      <div id="hud-l" class="abs"><div class="dot"></div><div class="kicker" style="font-size:22px">Mevsimler neden oluşur?</div></div>
+      <div id="hud-r" class="abs kicker" style="font-size:22px"><span id="chap">01 · Yanılgı</span></div>
+      <div id="capwrap"></div>
+      <div id="prog" class="abs"></div>
+    </div>
+
+    <script src="assets/land.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/engine.js"></script>
+    <script src="assets/main.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = window.__mainTl;
+    </script>
+  </body>
+</html>

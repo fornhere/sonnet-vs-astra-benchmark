@@ -1,0 +1,983 @@
+{
+  "ok": true,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 24,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#host-s1 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 138,
+          "top": 63,
+          "right": 222.73,
+          "bottom": 101,
+          "width": 84.73,
+          "height": 38
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "orvant",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 138,
+          "y": 63,
+          "width": 84.73,
+          "height": 38
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#host-s1 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1546.39,
+          "top": 67.5,
+          "right": 1820,
+          "bottom": 96.5,
+          "width": 273.61,
+          "height": 29
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "01 — OPERATÖR YÜKÜ",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1546.39,
+          "y": 67.5,
+          "width": 273.61,
+          "height": 29
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#host-s1 > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 997,
+          "right": 347,
+          "bottom": 1024,
+          "width": 247,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "OTONOM ORKESTRASYON",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 997,
+          "width": 247,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#host-s1 > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1755,
+          "top": 997,
+          "right": 1820,
+          "bottom": 1024,
+          "width": 65,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "1 / 6",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1755,
+          "y": 997,
+          "width": 65,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-kicker",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 235,
+          "right": 537.41,
+          "bottom": 264,
+          "width": 437.41,
+          "height": 29
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "YAPAY ZEKÂ KODLAMA AJANLARI",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 235,
+          "width": 437.41,
+          "height": 29
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-a",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 282,
+          "right": 516,
+          "bottom": 555.95,
+          "width": 416,
+          "height": 273.95
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Ajanlarçalışıyor.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 282,
+          "width": 416,
+          "height": 273.95
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-b",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 585.91,
+          "right": 499.7,
+          "bottom": 681.91,
+          "width": 399.7,
+          "height": 96
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Operatör hâlâ",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 585.91,
+          "width": 399.7,
+          "height": 96
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-b > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 664.3,
+          "right": 309.63,
+          "bottom": 760.3,
+          "width": 209.63,
+          "height": 96
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "sensin.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 664.3,
+          "width": 209.63,
+          "height": 96
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l1",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1186,
+          "top": 239,
+          "right": 1222,
+          "bottom": 266,
+          "width": 36,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "01",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1186,
+          "y": 239,
+          "width": 36,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l1 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1237,
+          "top": 231,
+          "right": 1346.8,
+          "bottom": 269,
+          "width": 109.8,
+          "height": 38
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "İş tanımı",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1237,
+          "y": 231,
+          "width": 109.8,
+          "height": 38
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l2",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1486,
+          "top": 392,
+          "right": 1522,
+          "bottom": 419,
+          "width": 36,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "02",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1486,
+          "y": 392,
+          "width": 36,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l2 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1537,
+          "top": 384,
+          "right": 1708.25,
+          "bottom": 422,
+          "width": 171.25,
+          "height": 38
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Model seçimi",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1537,
+          "y": 384,
+          "width": 171.25,
+          "height": 38
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l3",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1116,
+          "top": 744,
+          "right": 1152,
+          "bottom": 771,
+          "width": 36,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "03",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1116,
+          "y": 744,
+          "width": 36,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l3 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1167,
+          "top": 736,
+          "right": 1309.77,
+          "bottom": 774,
+          "width": 142.77,
+          "height": 38
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Doğrulama",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1167,
+          "y": 736,
+          "width": 142.77,
+          "height": 38
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l4",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1476,
+          "top": 834,
+          "right": 1512,
+          "bottom": 861,
+          "width": 36,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "04",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1476,
+          "y": 834,
+          "width": 36,
+          "height": 27
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-l4 > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1527,
+          "top": 826,
+          "right": 1683.16,
+          "bottom": 864,
+          "width": 156.16,
+          "height": 38
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Hata teşhisi",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1527,
+          "y": 826,
+          "width": 156.16,
+          "height": 38
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 6.9,
+        "selector": "#s1-person",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1310,
+          "top": 670,
+          "right": 1418.81,
+          "bottom": 698,
+          "width": 108.81,
+          "height": 28
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "OPERATÖR",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 1310,
+          "y": 670,
+          "width": 108.81,
+          "height": 28
+        },
+        "firstSeen": 6.9,
+        "lastSeen": 6.9,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#host-s2 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1515.98,
+          "top": 67.5,
+          "right": 1820,
+          "bottom": 96.5,
+          "width": 304.02,
+          "height": 29
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "02 — YENİ BİR KATMAN",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 1515.98,
+          "y": 67.5,
+          "width": 304.02,
+          "height": 29
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#host-s2 > div:nth-of-type(1) > div:nth-of-type(2) > span:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1755,
+          "top": 997,
+          "right": 1820,
+          "bottom": 1024,
+          "width": 65,
+          "height": 27
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "2 / 6",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 1755,
+          "y": 997,
+          "width": 65,
+          "height": 27
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#s2-name",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 90.94,
+          "top": 526.48,
+          "right": 719.87,
+          "bottom": 863.3,
+          "width": 628.94,
+          "height": 336.82
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "orvant",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 90.94,
+          "y": 526.48,
+          "width": 628.94,
+          "height": 336.82
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#s2-name > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 699.29,
+          "top": 569.02,
+          "right": 773.86,
+          "bottom": 867.08,
+          "width": 74.57,
+          "height": 298.06
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": ".",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 699.29,
+          "y": 569.02,
+          "width": 74.57,
+          "height": 298.06
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#s2-line",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 697.19,
+          "right": 726.84,
+          "bottom": 776.19,
+          "width": 626.84,
+          "height": 79
+        },
+        "containerSelector": "#wipe-0-1",
+        "text": "Operatörü devralmak için.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 0.33,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 100,
+          "y": 697.19,
+          "width": 626.84,
+          "height": 79
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#s2-name",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 92.18,
+          "top": 544.44,
+          "right": 1107.82,
+          "bottom": 872.75,
+          "width": 1015.64,
+          "height": 328.31
+        },
+        "containerSelector": "div.mask",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 100,
+          "top": 309,
+          "right": 1100,
+          "bottom": 582.19,
+          "width": 1000,
+          "height": 273.19
+        },
+        "overflow": {
+          "left": 7.82,
+          "right": 7.82,
+          "bottom": 290.56
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 92.18,
+          "y": 544.44,
+          "width": 1015.64,
+          "height": 328.31
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 7.2,
+        "selector": "#s2-line",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 100,
+          "top": 697.19,
+          "right": 1100,
+          "bottom": 776.19,
+          "width": 1000,
+          "height": 79
+        },
+        "containerSelector": "div.mask",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 100,
+          "top": 582.19,
+          "right": 1100,
+          "bottom": 690.19,
+          "width": 1000,
+          "height": 108
+        },
+        "overflow": {
+          "bottom": 86
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 100,
+          "y": 697.19,
+          "width": 1000,
+          "height": 79
+        },
+        "firstSeen": 7.2,
+        "lastSeen": 7.2,
+        "occurrences": 1,
+        "heldMs": 0
+      }
+    ],
+    "duration": 52,
+    "samples": [
+      5.5,
+      6.9,
+      7.2,
+      10.5,
+      20.5,
+      26.6,
+      29.5,
+      40.5,
+      46.5,
+      49.5
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 24,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.85:1; WCAG AA requires 4.5:1.",
+        "text": "02 — YENİ BİR KATMAN",
+        "fg": "rgb(173,180,166)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.85,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(106,110,102)",
+        "large": false,
+        "selector": "div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 1515.984375,
+          "y": 67.5,
+          "width": 304.015625,
+          "height": 29
+        },
+        "time": 7.2
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.85:1; WCAG AA requires 4.5:1.",
+        "text": "2 / 6",
+        "fg": "rgb(173,180,166)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.85,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(106,110,102)",
+        "large": false,
+        "selector": "div > div:nth-of-type(2) > div > div:nth-of-type(2) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 1755,
+          "y": 997,
+          "width": 65,
+          "height": 27
+        },
+        "time": 7.2
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.04:1; WCAG AA requires 4.5:1.",
+        "text": "TANIŞTIRALIM",
+        "fg": "rgb(206,250,105)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.04,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(95,116,49)",
+        "large": false,
+        "selector": "#s2-pre",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 100,
+          "y": 260,
+          "width": 1000,
+          "height": 29
+        },
+        "time": 7.2
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.01:1; WCAG AA requires 3:1.",
+        "text": "orvant.",
+        "fg": "rgb(240,240,230)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.01,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(138,138,133)",
+        "large": true,
+        "selector": "#s2-name",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 92.17797088623047,
+          "y": 544.4374389648438,
+          "width": 1015.64404296875,
+          "height": 328.3126220703125
+        },
+        "time": 7.2
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.04:1; WCAG AA requires 3:1.",
+        "text": ".",
+        "fg": "rgb(206,250,105)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.04,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(121,147,62)",
+        "large": true,
+        "selector": "div > div:nth-of-type(2) > div > div:nth-of-type(3) > div:nth-of-type(2) > div > span",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 699.2936401367188,
+          "y": 569.0218505859375,
+          "width": 74.5712890625,
+          "height": 298.05694580078125
+        },
+        "time": 7.2
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.01:1; WCAG AA requires 3:1.",
+        "text": "Operatörü devralmak için.",
+        "fg": "rgb(240,240,230)",
+        "bg": "rgb(238,240,228)",
+        "ratio": 1.01,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(138,138,133)",
+        "large": true,
+        "selector": "#s2-line",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 100,
+          "y": 697.1875,
+          "width": 1000,
+          "height": 79
+        },
+        "time": 7.2
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      5.5,
+      7.2,
+      20.5,
+      29.5,
+      49.5
+    ],
+    "checked": 70,
+    "passed": 64
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.91",
+    "latestVersion": "0.8.86",
+    "updateAvailable": false
+  }
+}

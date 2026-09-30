@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeae2"><meta name="description" content="A little New York. Explore a hand-built voxel diorama of Manhattan, from the quiet of Central Park to the glow of Midtown.">
+  <title>A little New York — Borough No. 01</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="scene" aria-label="Interactive 3D voxel model of Manhattan. Drag to orbit, scroll to zoom, right-drag to pan." role="img"></div>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Borough, return to the whole island"><svg viewBox="0 0 32 36" fill="none"><path d="M16 2 30 10v16L16 34 2 26V10L16 2Z" stroke="currentColor" stroke-width="1.8"/><path d="m2 10 14 8 14-8M16 18v16M9 6l14 8v16M9 14v16" stroke="currentColor" stroke-width="1.4"/></svg><span>BOROUGH<small>SMALL WORLDS. BIG STORIES.</small></span></a>
+    <div class="edition"><span class="live-dot"></span> A CITY IN MINIATURE <span class="edition-separator">/</span> VOL. 001</div>
+    <div class="top-actions"><button id="guide-button" class="text-button">Field notes <span>↗</span></button><span class="top-divider"></span><button class="icon-button" id="sound-button" aria-label="Turn on ambient city sound" title="Ambient city sound"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 3c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg><span class="sound-slash"></span></button></div>
+  </header>
+  <main class="intro">
+    <div class="eyebrow"><span class="index-number">01</span> NEW YORK, NEW YORK</div>
+    <h1>A little<br>New York<span class="title-dot">.</span></h1>
+    <p class="intro-copy">The city that never sleeps.<br>A little closer. A little slower.</p>
+    <div class="coordinate">40°46′ N &nbsp; 73°58′ W <span>↗</span></div>
+    <button id="explore-button" class="explore-button">Explore the island <svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+  </main>
+  <aside class="place-card" id="place-card" aria-live="polite">
+    <div class="place-topline"><span id="place-category">THE BIG PICTURE</span><span id="place-count">01 / 06</span></div>
+    <h2 id="place-title">One island. A thousand stories.</h2>
+    <p id="place-description">Follow the avenues, find a familiar skyline, or get happily lost between the blocks.</p>
+    <div class="place-footer"><span id="place-detail"><i></i> MADE TO BE EXPLORED</span><button id="place-go" aria-label="Visit Central Park">↗</button></div>
+  </aside>
+  <div class="scene-labels" id="scene-labels"></div>
+  <div class="view-tools" role="group" aria-label="View controls">
+    <button id="zoom-in" aria-label="Zoom in" title="Zoom in (+)">+</button><button id="zoom-out" aria-label="Zoom out" title="Zoom out (−)">−</button><span></span>
+    <button id="reset-view" aria-label="Reset view" title="Whole island (Home)"><svg viewBox="0 0 24 24"><path d="m4 10 8-6 8 6v10h-6v-6h-4v6H4V10Z"/></svg></button>
+    <button id="orbit-button" aria-label="Start slow orbit" title="Slow orbit (Space)"><svg viewBox="0 0 24 24"><path d="M19 8c-1.4-2.5-4-4-7-4a8 8 0 1 0 8 9M19 3v5h-5"/></svg></button>
+    <button id="capture-button" aria-label="Save a postcard" title="Save a postcard"><svg viewBox="0 0 24 24"><path d="M4 7h4l2-3h4l2 3h4v13H4V7Z"/><circle cx="12" cy="13" r="4"/></svg></button>
+  </div>
+  <div class="compass" aria-label="North compass"><svg id="compass-needle" viewBox="0 0 54 54"><path d="M27 8 34 35 27 31 20 35Z" fill="currentColor"/><path d="m27 31 7 4-7 11-7-11Z" fill="currentColor" opacity=".2"/></svg><span>N</span></div>
+  <div class="water-label label-hudson">HUDSON RIVER</div><div class="water-label label-east">EAST RIVER</div>
+  <div class="view-caption"><span class="live-dot"></span><span id="view-status">THE WHOLE ISLAND</span><span class="caption-rule"></span> <span id="scale-label">A NEW PERSPECTIVE</span></div>
+  <section class="bottom-dock" aria-label="Explore and lighting controls">
+    <div class="destinations"><span class="dock-label">TAKE ME TO</span><div class="destination-list" role="group" aria-label="Landmarks"><button data-place="park"><span class="place-symbol">♧</span> Central Park</button><button data-place="empire"><span class="place-symbol building-symbol">▥</span> Midtown</button><button data-place="downtown"><span class="place-symbol">▥</span> Downtown</button><button data-place="bridge"><span class="place-symbol bridge-symbol">⌁</span> Brooklyn Bridge</button></div></div>
+    <div class="lighting"><div class="lighting-heading"><label for="time-slider">SET THE MOOD</label><span id="time-label">GOLDEN HOUR</span></div><div class="lighting-slider"><svg viewBox="0 0 24 24" aria-label="Day"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></svg><input id="time-slider" type="range" min="0" max="100" value="38" aria-label="Lighting, from daylight to night"><svg viewBox="0 0 24 24" aria-label="Night"><path d="M20 15A9 9 0 0 1 9 4a9 9 0 1 0 11 11Z"/></svg></div></div>
+  </section>
+  <footer class="page-footer"><span>BUILT BLOCK BY BLOCK.</span><div><span class="mouse-icon"></span> Drag to orbit <i>·</i> Scroll to zoom <i>·</i> Right-drag to pan</div><button id="labels-button" aria-pressed="true">Hide landmarks <span>◉</span></button></footer>
+  <div id="toast" role="status"></div>
+  <div class="loading" id="loading"><div class="loading-cube">B</div><span>Putting the city together<span class="loading-dots">...</span></span><small>ONE BLOCK AT A TIME</small></div>
+  <dialog id="guide"><button class="modal-close" aria-label="Close field notes">×</button><div class="eyebrow">NOTES FROM THE ATELIER</div><h2>A city. In the palm<br>of your hand.</h2><p>This is Manhattan, reimagined as a little world of blocks. Its geography is familiar; its proportions take a few creative liberties.</p><div class="guide-grid"><div><span>01 / GET LOST</span><p>Drag to turn the table. Scroll or pinch to get closer. Right-drag or use two fingers to move across the island.</p></div><div><span>02 / FIND YOUR PLACE</span><p>Select a landmark on the model or choose a neighborhood below. Use the home button to see the whole island.</p></div><div><span>03 / STAY A LITTLE</span><p>Slide the sun into night, switch on the city ambience, and let the slow orbit show you another side.</p></div><div><span>04 / TAKE IT WITH YOU</span><p>The camera saves a high-resolution postcard of your current view. A small souvenir of a small New York.</p></div></div><div class="guide-bottom">KEYBOARD <span>+ / − &nbsp; Zoom</span><span>Home &nbsp; Reset</span><span>Space &nbsp; Orbit</span><span>Esc &nbsp; Close</span></div></dialog>
+  <script defer src="app.bundle.js"></script>
+</body>
+</html>

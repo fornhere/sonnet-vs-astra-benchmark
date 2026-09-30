@@ -1,0 +1,800 @@
+[
+  {
+    "test": "base net",
+    "actual": 4908772.25,
+    "expected": 4908772.25,
+    "pass": true
+  },
+  {
+    "test": "base result",
+    "actual": 70787.25,
+    "expected": 70787.25,
+    "pass": true
+  },
+  {
+    "test": "month 1 orders",
+    "actual": 1072.0,
+    "expected": 1072,
+    "pass": true
+  },
+  {
+    "test": "month 1 returns",
+    "actual": 34.0,
+    "expected": 34,
+    "pass": true
+  },
+  {
+    "test": "month 1 gross",
+    "actual": 589090.0,
+    "expected": 589090,
+    "pass": true
+  },
+  {
+    "test": "month 1 discount_tl",
+    "actual": 11226.75,
+    "expected": 11226.75,
+    "pass": true
+  },
+  {
+    "test": "month 1 net",
+    "actual": 560901.0,
+    "expected": 560901.0,
+    "pass": true
+  },
+  {
+    "test": "month 1 result",
+    "actual": 107919.0,
+    "expected": 107919.0,
+    "pass": true
+  },
+  {
+    "test": "month 2 orders",
+    "actual": 975.0,
+    "expected": 975,
+    "pass": true
+  },
+  {
+    "test": "month 2 returns",
+    "actual": 29.0,
+    "expected": 29,
+    "pass": true
+  },
+  {
+    "test": "month 2 gross",
+    "actual": 581395.0,
+    "expected": 581395,
+    "pass": true
+  },
+  {
+    "test": "month 2 discount_tl",
+    "actual": 13192.0,
+    "expected": 13192.0,
+    "pass": true
+  },
+  {
+    "test": "month 2 net",
+    "actual": 551920.25,
+    "expected": 551920.25,
+    "pass": true
+  },
+  {
+    "test": "month 2 result",
+    "actual": 105662.25,
+    "expected": 105662.25,
+    "pass": true
+  },
+  {
+    "test": "month 3 orders",
+    "actual": 650.0,
+    "expected": 650,
+    "pass": true
+  },
+  {
+    "test": "month 3 returns",
+    "actual": 16.0,
+    "expected": 16,
+    "pass": true
+  },
+  {
+    "test": "month 3 gross",
+    "actual": 388630.0,
+    "expected": 388630,
+    "pass": true
+  },
+  {
+    "test": "month 3 discount_tl",
+    "actual": 8693.0,
+    "expected": 8693.0,
+    "pass": true
+  },
+  {
+    "test": "month 3 net",
+    "actual": 371162.25,
+    "expected": 371162.25,
+    "pass": true
+  },
+  {
+    "test": "month 3 result",
+    "actual": -11360.75,
+    "expected": -11360.75,
+    "pass": true
+  },
+  {
+    "test": "month 4 orders",
+    "actual": 452.0,
+    "expected": 452,
+    "pass": true
+  },
+  {
+    "test": "month 4 returns",
+    "actual": 10.0,
+    "expected": 10,
+    "pass": true
+  },
+  {
+    "test": "month 4 gross",
+    "actual": 247055.0,
+    "expected": 247055,
+    "pass": true
+  },
+  {
+    "test": "month 4 discount_tl",
+    "actual": 3448.25,
+    "expected": 3448.25,
+    "pass": true
+  },
+  {
+    "test": "month 4 net",
+    "actual": 240957.25,
+    "expected": 240957.25,
+    "pass": true
+  },
+  {
+    "test": "month 4 result",
+    "actual": -97631.75,
+    "expected": -97631.75,
+    "pass": true
+  },
+  {
+    "test": "month 5 orders",
+    "actual": 456.0,
+    "expected": 456,
+    "pass": true
+  },
+  {
+    "test": "month 5 returns",
+    "actual": 8.0,
+    "expected": 8,
+    "pass": true
+  },
+  {
+    "test": "month 5 gross",
+    "actual": 287745.0,
+    "expected": 287745,
+    "pass": true
+  },
+  {
+    "test": "month 5 discount_tl",
+    "actual": 6714.0,
+    "expected": 6714.0,
+    "pass": true
+  },
+  {
+    "test": "month 5 net",
+    "actual": 273516.0,
+    "expected": 273516.0,
+    "pass": true
+  },
+  {
+    "test": "month 5 result",
+    "actual": -75763.0,
+    "expected": -75763.0,
+    "pass": true
+  },
+  {
+    "test": "month 6 orders",
+    "actual": 430.0,
+    "expected": 430,
+    "pass": true
+  },
+  {
+    "test": "month 6 returns",
+    "actual": 14.0,
+    "expected": 14,
+    "pass": true
+  },
+  {
+    "test": "month 6 gross",
+    "actual": 293730.0,
+    "expected": 293730,
+    "pass": true
+  },
+  {
+    "test": "month 6 discount_tl",
+    "actual": 6541.75,
+    "expected": 6541.75,
+    "pass": true
+  },
+  {
+    "test": "month 6 net",
+    "actual": 276725.75,
+    "expected": 276725.75,
+    "pass": true
+  },
+  {
+    "test": "month 6 result",
+    "actual": -66026.25,
+    "expected": -66026.25,
+    "pass": true
+  },
+  {
+    "test": "month 7 orders",
+    "actual": 454.0,
+    "expected": 454,
+    "pass": true
+  },
+  {
+    "test": "month 7 returns",
+    "actual": 15.0,
+    "expected": 15,
+    "pass": true
+  },
+  {
+    "test": "month 7 gross",
+    "actual": 328945.0,
+    "expected": 328945,
+    "pass": true
+  },
+  {
+    "test": "month 7 discount_tl",
+    "actual": 8072.25,
+    "expected": 8072.25,
+    "pass": true
+  },
+  {
+    "test": "month 7 net",
+    "actual": 311599.25,
+    "expected": 311599.25,
+    "pass": true
+  },
+  {
+    "test": "month 7 result",
+    "actual": -42749.75,
+    "expected": -42749.75,
+    "pass": true
+  },
+  {
+    "test": "month 8 orders",
+    "actual": 403.0,
+    "expected": 403,
+    "pass": true
+  },
+  {
+    "test": "month 8 returns",
+    "actual": 26.0,
+    "expected": 26,
+    "pass": true
+  },
+  {
+    "test": "month 8 gross",
+    "actual": 267855.0,
+    "expected": 267855,
+    "pass": true
+  },
+  {
+    "test": "month 8 discount_tl",
+    "actual": 6251.75,
+    "expected": 6251.75,
+    "pass": true
+  },
+  {
+    "test": "month 8 net",
+    "actual": 246909.75,
+    "expected": 246909.75,
+    "pass": true
+  },
+  {
+    "test": "month 8 result",
+    "actual": -84394.25,
+    "expected": -84394.25,
+    "pass": true
+  },
+  {
+    "test": "month 9 orders",
+    "actual": 584.0,
+    "expected": 584,
+    "pass": true
+  },
+  {
+    "test": "month 9 returns",
+    "actual": 34.0,
+    "expected": 34,
+    "pass": true
+  },
+  {
+    "test": "month 9 gross",
+    "actual": 413835.0,
+    "expected": 413835,
+    "pass": true
+  },
+  {
+    "test": "month 9 discount_tl",
+    "actual": 9100.0,
+    "expected": 9100.0,
+    "pass": true
+  },
+  {
+    "test": "month 9 net",
+    "actual": 381609.5,
+    "expected": 381609.5,
+    "pass": true
+  },
+  {
+    "test": "month 9 result",
+    "actual": -12133.5,
+    "expected": -12133.5,
+    "pass": true
+  },
+  {
+    "test": "month 10 orders",
+    "actual": 795.0,
+    "expected": 795,
+    "pass": true
+  },
+  {
+    "test": "month 10 returns",
+    "actual": 58.0,
+    "expected": 58,
+    "pass": true
+  },
+  {
+    "test": "month 10 gross",
+    "actual": 471775.0,
+    "expected": 471775,
+    "pass": true
+  },
+  {
+    "test": "month 10 discount_tl",
+    "actual": 12246.25,
+    "expected": 12246.25,
+    "pass": true
+  },
+  {
+    "test": "month 10 net",
+    "actual": 425555.0,
+    "expected": 425555.0,
+    "pass": true
+  },
+  {
+    "test": "month 10 result",
+    "actual": -23103.0,
+    "expected": -23103.0,
+    "pass": true
+  },
+  {
+    "test": "month 11 orders",
+    "actual": 1162.0,
+    "expected": 1162,
+    "pass": true
+  },
+  {
+    "test": "month 11 returns",
+    "actual": 78.0,
+    "expected": 78,
+    "pass": true
+  },
+  {
+    "test": "month 11 gross",
+    "actual": 680040.0,
+    "expected": 680040,
+    "pass": true
+  },
+  {
+    "test": "month 11 discount_tl",
+    "actual": 17128.75,
+    "expected": 17128.75,
+    "pass": true
+  },
+  {
+    "test": "month 11 net",
+    "actual": 617212.5,
+    "expected": 617212.5,
+    "pass": true
+  },
+  {
+    "test": "month 11 result",
+    "actual": 122946.5,
+    "expected": 122946.5,
+    "pass": true
+  },
+  {
+    "test": "month 12 orders",
+    "actual": 1191.0,
+    "expected": 1191,
+    "pass": true
+  },
+  {
+    "test": "month 12 returns",
+    "actual": 80.0,
+    "expected": 80,
+    "pass": true
+  },
+  {
+    "test": "month 12 gross",
+    "actual": 712825.0,
+    "expected": 712825,
+    "pass": true
+  },
+  {
+    "test": "month 12 discount_tl",
+    "actual": 17512.0,
+    "expected": 17512.0,
+    "pass": true
+  },
+  {
+    "test": "month 12 net",
+    "actual": 650703.75,
+    "expected": 650703.75,
+    "pass": true
+  },
+  {
+    "test": "month 12 result",
+    "actual": 147421.75,
+    "expected": 147421.75,
+    "pass": true
+  },
+  {
+    "test": "segment 6 orders",
+    "actual": 3273.0,
+    "expected": 3273,
+    "pass": true
+  },
+  {
+    "test": "segment 6 net",
+    "actual": 1926575.0,
+    "expected": 1926575.0,
+    "pass": true
+  },
+  {
+    "test": "segment 6 discount_tl",
+    "actual": 1040.0,
+    "expected": 1040.0,
+    "pass": true
+  },
+  {
+    "test": "segment 6 shipping",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "segment 7 orders",
+    "actual": 2475.0,
+    "expected": 2475,
+    "pass": true
+  },
+  {
+    "test": "segment 7 net",
+    "actual": 1238455.25,
+    "expected": 1238455.25,
+    "pass": true
+  },
+  {
+    "test": "segment 7 discount_tl",
+    "actual": 118700.75,
+    "expected": 118700.75,
+    "pass": true
+  },
+  {
+    "test": "segment 7 shipping",
+    "actual": 94050.0,
+    "expected": 94050,
+    "pass": true
+  },
+  {
+    "test": "segment 8 orders",
+    "actual": 1997.0,
+    "expected": 1997,
+    "pass": true
+  },
+  {
+    "test": "segment 8 net",
+    "actual": 1165447.0,
+    "expected": 1165447.0,
+    "pass": true
+  },
+  {
+    "test": "segment 8 discount_tl",
+    "actual": 126.0,
+    "expected": 126.0,
+    "pass": true
+  },
+  {
+    "test": "segment 8 shipping",
+    "actual": 89851.0,
+    "expected": 89851,
+    "pass": true
+  },
+  {
+    "test": "segment 9 orders",
+    "actual": 879.0,
+    "expected": 879,
+    "pass": true
+  },
+  {
+    "test": "segment 9 net",
+    "actual": 578295.0,
+    "expected": 578295.0,
+    "pass": true
+  },
+  {
+    "test": "segment 9 discount_tl",
+    "actual": 260.0,
+    "expected": 260.0,
+    "pass": true
+  },
+  {
+    "test": "segment 9 shipping",
+    "actual": 39555.0,
+    "expected": 39555,
+    "pass": true
+  },
+  {
+    "test": "segment 15 orders",
+    "actual": 750.0,
+    "expected": 750,
+    "pass": true
+  },
+  {
+    "test": "segment 15 net",
+    "actual": 1685045.0,
+    "expected": 1685045.0,
+    "pass": true
+  },
+  {
+    "test": "segment 15 discount_tl",
+    "actual": 38207.5,
+    "expected": 38207.5,
+    "pass": true
+  },
+  {
+    "test": "segment 15 shipping",
+    "actual": 21020.0,
+    "expected": 21020,
+    "pass": true
+  },
+  {
+    "test": "segment 16 orders",
+    "actual": 2382.0,
+    "expected": 2382,
+    "pass": true
+  },
+  {
+    "test": "segment 16 net",
+    "actual": 1567671.0,
+    "expected": 1567671.0,
+    "pass": true
+  },
+  {
+    "test": "segment 16 discount_tl",
+    "actual": 42336.0,
+    "expected": 42336.0,
+    "pass": true
+  },
+  {
+    "test": "segment 16 shipping",
+    "actual": 62571.0,
+    "expected": 62571,
+    "pass": true
+  },
+  {
+    "test": "segment 17 orders",
+    "actual": 2727.0,
+    "expected": 2727,
+    "pass": true
+  },
+  {
+    "test": "segment 17 net",
+    "actual": 792086.75,
+    "expected": 792086.75,
+    "pass": true
+  },
+  {
+    "test": "segment 17 discount_tl",
+    "actual": 21238.0,
+    "expected": 21238.0,
+    "pass": true
+  },
+  {
+    "test": "segment 17 shipping",
+    "actual": 71107.0,
+    "expected": 71107,
+    "pass": true
+  },
+  {
+    "test": "segment 18 orders",
+    "actual": 1725.0,
+    "expected": 1725,
+    "pass": true
+  },
+  {
+    "test": "segment 18 net",
+    "actual": 392587.5,
+    "expected": 392587.5,
+    "pass": true
+  },
+  {
+    "test": "segment 18 discount_tl",
+    "actual": 9548.25,
+    "expected": 9548.25,
+    "pass": true
+  },
+  {
+    "test": "segment 18 shipping",
+    "actual": 45396.0,
+    "expected": 45396,
+    "pass": true
+  },
+  {
+    "test": "segment 19 orders",
+    "actual": 867.0,
+    "expected": 867,
+    "pass": true
+  },
+  {
+    "test": "segment 19 net",
+    "actual": 277032.0,
+    "expected": 277032.0,
+    "pass": true
+  },
+  {
+    "test": "segment 19 discount_tl",
+    "actual": 7497.0,
+    "expected": 7497.0,
+    "pass": true
+  },
+  {
+    "test": "segment 19 shipping",
+    "actual": 22192.0,
+    "expected": 22192,
+    "pass": true
+  },
+  {
+    "test": "segment 20 orders",
+    "actual": 173.0,
+    "expected": 173,
+    "pass": true
+  },
+  {
+    "test": "segment 20 net",
+    "actual": 194350.0,
+    "expected": 194350.0,
+    "pass": true
+  },
+  {
+    "test": "segment 20 discount_tl",
+    "actual": 1300.0,
+    "expected": 1300.0,
+    "pass": true
+  },
+  {
+    "test": "segment 20 shipping",
+    "actual": 1170.0,
+    "expected": 1170,
+    "pass": true
+  },
+  {
+    "test": "audit row 30",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "audit row 31",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "audit row 32",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "audit row 33",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "audit row 34",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "commission zero",
+    "actual": 70787.25,
+    "expected": 70787.25,
+    "pass": true
+  },
+  {
+    "test": "commission twenty",
+    "actual": -176903.80000000002,
+    "expected": -176903.8,
+    "pass": true
+  },
+  {
+    "test": "edited sale net +185",
+    "actual": 4908957.25,
+    "expected": 4908957.25,
+    "pass": true
+  },
+  {
+    "test": "edited sale result +185",
+    "actual": 70972.25,
+    "expected": 70972.25,
+    "pass": true
+  },
+  {
+    "test": "full return net -370",
+    "actual": 4908402.25,
+    "expected": 4908402.25,
+    "pass": true
+  },
+  {
+    "test": "missing cost result n.a.",
+    "actual": "n.a.",
+    "expected": "n.a.",
+    "pass": true
+  },
+  {
+    "test": "zero cost stays zero",
+    "actual": 250563.25,
+    "expected": 250563.25,
+    "pass": true
+  },
+  {
+    "test": "missing year net",
+    "actual": 0.0,
+    "expected": 0,
+    "pass": true
+  },
+  {
+    "test": "missing year result",
+    "actual": "n.a.",
+    "expected": "n.a.",
+    "pass": true
+  },
+  {
+    "test": "appended sale net",
+    "actual": 4908952.25,
+    "expected": 4908952.25,
+    "pass": true
+  },
+  {
+    "test": "appended sale result",
+    "actual": 70922.25,
+    "expected": 70922.25,
+    "pass": true
+  },
+  {
+    "test": "appended web net",
+    "actual": 1165627.0,
+    "expected": 1165627,
+    "pass": true
+  },
+  {
+    "test": "appended December discount",
+    "actual": 17532.0,
+    "expected": 17532,
+    "pass": true
+  },
+  {
+    "test": "excluded appended sale",
+    "actual": 70787.25,
+    "expected": 70787.25,
+    "pass": true
+  }
+]

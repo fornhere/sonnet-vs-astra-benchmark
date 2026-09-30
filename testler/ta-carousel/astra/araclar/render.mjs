@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawn} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
+const root=path.resolve(import.meta.dirname,'..');
+const profile=path.join(root,'.chromium-render');
+const proc=spawn('/usr/bin/chromium',['--headless','--no-sandbox','--disable-dev-shm-usage','--hide-scrollbars','--disable-gpu','--force-color-profile=srgb',`--user-data-dir=${profile}`,'--remote-debugging-port=9322','about:blank'],{stdio:'ignore'});
+let ws, next=0; const pending=new Map();
+async function connect(){for(let i=0;i<100;i++){try{const ts=await(await fetch('http://127.0.0.1:9322/json')).json();ws=new WebSocket(ts.find(t=>t.type==='page').webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));ws.addEventListener('message',({data})=>{const m=JSON.parse(data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result)}});return;}catch{await new Promise(r=>setTimeout(r,100))}}throw Error('Chromium bağlantısı kurulamadı')}
+function call(method,params={}){return new Promise((resolve,reject)=>{const id=++next;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}))})}
+async function evaljs(expression){return (await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true})).result.value}
+async function capture(file,out,width,height){await call('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false});await call('Page.navigate',{url:pathToFileURL(path.join(root,file)).href});await new Promise(r=>setTimeout(r,170));await evaljs('[...document.images].forEach(i=>i.loading="eager")');await evaljs('document.fonts.ready.then(()=>Promise.all([...document.images].map(i=>i.decode().catch(()=>{}))))');await evaljs('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))');const check=await evaljs(`JSON.stringify({ready:document.readyState,w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,fonts:[document.fonts.check('30px "URW Bookman"'),document.fonts.check('30px "Nimbus Sans"')],text:[...document.querySelectorAll('h1,.copy,.tip,.cta,.caption-strip,.bottom-note,.moments,.checklist,.endline')].map(e=>({class:e.className,tag:e.tagName,text:e.innerText,rect:{x:e.getBoundingClientRect().x,y:e.getBoundingClientRect().y,w:e.getBoundingClientRect().width,h:e.getBoundingClientRect().height}}))})`);const shot=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});fs.writeFileSync(path.join(root,out),Buffer.from(shot.data,'base64'));return JSON.parse(check)}
+try{await connect();await call('Page.enable');await call('Runtime.enable');const slides=JSON.parse(fs.readFileSync(path.join(root,'kaynak/kareler.json')));const report=[];for(const s of slides){report.push({file:s.png,...await capture(s.file,s.png,1080,1350)});console.log(s.png)}await capture('onizleme/iletisim.html','onizleme/tum-kareler.png',1644,1145);await capture('index.html','onizleme/tarayici.png',1440,1500);await call('DOM.enable');await call('CSS.enable');
+const doc=await call('DOM.getDocument');const node=await call('DOM.querySelector',{nodeId:doc.root.nodeId,selector:'h1'});const fonts=await call('CSS.getPlatformFontsForNode',{nodeId:node.nodeId});
+const gallery={cards:await evaljs('document.querySelectorAll("[data-index]").length'),fonts};
+await evaljs('document.querySelector("[data-index]").click()');gallery.opens=await evaljs('document.querySelector("dialog").open');
+await evaljs('document.querySelector("#next").click()');gallery.next=await evaljs('document.querySelector("#full").getAttribute("src").endsWith("02.png")');
+await call('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight',windowsVirtualKeyCode:39});gallery.keyboard=await evaljs('document.querySelector("#full").getAttribute("src").endsWith("03.png")');
+await evaljs('document.querySelector("#close").click()');gallery.closes=await evaljs('!document.querySelector("dialog").open');
+await capture('index.html','onizleme/mobil.png',390,844);gallery.mobileWidth=await evaljs('document.documentElement.scrollWidth');
+fs.writeFileSync(path.join(root,'onizleme/galeri-kontrol.json'),JSON.stringify(gallery,null,2));
+fs.writeFileSync(path.join(root,'onizleme/kontrol.json'),JSON.stringify(report,null,2));console.log('Tamam: 21 PNG, toplu görünüm ve tarayıcı ekranı.');}finally{if(ws)ws.close();proc.kill();}

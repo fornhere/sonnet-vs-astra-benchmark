@@ -1,0 +1,46 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'tanitim.mp4':
+  Metadata:
+    minor_version   : 512;512
+    major_brand     : isom;isom
+    compatible_brands: isomiso2avc1mp41;isomiso2avc1mp41
+    hyperframes_version: 0.8.91
+    hyperframes_renderer: hyperframes
+    encoder         : Lavf63.1.101
+  Duration: 00:00:52.00, start: 0.000000, bitrate: 4369 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 4158 kb/s, 60 fps, 60 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc63.1.101 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 201 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    minor_version   : 512;512
+    major_brand     : isom;isom
+    compatible_brands: isomiso2avc1mp41;isomiso2avc1mp41
+    hyperframes_version: 0.8.91
+    hyperframes_renderer: hyperframes
+    encoder         : Lavf63.1.101
+  Stream #0:0(und): Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s (default)
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+      handler_name    : SoundHandler
+size=N/A time=00:00:04.50 bitrate=N/A speed=8.97x elapsed=0:00:00.50    size=N/A time=00:00:15.20 bitrate=N/A speed=15.2x elapsed=0:00:01.00    size=N/A time=00:00:32.60 bitrate=N/A speed=21.7x elapsed=0:00:01.50    [Parsed_loudnorm_0 @ 0x7c3580003dc0] 
+{
+	"input_i" : "-14.64",
+	"input_tp" : "-1.07",
+	"input_lra" : "2.10",
+	"input_thresh" : "-24.81",
+	"output_i" : "-15.25",
+	"output_tp" : "-1.69",
+	"output_lra" : "1.70",
+	"output_thresh" : "-25.34",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.25"
+}
+[out#0/null @ 0x5879bbdc5cc0] video:0KiB audio:39000KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:52.00 bitrate=N/A speed=26.2x elapsed=0:00:01.98    

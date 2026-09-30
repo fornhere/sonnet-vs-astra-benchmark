@@ -1,0 +1,2 @@
+import puppeteer from '../.npm-cache/_npx/702923228c2ce1e6/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+const browser=await puppeteer.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox'],userDataDir:process.cwd()+'/qa/studio-chrome'});const page=await browser.newPage();await page.setViewport({width:1600,height:1000});await page.goto('http://localhost:3003/#project/film',{waitUntil:'networkidle0'});await page.screenshot({path:'qa/studio.png'});console.log('Studio opened:',await page.title());await browser.close();

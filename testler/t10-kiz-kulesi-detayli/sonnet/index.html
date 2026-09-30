@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kız Kulesi · Fırtınalı Gece</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23070b14%27/%3E%3Cpath d=%27M16 3l4 7v3h-8v-3zM12 13h8l1 13H11z%27 fill=%27%23ffcf86%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <header id="title">
+    <div class="t1">KIZ KULESİ</div>
+    <div class="t2">Fırtınalı gece · Üsküdar, İstanbul</div>
+    <div class="t3" id="chapter"></div>
+  </header>
+
+  <div id="fps" title="F: gizle / göster">
+    <span id="fpsv">-- fps</span><span id="fpsx"></span>
+  </div>
+
+  <div id="bars">
+    <div class="ctrl">
+      <div class="lab"><span>Fırtına şiddeti</span><b id="stormv">80%</b></div>
+      <input id="storm" type="range" min="0" max="1" step="0.005" value="0.8" aria-label="Fırtına şiddeti">
+      <div class="ends"><span>Sakin gece</span><span>Tam fırtına</span></div>
+    </div>
+    <div class="ctrl">
+      <div class="lab"><span>Saat</span><b id="dayv">Gece 02:00</b></div>
+      <input id="day" type="range" min="0" max="1" step="0.002" value="0" aria-label="Saat">
+      <div class="ends"><span>Gece</span><span>Şafak</span></div>
+    </div>
+    <div class="btns">
+      <button id="bStrike" title="L"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg><span>Şimşek çaktır</span></button>
+      <button id="bCam" title="C"><svg viewBox="0 0 24 24"><path d="M4 7h11a2 2 0 0 1 2 2v1.5l4-2.5v8l-4-2.5V15a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg><span id="bCamT">Sinematik kamera</span></button>
+      <button id="bBack" title="C" class="hide"><svg viewBox="0 0 24 24"><path d="M12 5V2L7 6.5 12 11V8a5 5 0 1 1-5 5H5a7 7 0 1 0 7-8z"/></svg><span>Sinematiğe dön</span></button>
+      <button id="bSound" title="M"><svg id="icoSnd" viewBox="0 0 24 24"><path d="M3 10v4h4l5 4V6L7 10z"/><path class="x" d="M16 9l5 6m0-6-5 6" /><path class="w" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" /></svg><span id="bSoundT">Ses kapalı</span></button>
+      <button id="bPhoto" title="P"><svg viewBox="0 0 24 24"><path d="M9 4 7.5 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.5L15 4zm3 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg><span>Fotoğraf modu</span></button>
+      <button id="bFps" title="F"><svg viewBox="0 0 24 24"><path d="M3 17h4V9H3zm7 0h4V5h-4zm7 0h4v-6h-4z"/></svg><span>FPS sayacı</span></button>
+      <button id="bQ" title="Kalite"><svg viewBox="0 0 24 24"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h16v2H4z"/></svg><span id="bQT">Kalite: Yüksek</span></button>
+    </div>
+    <div class="hint">Sürükle: serbest kamera · Tekerlek: yakınlaş · <kbd>H</kbd> arayüz · <kbd>L</kbd> şimşek · <kbd>M</kbd> ses · <kbd>P</kbd> fotoğraf · <kbd>F</kbd> fps</div>
+  </div>
+</div>
+
+<div id="photoBar" class="hide">
+  <button id="pDl">PNG indir</button>
+  <button id="pExit">Çık</button>
+</div>
+
+<div id="intro"><div class="i1">KIZ KULESİ</div><div class="i2">MAIDEN’S TOWER · BOĞAZİÇİ</div><div class="i3">Fırtınalı bir gecede, Üsküdar açıklarında</div></div>
+<div id="toast"></div>
+<div id="err" class="hide"></div>
+<div id="loading">Fırtına hazırlanıyor…</div>
+
+<script src="dist/app.js"></script>
+</body>
+</html>

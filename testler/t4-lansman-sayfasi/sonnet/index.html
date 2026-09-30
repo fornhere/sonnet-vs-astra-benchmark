@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halcyon Meridian — Zamanı güneşten öğrenen saat</title>
+<meta name="description" content="Halcyon Meridian: Grade 5 titanyum kasa, güneş enerjili Kalibre H-01 ve bulunduğun şehrin gün doğumunu bilen gün-gece diski. 14 Ekim'de ön siparişte.">
+<meta name="theme-color" content="#07080c">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="ld-mark">Meridian</div>
+  <div class="ld-bar"><i></i></div>
+</div>
+
+<div class="bg" aria-hidden="true"></div>
+<div class="wordmark" id="wordmark" aria-hidden="true">Meridian</div>
+<canvas id="gl" aria-label="Halcyon Meridian saatinin üç boyutlu görünümü" role="img"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="scrim" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#s0" aria-label="Halcyon">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 1.8v3.2M12 19v3.2M1.8 12H5M19 12h3.2M4.8 4.8l2.2 2.2M17 17l2.2 2.2M19.2 4.8 17 7M7 17l-2.2 2.2"/></g></svg>
+    <span>HALCYON</span>
+  </a>
+  <div class="nav-mid"><span>Meridian</span><i></i><span data-bind="finishName">Ham Titanyum</span></div>
+  <button class="pill" data-order type="button">Ön sipariş <span aria-hidden="true">→</span></button>
+</header>
+
+<nav class="rail" id="rail" aria-label="Bölümler"></nav>
+
+<div class="tags" id="tags" aria-hidden="true">
+  <div class="tag" data-key="crystal"><i class="dot"></i><b class="ln"></b><span><em>01</em>Safir cam<small>Çift kubbeli, yansıma önleyici</small></span></div>
+  <div class="tag" data-key="bezel"><i class="dot"></i><b class="ln"></b><span><em>02</em>24 saat çerçevesi<small>Fırçalı titanyum, cilalı pah</small></span></div>
+  <div class="tag" data-key="hands"><i class="dot"></i><b class="ln"></b><span><em>03</em>Akrep &amp; yelkovan<small>Elle cilalı, lüm dolgulu</small></span></div>
+  <div class="tag" data-key="dial"><i class="dot"></i><b class="ln"></b><span><em>04</em>Fotovoltaik kadran<small>Sunburst yüzey, gün-gece diski</small></span></div>
+  <div class="tag" data-key="case"><i class="dot"></i><b class="ln"></b><span><em>05</em>Kasa &amp; taç<small>Tek bloktan işlenmiş Grade 5</small></span></div>
+  <div class="tag" data-key="move"><i class="dot"></i><b class="ln"></b><span><em>06</em>Kalibre H-01<small>Güneş + otomatik · 27 taş</small></span></div>
+  <div class="tag" data-key="back"><i class="dot"></i><b class="ln"></b><span><em>07</em>Kasa arkası<small>Safir pencere, numaralı</small></span></div>
+</div>
+
+<main id="story">
+
+  <!-- 0 · Giriş -->
+  <section class="scene" id="s0" data-name="Giriş" style="--h:240">
+    <div class="stage">
+      <div class="beat b-hero-l" data-in="-1,-0.5" data-out="0.22,0.4">
+        <p class="eyebrow"><i class="pulse"></i>Yeni · Halcyon Saat Atölyesi</p>
+        <h2 class="lead">Zamanı güneşten<br><em>öğrenen</em> ilk saat.</h2>
+      </div>
+      <div class="beat b-hero-r" data-in="-1,-0.5" data-out="0.22,0.4">
+        <dl class="mini">
+          <div><dt>Kasa</dt><dd>41 mm · Grade 5 titanyum</dd></div>
+          <div><dt>Kalibre</dt><dd>H-01 · güneş + otomatik</dd></div>
+          <div><dt>Ön sipariş</dt><dd>14 Ekim</dd></div>
+        </dl>
+      </div>
+      <div class="cue beat" data-in="-1,-0.5" data-out="0.04,0.12"><span>Kaydır</span><i></i></div>
+    </div>
+  </section>
+
+  <!-- 1 · Kadran -->
+  <section class="scene" id="s1" data-name="Kadran" style="--h:300">
+    <div class="stage">
+      <div class="beat left" data-in="0.04,0.2" data-out="0.5,0.62">
+        <p class="eyebrow"><b>01</b>Kadran</p>
+        <h2 class="h">Bir bakışta <em>bütün gün.</em></h2>
+        <p class="p">Kadranın altında sessizce dönen gün-gece diski, bulunduğun şehrin gün ışığını bileğine taşır. Telefon yok, ekran yok. Yalnızca gökyüzünün saati.</p>
+      </div>
+      <div class="beat left" data-in="0.64,0.78" data-out="0.96,1.2">
+        <p class="eyebrow"><b>01</b>Üç ayrıntı</p>
+        <ol class="facts">
+          <li><span>i.</span><div><strong>Sunburst fotovoltaik kadran</strong><small>Işık geçirgen katmanın altında güneş hücresi; ışık açısına göre parlayan ışınlar.</small></div></li>
+          <li><span>ii.</span><div><strong>Çift kubbeli safir cam</strong><small>Her iki yüzü yansıma önleyici; sert açıdan bile okunur.</small></div></li>
+          <li><span>iii.</span><div><strong>Lüm dolgulu indeksler</strong><small>Geceleri sekiz saat boyunca yumuşak yeşil parlar.</small></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Anatomi -->
+  <section class="scene" id="s2" data-name="Anatomi" style="--h:520">
+    <div class="stage">
+      <div class="beat left" data-in="0.02,0.14" data-out="0.5,0.6">
+        <p class="eyebrow"><b>02</b>Anatomi</p>
+        <h2 class="h">212 parça. <em>Tek bir niyet.</em></h2>
+        <p class="p">Her katman, bir öncekini daha az fark edilir kılmak için tasarlandı. Kaydırdıkça saat kendi kendini açar.</p>
+      </div>
+      <div class="beat left stats" data-in="0.64,0.76" data-out="0.96,1.2">
+        <div class="stat"><strong data-count="212">212</strong><span>parça</span></div>
+        <div class="stat"><strong data-count="0.01" data-dec="2">0,01</strong><span>mm işleme toleransı</span></div>
+        <div class="stat"><strong data-count="38">38</strong><span>saat el işçiliği</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Kalp -->
+  <section class="scene" id="s3" data-name="Kalp" style="--h:420">
+    <div class="stage">
+      <div class="beat left" data-in="0.36,0.48" data-out="0.62,0.72">
+        <p class="eyebrow"><b>03</b>Kalibre H-01</p>
+        <h2 class="h">Saniyede sekiz kez <em>atan kalp.</em></h2>
+        <p class="p">Denge çarkı, kadranın altındaki güneş hücresinden beslenir. Rotor ise bileğinin her hareketini enerjiye çevirir. Işık varsa şarj olur; yoksa sen yürürken.</p>
+      </div>
+      <div class="beat left stats" data-in="0.76,0.86" data-out="0.98,1.2">
+        <div class="stat"><strong data-count="28800">28.800</strong><span>vph frekans</span></div>
+        <div class="stat"><strong data-count="27">27</strong><span>rubi taş</span></div>
+        <div class="stat"><strong data-count="90">90</strong><span>gün güç rezervi</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Gün ışığı -->
+  <section class="scene" id="s4" data-name="Gün ışığı" style="--h:520">
+    <div class="stage">
+      <div class="beat left above compact" data-in="0.02,0.12" data-out="0.96,1.2" id="daybeat">
+        <p class="eyebrow"><b>04</b>Gün-gece diski</p>
+        <h2 class="h">Gün doğumunu <em>bilen saat.</em></h2>
+        <p class="p">Taçtan şehrini seç; disk o şehrin gerçek gün doğumu ve batımına göre boyanır. Kaydırarak günü ilerlet.</p>
+        <div class="chips" id="cities" role="group" aria-label="Şehir"></div>
+      </div>
+      <div class="beat readout" data-in="0.12,0.24" data-out="0.96,1.2">
+        <div class="clock" data-bind="clk">10:10</div>
+        <div class="phase" data-bind="phase">Öğle</div>
+        <dl>
+          <div><dt>Gün doğumu</dt><dd data-bind="rise">—</dd></div>
+          <div><dt>Gün batımı</dt><dd data-bind="set">—</dd></div>
+          <div><dt>Gün ışığı</dt><dd data-bind="len">—</dd></div>
+        </dl>
+        <div class="bar"><i data-bind="bar"></i><b class="sr"></b><b class="ss"></b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Malzeme -->
+  <section class="scene" id="s5" data-name="Malzeme" style="--h:380">
+    <div class="stage">
+      <div class="beat right" data-in="0.04,0.18" data-out="0.5,0.62">
+        <p class="eyebrow"><b>05</b>Malzeme</p>
+        <h2 class="h">Çelikten <em>%45 hafif.</em></h2>
+        <p class="p">Kasa, tek parça Grade 5 titanyumdan işlenir. Fırçalı yüzeyler ve cilalı pahlar aynı bloktan çıkar; 41 mm çapında, taç ve cam dahil 11,9 mm kalınlığındadır.</p>
+      </div>
+      <div class="beat right" data-in="0.6,0.74" data-out="1.1,1.3">
+        <p class="eyebrow"><b>05</b>Üç sonlandırma</p>
+        <div class="swatches" id="swatches" role="radiogroup" aria-label="Sonlandırma"></div>
+        <p class="fin-name" data-bind="finishName">Ham Titanyum</p>
+        <p class="fin-note" data-bind="finishNote">Fırçalı Grade 5 · Arduvaz kadran</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Bilekte -->
+  <section class="scene" id="s6" data-name="Bilekte" style="--h:340">
+    <div class="stage">
+      <div class="beat left above compact" data-in="0.04,0.18" data-out="0.9,1.05">
+        <p class="eyebrow"><b>06</b>Gün boyu</p>
+        <h2 class="h">Sabah koşuda, <em>akşam yemekte.</em></h2>
+        <p class="p">Kauçuk ve dokuma karışımı kayış terlemez, kaşımaz ve tek hamlede ayarlanır. Titanyum kasa ise günün sonunda bile bileğinde fark edilmez.</p>
+      </div>
+      <div class="beat grid4" data-in="0.3,0.46" data-out="0.96,1.2">
+        <div class="stat"><strong><span data-count="100">100</span><u>m</u></strong><span>su geçirmezlik</span></div>
+        <div class="stat"><strong><span data-count="53">53</span><u>g</u></strong><span>toplam ağırlık</span></div>
+        <div class="stat"><strong><span data-count="8">8</span><u>sa</u></strong><span>lüm parlaklığı</span></div>
+        <div class="stat"><strong><span data-count="5">5</span><u>yıl</u></strong><span>uluslararası garanti</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Sipariş -->
+  <section class="scene" id="s7" data-name="Sipariş" style="--h:230">
+    <div class="stage">
+      <div class="beat right buy" data-in="0.08,0.28" data-out="2,3">
+        <p class="eyebrow"><b>07</b>Ön sipariş 14 Ekim'de</p>
+        <h2 class="h big">Meridian.</h2>
+        <p class="price"><span>₺</span>74.900</p>
+        <p class="p">İlk bin saat numaralı gelir. Teslimat Kasım 2026; her saat kutusunda seçtiğin şehrin gün ışığı için ayarlanmış olarak.</p>
+        <div class="cta">
+          <button class="btn" data-order type="button">Ön sipariş ver <span aria-hidden="true">→</span></button>
+          <a class="ghost" href="#specs">Teknik özellikler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teknik özellikler -->
+  <section class="specs" id="specs" data-name="Özellikler">
+    <div class="specs-in">
+      <p class="eyebrow"><b>08</b>Teknik özellikler</p>
+      <h2 class="h">Rakamlarla <em>Meridian.</em></h2>
+      <dl class="table">
+        <div><dt>Kasa</dt><dd>Grade 5 titanyum · 41 mm çap · 11,9 mm kalınlık · 51 mm boynuz mesafesi</dd></div>
+        <div><dt>Cam</dt><dd>Çift kubbeli safir, iki yüzü yansıma önleyici · safir kasa arkası</dd></div>
+        <div><dt>Kalibre</dt><dd>H-01 · fotovoltaik kadran + otomatik kurma · 212 parça · 27 taş</dd></div>
+        <div><dt>Frekans</dt><dd>28.800 vph (4 Hz) · 90 gün güç rezervi</dd></div>
+        <div><dt>Gün-gece diski</dt><dd>Şehir seçimi taçtan · gün doğumu/batımı için 5 yıllık tablo</dd></div>
+        <div><dt>Su geçirmezlik</dt><dd>100 metre (10 bar) · vidalı taç</dd></div>
+        <div><dt>Kayış</dt><dd>Kauçuk-dokuma hibrit · 20 mm · titanyum tokalı · tek hamlede ayar</dd></div>
+        <div><dt>Ağırlık</dt><dd>53 g (kayış dahil)</dd></div>
+        <div><dt>Kutuda</dt><dd>Saat, ikinci kayış, kayış aleti, numaralı sertifika</dd></div>
+        <div><dt>Garanti</dt><dd>5 yıl uluslararası · ücretsiz ilk bakım</dd></div>
+      </dl>
+      <div class="cta">
+        <button class="btn" data-order type="button">Ön sipariş ver <span aria-hidden="true">→</span></button>
+        <span class="fine">₺74.900 · KDV dahil</span>
+      </div>
+    </div>
+    <footer class="foot">
+      <span>© 2026 Halcyon Saat Atölyesi</span>
+      <span>Halcyon Meridian kurgusal bir üründür; bu sayfa bir tasarım ve 3B çalışmasıdır.</span>
+    </footer>
+  </section>
+</main>
+
+<dialog id="order" aria-labelledby="ord-title">
+  <form method="dialog" class="ord" id="ordform">
+    <button class="x" value="cancel" aria-label="Kapat" type="button" data-close>×</button>
+    <template id="ord-form">
+      <p class="eyebrow">Ön sipariş listesi</p>
+      <h3 id="ord-title">Sıradaki bin kişiden <em>biri ol.</em></h3>
+      <div class="ord-pick">
+        <i class="sw" data-bind="swatch"></i>
+        <div><strong data-bind="finishName">Ham Titanyum</strong><small data-bind="finishNote"></small></div>
+        <b>₺74.900</b>
+      </div>
+      <label class="fld"><span>E-posta</span><input type="email" id="ord-mail" placeholder="ad@ornek.com" autocomplete="email" required></label>
+      <div class="fld sel"><span>Şehir (gün-gece diski için)</span><div class="chips" id="ord-cities"></div></div>
+      <button class="btn wide" type="submit">Sıraya gir <span aria-hidden="true">→</span></button>
+      <p class="fine">Şimdi ödeme alınmaz. 14 Ekim'de bir e-posta gelir.</p>
+    </template>
+    <div id="ord-body"></div>
+  </form>
+</dialog>
+
+<script src="dist/app.js" defer></script>
+</body>
+</html>

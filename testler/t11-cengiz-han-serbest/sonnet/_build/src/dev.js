@@ -1,0 +1,17 @@
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { loadStatueGeometries } from './statueLoader.js';
+const q = new URLSearchParams(location.search);
+const r = new THREE.WebGLRenderer({ antialias: true });
+r.setSize(innerWidth, innerHeight); document.body.appendChild(r.domElement);
+r.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x8fa6c0);
+const pm = new THREE.PMREMGenerator(r); scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+const l = new THREE.DirectionalLight(0xffffff, 2.5); l.position.set(30, 40, 30); scene.add(l);
+(async()=>{const gs = await loadStatueGeometries();
+const mat = new THREE.MeshStandardMaterial({ color: 0xc8ccd2, metalness: 1, roughness: 0.28 });
+for (const g of gs) scene.add(new THREE.Mesh(g, mat));
+const cam = new THREE.PerspectiveCamera(+(q.get('fov')||35), innerWidth / innerHeight, 0.5, 2000);
+const c = (q.get('c') || '60,25,60').split(',').map(Number), t = (q.get('t') || '0,20,0').split(',').map(Number);
+cam.position.set(...c); cam.lookAt(...t);
+r.render(scene, cam); window.__ready = true;})();

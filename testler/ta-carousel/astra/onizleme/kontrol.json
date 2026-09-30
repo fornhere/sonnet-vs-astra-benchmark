@@ -1,0 +1,826 @@
+[
+  {
+    "file": "gonderiler/01-kadikoy-aksami/01.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Şehir hızlı.\nSen demli.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 253.46875
+        }
+      },
+      {
+        "class": "bottom-note",
+        "tag": "DIV",
+        "text": "İstanbul’a küçük bir çay arası.\nKaydır →",
+        "rect": {
+          "x": 76,
+          "y": 1178,
+          "w": 928,
+          "h": 30
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/02.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Bir bildirim\ndaha beklesin.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 214
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Bazen günün en iyi planı,\nplana küçük bir ara vermektir.",
+        "rect": {
+          "x": 76,
+          "y": 472,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "caption-strip",
+        "tag": "DIV",
+        "text": "RAHATSIZ ETME MODU: DEMLENİYOR.",
+        "rect": {
+          "x": 76,
+          "y": 1160,
+          "w": 928,
+          "h": 47
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/03.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Kadıköy\nAkşamı.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 264.09375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Yeni sonbahar harmanımız.\nŞehrin temposuna sıcak bir parantez.",
+        "rect": {
+          "x": 76,
+          "y": 522.09375,
+          "w": 928,
+          "h": 93.71875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/04.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Kahve molası\ntanıdık.\nÇayı yeniden keşfet.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 275.734375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Mola aynı mola.\nBu kez başrolde ince belli var.",
+        "rect": {
+          "x": 76,
+          "y": 533.734375,
+          "w": 928,
+          "h": 93.71875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/05.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Akşamın\nüç hâli.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 222.5
+        }
+      },
+      {
+        "class": "moments",
+        "tag": "DIV",
+        "text": "01\nKendine kal.\n\nBir bardak. Bir nefes.\n\n02\nBirini çağır.\n\n“Çay içelim mi?” yeter.\n\n03\nBiraz daha otur.\n\nSohbetin de demi var.",
+        "rect": {
+          "x": 76,
+          "y": 483,
+          "w": 724,
+          "h": 645
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/06.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Rotayı biraz\nyavaşlat.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 223.625
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Moda’da bir çay arası ver.\nAkşama Demlik’te buluşalım.",
+        "rect": {
+          "x": 76,
+          "y": 481.625,
+          "w": 928,
+          "h": 93.71875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/01-kadikoy-aksami/07.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Demini al.\nAkşama uğra.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 223.625
+        }
+      },
+      {
+        "class": "cta",
+        "tag": "DIV",
+        "text": "Yeni harman: Kadıköy Akşamı\n\nModa Cd. No: 42 · Kadıköy\n@demlik.kadikoy",
+        "rect": {
+          "x": 76,
+          "y": 1015,
+          "w": 928,
+          "h": 164.59375
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/01.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Cumartesi\nbiraz\ndemlenelim.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 357.796875
+        }
+      },
+      {
+        "class": "bottom-note",
+        "tag": "DIV",
+        "text": "Çay acele sevmez. Cumartesi de öyle.\nKaydır →",
+        "rect": {
+          "x": 76,
+          "y": 1178,
+          "w": 928,
+          "h": 30
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/02.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Çayı seviyoruz.\nPeki, demlemeyi?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 195.9375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "“Ben hep göz kararı yapıyorum.”\ndiyenler de bu masaya davetli.",
+        "rect": {
+          "x": 76,
+          "y": 453.9375,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "caption-strip",
+        "tag": "DIV",
+        "text": "BAŞLAMAK İÇİN UZMAN OLMAN GEREKMİYOR.",
+        "rect": {
+          "x": 76,
+          "y": 1160,
+          "w": 928,
+          "h": 47
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/03.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Aynı çay.\nFarklı kararlar.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 222.5
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Demleme atölyesinde buluşalım;\nsohbete bu sorulardan başlayalım.",
+        "rect": {
+          "x": 76,
+          "y": 1069,
+          "w": 490.390625,
+          "h": 93.71875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/04.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Bir arkadaşını\nçaya çıkar.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 219.375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Bu kez sohbete\nbir de demleme merakı ekle.",
+        "rect": {
+          "x": 76,
+          "y": 477.375,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "caption-strip",
+        "tag": "DIV",
+        "text": "BU KAREYİ “HADİ GİDELİM” DEDİĞİN KİŞİYE GÖNDER.",
+        "rect": {
+          "x": 76,
+          "y": 1160,
+          "w": 928,
+          "h": 47
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/05.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "İlk haftanın\nküçük kıyağı.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 204.46875
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Demini Al kampanyasının\nilk haftasına özel.",
+        "rect": {
+          "x": 76,
+          "y": 934,
+          "w": 420.984375,
+          "h": 107.90625
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/06.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Ajandaya yaz:\nçay molası.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 219.375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Yanına merakını al.",
+        "rect": {
+          "x": 76,
+          "y": 1094,
+          "w": 275.96875,
+          "h": 46.859375
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/02-cumartesi-atolyesi/07.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Plan tamam.\nBir mesaj kaldı.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 214
+        }
+      },
+      {
+        "class": "cta",
+        "tag": "DIV",
+        "text": "@demlik.kadikoy\n\nSeans, ücret ve kayıt bilgisi için bize yaz.\nModa Cd. No: 42 · Kadıköy",
+        "rect": {
+          "x": 76,
+          "y": 985,
+          "w": 928,
+          "h": 164.59375
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/01.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "İyi bir dem,\nbeş iyi soru.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 240.6875
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Ezber tariften önce\nçayını tanı.",
+        "rect": {
+          "x": 76,
+          "y": 498.6875,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "bottom-note",
+        "tag": "DIV",
+        "text": "Bir sonraki çay için kaydet.\nKaydır →",
+        "rect": {
+          "x": 76,
+          "y": 1178,
+          "w": 928,
+          "h": 30
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/02.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Neyi\ndemliyorsun?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 237.40625
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Siyah çay, yeşil çay, bitki harmanı…\nHepsine aynı tarif uymaz.",
+        "rect": {
+          "x": 76,
+          "y": 495.40625,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "tip",
+        "tag": "DIV",
+        "text": "KÜÇÜK ADIM\nÖnce çayın türünü ve demleme önerisini oku.",
+        "rect": {
+          "x": 76,
+          "y": 1121.3125,
+          "w": 928,
+          "h": 91.6875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/03.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Göz kararı mı,\nsenin kararın mı?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 193.8125
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Sevdiğin demi tekrar bulmak için\nçayı ve suyu ölçerek başla.",
+        "rect": {
+          "x": 76,
+          "y": 451.8125,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "tip",
+        "tag": "DIV",
+        "text": "KÜÇÜK ADIM\nKullandığın çay ve su miktarını not et.",
+        "rect": {
+          "x": 76,
+          "y": 1121.3125,
+          "w": 928,
+          "h": 91.6875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/04.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Her çaya\nfokur fokur mu?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 210.84375
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Sıcaklık, demlemenin bir parçası.\nTek bir dereceyi bütün çaylara uygulama.",
+        "rect": {
+          "x": 76,
+          "y": 468.84375,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "tip",
+        "tag": "DIV",
+        "text": "KÜÇÜK ADIM\nÇayının önerdiği su sıcaklığını esas al.",
+        "rect": {
+          "x": 76,
+          "y": 1121.3125,
+          "w": 928,
+          "h": 91.6875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/05.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Süreyi kim\ntutuyor?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 237.40625
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "“Biraz daha beklesin” de bir karar.\nBaşlangıç için çayın önerilen süresini izle.",
+        "rect": {
+          "x": 76,
+          "y": 495.40625,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "tip",
+        "tag": "DIV",
+        "text": "KÜÇÜK ADIM\nZamanlayıcı kur; süre sonunda demlemeyi bitir.",
+        "rect": {
+          "x": 76,
+          "y": 1121.3125,
+          "w": 928,
+          "h": 91.6875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/06.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Peki, sen\nnasıl sevdin?",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 232.15625
+        }
+      },
+      {
+        "class": "copy ",
+        "tag": "P",
+        "text": "Demini keşfetmek küçük denemeler ister.\nBir sonraki sefer tek bir şeyi değiştir.",
+        "rect": {
+          "x": 76,
+          "y": 490.15625,
+          "w": 928,
+          "h": 93.71875
+        }
+      },
+      {
+        "class": "tip",
+        "tag": "DIV",
+        "text": "KÜÇÜK ADIM\nMiktar, sıcaklık veya süre. Her seferinde biri.",
+        "rect": {
+          "x": 76,
+          "y": 1121.3125,
+          "w": 928,
+          "h": 91.6875
+        }
+      }
+    ]
+  },
+  {
+    "file": "gonderiler/03-bes-soruda-dem/07.png",
+    "ready": "complete",
+    "w": 1080,
+    "h": 1350,
+    "fonts": [
+      true,
+      true
+    ],
+    "text": [
+      {
+        "class": "",
+        "tag": "H1",
+        "text": "Bir sonraki\nçayın için\nburaya dön.",
+        "rect": {
+          "x": 76,
+          "y": 229,
+          "w": 940,
+          "h": 333.25
+        }
+      },
+      {
+        "class": "checklist",
+        "tag": "DIV",
+        "text": "01Çayını tanı.\n02Çayı ve suyu ölç.\n03Sıcaklığı ayarla.\n04Süreyi takip et.\n05Damak tadını not et.",
+        "rect": {
+          "x": 76,
+          "y": 602,
+          "w": 660,
+          "h": 440
+        }
+      },
+      {
+        "class": "endline",
+        "tag": "DIV",
+        "text": "Çay acele sevmez.\nSenin favori ritüelin ne?",
+        "rect": {
+          "x": 76,
+          "y": 1150,
+          "w": 928,
+          "h": 31
+        }
+      }
+    ]
+  }
+]

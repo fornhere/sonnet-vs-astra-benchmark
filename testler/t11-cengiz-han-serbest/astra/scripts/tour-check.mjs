@@ -1,0 +1,8 @@
+import {chromium} from 'playwright';
+import fs from 'node:fs';
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'],env:{...process.env,TMPDIR:process.cwd()+'/qa'}});
+const p=await browser.newPage({viewport:{width:1000,height:700},deviceScaleFactor:1});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('file://'+process.cwd()+'/index.html');await p.waitForSelector('#loading.loaded');
+await p.locator('#journey-btn').click();await p.waitForTimeout(22000);const middle=await p.evaluate(()=>window.__experience.state);console.log('22 seconds',middle);await p.screenshot({path:'qa/tour-middle.png'});await p.waitForTimeout(22000);const finalShot=await p.evaluate(()=>window.__experience.state);console.log('last scene',finalShot);await p.screenshot({path:'qa/infinity.png'});await p.waitForTimeout(18000);const completed=await p.evaluate(()=>window.__experience.state);console.log('complete',completed);
+await p.locator('#fullscreen-btn').click();const fullscreen=await p.evaluate(()=>!!document.fullscreenElement);await p.keyboard.press('Escape');
+await p.setViewportSize({width:390,height:844});await p.reload();await p.waitForSelector('#loading.loaded');await p.waitForTimeout(2000);await p.screenshot({path:'qa/mobile.png'});await p.locator('#about-btn').click();await p.screenshot({path:'qa/mobile-story.png'});
+const result={errors,tourMiddle:middle.chapter===1,tourLast:finalShot.chapter===2,tourCompleted:!completed.touring&&completed.chapter===2,fullscreen};fs.writeFileSync('qa/tour-report.json',JSON.stringify(result,null,2));console.log(result);await browser.close();

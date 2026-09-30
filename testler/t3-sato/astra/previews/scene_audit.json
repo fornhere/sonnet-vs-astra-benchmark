@@ -1,0 +1,33 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "scene": "KARAKIYI / The Tidal Crown",
+  "mesh_objects": 383,
+  "polygons": 158015,
+  "vertices": 192638,
+  "materials": 30,
+  "camera_count": 5,
+  "modular_groups": 37,
+  "timeline": {
+    "start": 1,
+    "end": 576,
+    "fps": 24
+  },
+  "camera_cuts": [
+    {
+      "frame": 1,
+      "camera": "01 / THE TIDAL CROWN — arrival"
+    },
+    {
+      "frame": 241,
+      "camera": "02 / THE GATE — bridge approach"
+    },
+    {
+      "frame": 409,
+      "camera": "03 / THE INNER WARD — rising orbit"
+    }
+  ],
+  "external_file_images": [],
+  "missing_files": [],
+  "render_engine": "CYCLES",
+  "unit_system": "METRIC"
+}

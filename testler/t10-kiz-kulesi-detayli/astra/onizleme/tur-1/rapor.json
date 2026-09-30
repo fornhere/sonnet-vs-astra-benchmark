@@ -1,0 +1,15 @@
+{
+  "errors": [],
+  "metrics": {
+    "fps": 3.1691703112125253,
+    "p95ms": 366.59999999999854,
+    "frames": 30,
+    "drawCalls": 92,
+    "triangles": 158140,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+  }
+}

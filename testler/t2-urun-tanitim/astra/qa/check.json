@@ -1,0 +1,387 @@
+{
+  "ok": false,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 1,
+    "infoCount": 6,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 43.5,
+        "selector": "#s5-host > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1636.8,
+          "top": 66,
+          "right": 1824,
+          "bottom": 98,
+          "width": 187.2,
+          "height": 32
+        },
+        "containerSelector": "div.s5-arrow",
+        "text": "DEVAM 05—06",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 1636.8,
+          "y": 66,
+          "width": 187.2,
+          "height": 32
+        },
+        "firstSeen": 43.5,
+        "lastSeen": 45.875,
+        "occurrences": 20,
+        "heldMs": 2375
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 46.875,
+        "selector": "h2.s6-title.huge > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 90,
+          "top": 212,
+          "right": 1010.38,
+          "bottom": 390,
+          "width": 920.38,
+          "height": 178
+        },
+        "containerSelector": "h2.s6-title.huge > span:nth-of-type(2)",
+        "text": "Dosyalar sende.",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s6.html",
+        "bbox": {
+          "x": 90,
+          "y": 212,
+          "width": 920.38,
+          "height": 178
+        },
+        "firstSeen": 46.875,
+        "lastSeen": 56,
+        "occurrences": 74,
+        "heldMs": 9125
+      },
+      {
+        "code": "content_overlap",
+        "severity": "warning",
+        "time": 7.875,
+        "selector": "div.s2-sheet.s2-front > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1664.72,
+          "top": 279.75,
+          "right": 1761.94,
+          "bottom": 359.85,
+          "width": 97.22,
+          "height": 80.1
+        },
+        "containerSelector": "div.s2-md",
+        "text": "KİŞİSEL KASA",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 1664.72,
+          "y": 279.75,
+          "width": 97.22,
+          "height": 80.1
+        },
+        "firstSeen": 7.875,
+        "lastSeen": 8,
+        "occurrences": 2,
+        "heldMs": 125
+      },
+      {
+        "code": "text_box_overflow",
+        "severity": "info",
+        "time": 3.5,
+        "selector": "span.s1-word",
+        "message": "Text extends outside its nearest visual/container box.",
+        "rect": {
+          "left": 96,
+          "top": 426.19,
+          "right": 948.78,
+          "bottom": 574.43,
+          "width": 852.78,
+          "height": 148.24
+        },
+        "containerSelector": "div.s1-slot.huge",
+        "text": "Yeniden anlat.",
+        "fixHint": "Text is 853px x 148px inside 886px x 158px and overflows by up to 84px; increase the container height to at least ~242px, or allow wrapping with max-width/fitTextFontSize.",
+        "containerRect": {
+          "left": 96,
+          "top": 332.23,
+          "right": 981.83,
+          "bottom": 490.47,
+          "width": 885.83,
+          "height": 158.23
+        },
+        "overflow": {
+          "bottom": 83.96
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 96,
+          "y": 426.19,
+          "width": 852.78,
+          "height": 148.24
+        },
+        "firstSeen": 3.5,
+        "lastSeen": 3.5,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 3.5,
+        "selector": "span.s1-word",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 96,
+          "top": 426.31,
+          "right": 981.83,
+          "bottom": 574.54,
+          "width": 885.83,
+          "height": 148.23
+        },
+        "containerSelector": "div.s1-slot.huge",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 96,
+          "top": 332.23,
+          "right": 981.83,
+          "bottom": 490.47,
+          "width": 885.83,
+          "height": 158.23
+        },
+        "overflow": {
+          "bottom": 84.07
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 96,
+          "y": 426.31,
+          "width": 885.83,
+          "height": 148.23
+        },
+        "firstSeen": 3.5,
+        "lastSeen": 3.5,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 6.875,
+        "selector": "div.s1-slot.huge > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 96,
+          "top": 294.23,
+          "right": 948.78,
+          "bottom": 452.47,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "containerSelector": "div.s1-papers > div:nth-of-type(1) > span:nth-of-type(1)",
+        "text": "Yeniden anlat.",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 96,
+          "y": 294.23,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "firstSeen": 6.875,
+        "lastSeen": 6.875,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 6.875,
+        "selector": "div.s1-slot.huge > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 96,
+          "top": 294.23,
+          "right": 948.78,
+          "bottom": 452.47,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "containerSelector": "div.s1-papers > div:nth-of-type(1) > b:nth-of-type(1)",
+        "text": "Yeniden anlat.",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 96,
+          "y": 294.23,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "firstSeen": 6.875,
+        "lastSeen": 6.875,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 6.875,
+        "selector": "div.s1-slot.huge > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 96,
+          "top": 294.23,
+          "right": 948.78,
+          "bottom": 452.47,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "containerSelector": "div.s1-papers > div:nth-of-type(2) > span:nth-of-type(1)",
+        "text": "Yeniden anlat.",
+        "fixHint": "Give each block its own zone, or mark intentional layering with data-layout-allow-overlap.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 96,
+          "y": 294.23,
+          "width": 852.78,
+          "height": 158.24
+        },
+        "firstSeen": 6.875,
+        "lastSeen": 6.875,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "connector_orphan",
+        "severity": "info",
+        "time": 30,
+        "selector": "path.s4-p.path",
+        "message": "Connector shaft is visible while both endpoints are not on stage.",
+        "rect": {
+          "left": 98,
+          "top": 817,
+          "right": 1822,
+          "bottom": 817,
+          "width": 1724,
+          "height": 0
+        },
+        "containerSelector": "svg.s4-flow",
+        "fixHint": "Show the shaft only after both ends are on, and hide it with the earlier exit. Do not give the line its own clock.",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 98,
+          "y": 817,
+          "width": 1724,
+          "height": 0
+        },
+        "firstSeen": 30,
+        "lastSeen": 30,
+        "occurrences": 1,
+        "heldMs": 0
+      }
+    ],
+    "duration": 56,
+    "samples": [
+      3.5,
+      11,
+      19.5,
+      30,
+      41,
+      51
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 9,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      3.5,
+      11,
+      19.5,
+      30,
+      51
+    ],
+    "checked": 76,
+    "passed": 76
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      "snapshots/frame-00-at-3.5s.png",
+      "snapshots/frame-01-at-11.0s.png",
+      "snapshots/frame-02-at-19.5s.png",
+      "snapshots/frame-03-at-30.0s.png",
+      "snapshots/frame-04-at-51.0s.png"
+    ],
+    "times": [
+      3.5,
+      11,
+      19.5,
+      30,
+      51
+    ],
+    "findingFiles": [
+      "snapshots/finding-00-content_overlap.png",
+      "snapshots/finding-01-content_overlap.png"
+    ]
+  },
+  "_meta": {
+    "version": "0.8.91",
+    "latestVersion": "0.8.86",
+    "updateAvailable": false
+  }
+}

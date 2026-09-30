@@ -1,0 +1,7 @@
+import puppeteer from 'puppeteer-core';
+import path from 'node:path'; import { fileURLToPath, pathToFileURL } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium', headless: 'new', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=vulkan', '--enable-features=Vulkan', '--ignore-gpu-blocklist', '--allow-file-access-from-files'], defaultViewport: { width: 1920, height: 1080 } });
+const page = await browser.newPage(); await page.goto(pathToFileURL(path.join(root, 'index.html')).href + (process.argv[2] || '')); await page.waitForFunction('window.__ready === true'); await new Promise((r) => setTimeout(r, 2500));
+const r = await page.evaluate(() => new Promise((res) => { const ts = []; let last = performance.now(); const t0 = last; const tick = () => { const n = performance.now(); ts.push(n - last); last = n; if (n - t0 < 10000) requestAnimationFrame(tick); else { const s = [...ts].sort((a, b) => a - b); res({ n: ts.length, avg: ts.reduce((a, b) => a + b) / ts.length, p50: s[s.length >> 1], p95: s[Math.floor(s.length * .95)], p99: s[Math.floor(s.length * .99)], max: s.at(-1), over20: ts.filter((x) => x > 20).length, over33: ts.filter((x) => x > 33).length, longIdx: ts.map((x, i) => x > 33 ? i : -1).filter((i) => i >= 0).slice(0, 12) }); } }; requestAnimationFrame(tick); }));
+console.log(JSON.stringify(r)); await browser.close();

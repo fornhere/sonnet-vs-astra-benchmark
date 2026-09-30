@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "3D initializes with local assets",
+    "Both color selectors stay synchronized",
+    "Scroll changes product scene and background",
+    "User-initiated audio starts and stops",
+    "3D product can rotate with keyboard and reset",
+    "Dialog supports Escape and focus restoration",
+    "Form validates, stores chosen color locally, confirms success",
+    "Technical specification accordions work",
+    "Privacy control deletes the local demo record",
+    "No horizontal overflow at 320, 390, 768, 1024 and 1440 pixels",
+    "index.html opens directly via file:// without a server",
+    "No JavaScript errors, failed assets or external runtime requests"
+  ],
+  "errors": [],
+  "missing": []
+}

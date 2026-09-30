@@ -1,0 +1,18 @@
+{
+  "cards": 21,
+  "fonts": {
+    "fonts": [
+      {
+        "familyName": "URW Bookman",
+        "postScriptName": "URWBookman-Light",
+        "isCustomFont": false,
+        "glyphCount": 28
+      }
+    ]
+  },
+  "opens": true,
+  "next": true,
+  "keyboard": true,
+  "closes": true,
+  "mobileWidth": 390
+}

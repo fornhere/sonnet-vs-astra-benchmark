@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071216" />
+    <title>Boğaz · Gecenin Nöbetçisi</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%230c2028'/%3E%3Cpath d='M16 30V16h8v14M14 16h12l-6-9z' fill='none' stroke='%23dec393' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main
+      id="scene"
+      aria-label="Fırtınalı İstanbul gecesinde Kız Kulesi, etkileşimli üç boyutlu sahne"
+    ></main>
+    <div class="vignette"></div>
+    <div id="loading">
+      <div class="loader-mark">B</div>
+      <p>BOĞAZ</p>
+      <span>Geceye açılan bir pencere</span>
+    </div>
+    <div id="ui">
+      <header>
+        <a class="brand" href="#" aria-label="Boğaz ana görünüm"
+          ><svg viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="20" />
+            <path
+              d="M22 7v7m0 16v7M7 22h7m16 0h7M16 30V19h12v11m-14 0h16M16 19l6-9 6 9M19 23h6"
+            />
+          </svg>
+          <div>BOĞAZ<span>İNTERAKTİF ATMOSFER · № 01</span></div></a
+        >
+        <div class="top-actions">
+          <span class="live"><i></i>CANLI SAHNE</span
+          ><button id="audio" aria-pressed="false" title="Sesi aç / kapat (M)">
+            <svg viewBox="0 0 24 24">
+              <path d="M11 5 6 9H3v6h3l5 4zM16 9l5 6m0-6-5 6" /></svg
+            ><span>Ses kapalı</span></button
+          ><button
+            id="settings-toggle"
+            class="icon-button"
+            aria-label="Atmosfer ayarlarını gizle"
+            aria-expanded="true"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16M4 17h16M9 4v6M16 14v6" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <div class="coordinates">
+        41°01′18″ N &nbsp; 29°00′15″ E<span>İSTANBUL / TÜRKİYE</span>
+      </div>
+      <aside id="settings">
+        <div class="panel-title">
+          <span>ATMOSFER</span><span class="tiny-cross">+</span>
+        </div>
+        <div class="setting">
+          <label for="storm"
+            >Fırtına şiddeti <output id="storm-value">%78</output></label
+          ><input id="storm" type="range" min="0" max="100" value="78" />
+          <div class="range-label">
+            <span>Sakin gece</span><span>Tam fırtına</span>
+          </div>
+        </div>
+        <div class="setting">
+          <label for="time"
+            >Ufkun rengi <output id="time-value">02:40</output></label
+          ><input id="time" type="range" min="0" max="100" value="0" />
+          <div class="range-label"><span>Gece</span><span>Şafak</span></div>
+        </div>
+        <button class="lightning-button" id="lightning">
+          <svg viewBox="0 0 24 24"><path d="m13 2-8 12h6l-1 8 9-13h-7z" /></svg
+          >Şimşeği çağır<span>L</span>
+        </button>
+        <div class="panel-footer">
+          <span id="weather-label">KUVVETLİ FIRTINA</span
+          ><span id="wind">↗ 38 kn</span>
+        </div>
+      </aside>
+      <section class="title-block">
+        <div class="eyebrow"><span></span> İKİ KITA ARASINDA, BİR GECE.</div>
+        <h1>Kız Kulesi<span>Gecenin nöbetçisi.</span></h1>
+        <p>Rüzgâr geçer. Dalgalar değişir. O, bekler.</p>
+        <div class="scene-tags">
+          <span>GERÇEK ZAMANLI 3D</span><i></i
+          ><span>60 SANİYELİK YOLCULUK</span>
+        </div>
+      </section>
+      <div class="camera-actions">
+        <button id="free" aria-pressed="false">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M9 3H3v6m12-6h6v6M3 15v6h6m6 0h6v-6" /></svg
+          ><span>Serbest keşfet</span></button
+        ><button id="photo">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 7h5l2-3h4l2 3h5v13H3z" />
+            <circle cx="12" cy="13" r="4" /></svg
+          ><span>Fotoğraf modu</span>
+        </button>
+      </div>
+      <footer>
+        <div class="transport">
+          <button
+            id="pause"
+            class="icon-button"
+            aria-label="Animasyonu duraklat"
+          >
+            <svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" /></svg>
+          </button>
+          <div>
+            <span id="camera-label">SİNEMATİK KAMERA</span
+            ><span id="timecode">00:00 <em>/ 01:00</em></span>
+          </div>
+        </div>
+        <div
+          class="timeline"
+          id="timeline"
+          role="slider"
+          tabindex="0"
+          aria-label="Kamera yolculuğu"
+          aria-valuemin="0"
+          aria-valuemax="60"
+          aria-valuenow="0"
+        >
+          <div class="timeline-line"><div id="progress"></div></div>
+          <div class="chapters">
+            <span>01 &nbsp; YAKLAŞMA</span><span>02 &nbsp; SU HİZASI</span
+            ><span>03 &nbsp; YÖRÜNGE</span><span>04 &nbsp; FENER</span>
+          </div>
+        </div>
+        <div class="footer-right">
+          <button id="fps-toggle" title="FPS sayacını aç / kapat (F)">
+            FPS</button
+          ><span id="fps" hidden>—</span
+          ><span class="quality" id="quality">YÜKSEK</span>
+        </div>
+      </footer>
+      <div class="help" id="help">
+        Sürükle: yörünge &nbsp;·&nbsp; Tekerlek: yaklaş &nbsp;·&nbsp; C:
+        sinematik kamera
+      </div>
+    </div>
+    <div id="photo-ui" hidden>
+      <div>
+        <span>FOTOĞRAF MODU</span>
+        <p>Kadrajınızı fareyle ayarlayın.</p>
+      </div>
+      <button id="download">PNG indir <span>↓</span></button
+      ><button id="photo-exit">Sahneye dön <span>Esc</span></button>
+    </div>
+    <div id="toast" role="status"></div>
+    <div id="fatal" hidden></div>
+    <script src="dist/app.js"></script>
+  </body>
+</html>

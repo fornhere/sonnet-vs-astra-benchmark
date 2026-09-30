@@ -1,0 +1,19 @@
+{
+  "name": "aure-01-launch",
+  "version": "1.0.0",
+  "description": "Aure 01 — scroll-driven 3D product launch",
+  "scripts": {
+    "build": "esbuild main.js --bundle --minify --format=iife --outfile=app.js",
+    "start": "python3 -m http.server 4187",
+    "test": "node scripts/qa.cjs && node scripts/fallback-check.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "playwright": "^1.63.0",
+    "three": "^0.186.1"
+  },
+  "private": true
+}

@@ -1,0 +1,15 @@
+<template><style>.task{position:absolute;border:1px solid #5b664d;background:#1b2118;padding:20px 25px;font:20px Mono;color:#cefa69;border-radius:6px;box-shadow:0 18px 35px #05070588}.task span{color:#f0f0e6;margin-left:15px;font:500 28px Manrope}</style><div data-hf-id="hf-9lir" id="s1" class="scene" data-composition-id="s1" data-width="1920" data-height="1080" data-duration="7"><canvas data-hf-id="hf-bska" id="s1-art" class="canvas" width="1920" height="1080" data-layout-ignore=""></canvas><div data-hf-id="hf-sijt" class="top"><div data-hf-id="hf-a9y9" class="brand">orvant</div><div data-hf-id="hf-igtu">01 — OPERATÖR YÜKÜ</div></div><div data-hf-id="hf-9z1d" class="bottom"><span data-hf-id="hf-ho6z">OTONOM ORKESTRASYON</span><span data-hf-id="hf-z01f">1 / 6</span></div>
+<div data-hf-id="hf-z3id" style="position:absolute;left:100px;top:235px;width:1050px"><div data-hf-id="hf-hmga" class="eyebrow" id="s1-kicker">YAPAY ZEKÂ KODLAMA AJANLARI</div><div data-hf-id="hf-z092" class="mask" style="margin-top:35px"><h1 data-hf-id="hf-grjy" id="s1-a" class="headline">Ajanlar<br data-hf-id="hf-x5px">çalışıyor.</h1></div><div data-hf-id="hf-6wwa" class="mask" style="margin-top:40px"><div data-hf-id="hf-pcnh" id="s1-b" style="font-size:70px;line-height:1.12;letter-spacing:-3px">Operatör hâlâ<br data-hf-id="hf-rsrt"><span data-hf-id="hf-2hxs" class="acid">sensin.</span></div></div></div>
+<div data-hf-id="hf-s0wo" id="s1-l1" class="task" style="left:1160px;top:210px">01 <span data-hf-id="hf-mx58">İş tanımı</span></div><div data-hf-id="hf-zcjw" id="s1-l2" class="task" style="left:1460px;top:363px">02 <span data-hf-id="hf-su0c">Model seçimi</span></div><div data-hf-id="hf-jb8g" id="s1-l3" class="task" style="left:1090px;top:715px">03 <span data-hf-id="hf-imfh">Doğrulama</span></div><div data-hf-id="hf-s1xm" id="s1-l4" class="task" style="left:1450px;top:805px">04 <span data-hf-id="hf-naqq">Hata teşhisi</span></div>
+<div data-hf-id="hf-scn3" id="s1-person" class="tag" style="position:absolute;left:1310px;top:670px">OPERATÖR</div>
+</div><script>(function(){const tl=gsap.timeline({paused:true});const clock={t:0};tl.to(clock,{t:7,duration:7,ease:'none',onUpdate:()=>ORV.draw(document.getElementById('s1-art'),clock.t,'network')},0);ORV.draw(document.getElementById('s1-art'),0,'network');
+
+tl.fromTo('#s1-kicker',{opacity:0,x:-30},{opacity:1,x:0,duration:.6},.15);
+tl.fromTo('#s1-a',{y:250},{y:0,duration:.9,ease:'power4.out'},.3);
+tl.fromTo('#s1-b',{y:210},{y:0,duration:.85,ease:'power4.out'},2.5);
+['#s1-l1','#s1-l2','#s1-l3','#s1-l4'].forEach((q,i)=>{tl.fromTo(q,{opacity:0,scale:.85,y:20},{opacity:1,scale:1,y:0,duration:.5,ease:'back.out(1.5)'},.8+i*.55)});
+tl.fromTo('#s1-person',{opacity:0},{opacity:1,duration:.6},2);
+tl.to('#s1-art',{scale:1.035,duration:6.7,ease:'none'},.2);
+
+tl.fromTo('#s1-l1',{y:0},{y:-14,duration:2.2,repeat:1,yoyo:true,ease:'sine.inOut'},2.3);tl.fromTo('#s1-l3',{y:0},{y:12,duration:2,repeat:1,yoyo:true,ease:'sine.inOut'},2.7);
+window.__timelines['s1']=tl;})();</script></template>

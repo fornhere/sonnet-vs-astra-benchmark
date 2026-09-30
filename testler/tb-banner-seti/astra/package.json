@@ -1,0 +1,14 @@
+{
+  "name": "demlik-demini-al",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demlik Demini Al kampanyası — SVG, PNG ve bağımsız HTML5 banner seti",
+  "scripts": {
+    "build:svg": ".venv/bin/python kaynak/uret.py",
+    "render": "node kaynak/render.mjs",
+    "preview:build": ".venv/bin/python kaynak/onizleme_uret.py",
+    "preview": "python3 -m http.server 18973 --bind 127.0.0.1",
+    "qa": "node kaynak/kontrol.mjs && node kaynak/etkilesim-kontrol.mjs"
+  },
+  "devDependencies": { "playwright": "1.63.0" }
+}

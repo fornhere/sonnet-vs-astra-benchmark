@@ -1,0 +1,320 @@
+      rota                                   TO H U M YAT I R I M T U R U
+
+
+
+
+KOBİ E-TİCARETİ İÇİN TESLİMAT ZEKÂSI
+
+
+
+
+Her siparişe
+doğru kargo.
+Kargo seçimini, paketlemeyi ve gecikme
+riskini aynı kararda buluşturuyoruz.
+
+
+310 aktif satıcı      48.000 aylık gönderi    SİPARİŞ
+
+                                              TESLİMAT
+
+
+
+
+Rota · Türkiye                                                  01 / 12
+       rota                                                                                                      SORUN
+
+
+
+
+Kargo etiketi, gerçek maliyetin
+yalnızca bir parçası
+      S AT I C I N I N G Ö R D Ü Ğ Ü                  SONRADAN ORTAYA ÇIKAN
+
+                                                      + Operasyon yükü
+      Kargo fiyatı                                        Firma, fiyat ve teslimat süresini elle karşılaştırma
+
+                                                      + Paketleme maliyeti
+                                                          Uygun olmayan paket seçimi ve desi etkisi
+
+                                                      + Gecikme ve iade
+                                                          Tekrar işlem, destek yükü ve satıcı maliyeti
+      Her siparişte yeniden karar
+
+
+
+Satıcının ihtiyacı: siparişin toplam teslimat maliyetini yönetmek.
+Sorun çerçevesi · Rota girişim verileri                                                                          02 / 12
+      rota                                                                                                                                                                     ÇÖZÜM
+
+
+
+
+Sipariş bazında karar.
+Teslimata kadar takip.
+                                                                                                                             01   Kargo seçimi
+                                                                                                                                  Maliyet ile teslimat beklentisini birlikte
+GİRDİLER                                                                                                                          değerlendirir.
+Siparişin bağlamı
+Adres ve teslimat beklentisi
+                                                                                           rota                              02   Paketleme önerisi
+                                                                                                                                  Siparişe uygun paket seçimini
+                                                                                     Yapay zekâ destekli                          destekler.
+Ürün ve paket özellikleri                                                               karar motoru
+Kargo seçenekleri                                                                                                            03   Gecikme tahmini
+                                                                                                                                  Riskli gönderiyi müdahale için
+                                                                                                                                  görünür kılar.
+
+
+                                                                              Ürün geliştirme tezi: teslimat sonuçlarıyla önerileri iyileştirmek
+
+
+Şematik ürün mimarisi · Veri bağlantıları ve geri besleme akışı tasarım önerisidir                                                                                             03 / 12
+      rota                                                                                                                                                          ÜRÜN DENEYİMİ
+
+
+
+
+Bir kararın gerekçesi de görünür
+Satıcı seçimi anlayabilir, onaylayabilir ve gerektiğinde değiştirebilir.
+
+         rota        Sipariş kararı                                                                                                                                T E M S İ L İ A R AY Ü Z
+
+
+
+     YENİ GÖNDERİ                                                                                                        Standart teslimat     PAKETLEME ÖNERİSİ
+
+     İstanbul ⟶ Ankara                                                                                                      Kırılabilir ürün
+
+        Kargo seçeneği                                Fiyat düzeyi                          Gecikme riski   Karar
+
+
+        Taşıyıcı A                                    Düşük                                 Yüksek          Alternatif
+                                                                                                                                               Kompakt kutu
+        Taşıyıcı B                                    Orta                                  Düşük           Önerilen ✓                         + koruyucu dolgu
+
+        Taşıyıcı C                                    Yüksek                                Düşük           Alternatif                         GECİKME TAKİBİ
+
+                                                                                                                                               Risk artarsa satıcıya
+     Neden B? Fiyat ve gecikme riskini birlikte değerlendirdiğimizde bu sipariş için daha dengeli seçim.                                       müdahale önerisi.
+
+
+
+
+Arayüz, rota ve taşıyıcılar temsili örnektir · Ölçülmüş performans veya canlı entegrasyon göstermez                                                                                 04 / 12
+      rota                                                                        M E VC U T D U R U M
+
+
+
+
+14 ayda çalışan bir iş
+
+620.000
+AYLIK YİNELENEN GELİR
+
+
+
+
+                                                           TL
+                                                                       ↗ %11aylık büyüme
+
+
+
+
+310                                            48.000           %71
+aktif satıcı                                   aylık gönderi    brüt marj
+
+
+
+
+Kaynak: Rota girişim verileri · Mevcut durum                                                 05 / 12
+       rota                                                                                                                                                  İŞ MODELİ
+
+
+
+
+Tekrarlayan gelir,
+sipariş akışının içinde
+MEVCUT EKONOMİ                                                                                         FİYATLAMA HİPOTEZİ
+
+
+
+
+%71                                          brüt marj
+                                                                                                       Abonelik
+                                                                                                       + gönderi hacmi
+                                                                                                       Temel platform erişimi için abonelik.
+                                                                                                       Artan kullanım için hacme bağlı paketler.
+   Brüt marj                                                                   Doğrudan maliyet payı
+                                                                                                       Test edilecek denge: satıcı için ölçülebilir değer,
+620.000 TL aylık yinelenen gelir üzerinde                                                              Rota için sağlıklı hizmet maliyeti.
+izlenen temel verimlilik göstergesi.
+
+
+
+
+MRR ve marj: Rota girişim verileri · Fiyatlama yapısı test edilecek öneridir                                                                                    06 / 12
+      rota                                                                                                                                                                                PA Z A R V E O DA K
+
+
+
+
+Türkiye’de odaklı bir başlangıç
+İLK MÜŞTERİ PROFİLİ
+
+
+Düzenli gönderi yapan,
+                                                                                                              TAHMİN · YILLIK GELİR HAVUZU SENARYOSU
+
+
+
+kargoyu elle yöneten                                                                                          25.000                   × 2.000 TL                      × 12 ay
+                                                                                                              hedef satıcı varsayımı     aylık gelir / aktif satıcı*     yıllıklandırma
+
+KOBİ satıcılar
+Birden fazla kargo seçeneği kullanan ve
+gecikme / iade maliyetini takip etmek isteyen
+                                                                                                              600 milyon TL
+                                                                                                              yıllık gelir potansiyeli · tahmin
+e-ticaret işletmeleri.
+                                                                                                              Pazar büyüklüğü ölçümü veya satış tahmini değildir.
+       Önce kararın sık tekrarlandığı operasyonlar                                                            Hedef satıcı sayısı saha araştırmasıyla doğrulanmalıdır.
+
+
+
+
+*620.000 TL ÷ 310 aktif satıcı = 2.000 TL. Hesaplanan ortalama; fiyat veya ödeyen müşteri ARPA’sı değildir.                                                                                          07 / 12
+       rota                                                                                                                                       KO N U M L A N D I R M A
+
+
+
+
+Rota’nın odağı:
+siparişin teslimat kararı
+                                                                                                            SAVUNULABİLİRLİK HİPOTEZİ
+
+   TEDARİK
+                          Kargo firması
+                          Taşımayı gerçekleştirir.
+
+
+   İŞLEM
+                          Kargo / entegrasyon araçları
+                          Gönderi iş akışını yürütür.
+                                                                                                            Sonuç verisiyle
+                                                                                                            daha isabetli kararlar
+   KARAR
+                          Rota
+                          Hangi kargo, hangi paket, hangi risk?                                         ↗   Taşıyıcı ve rota bazında öğrenme.
+                                                                                                            Üstünlük, önerilerin sahada ölçülen
+                                                                                                            katkısıyla kanıtlanacak.
+
+
+
+
+Konumlandırma tezi · Kategori rolleri şematiktir; belirli rakiplerin özellik karşılaştırması değildir                                                            08 / 12
+      rota                                                                                                                                           BÜYÜME PLANI
+
+
+
+
+Mevcut kullanımı tekrar edilebilir
+satışa çevirmek
+ÖNERİLEN PAZARA GİRİŞ PLANI
+
+
+01                                                                                 02                              03
+
+Değeri kanıtla                                                                     Dağıtımı genişlet               Hesap içinde büyü
+Mevcut satıcılarda teslimat                                                        E-ticaret altyapıları ve        Satıcının daha fazla
+maliyetini ve gecikmeleri                                                          entegratörlerle ortak           gönderisini Rota üzerinden
+önce / sonra karşılaştır.                                                          satış kanallarını test et.      yönetmesini sağla.
+
+KANIT                                                                              KANIT                           KANIT
+
+Gönderi başına net fayda                                                           Edinim maliyeti ve geri ödeme   Elde tutma ve gelir genişlemesi
+
+Ölçekleme kararı, kanal bazında edinim maliyeti ve müşteri kohortlarına dayanacak.
+
+
+
+Gelecek planıdır · CAC, elde tutma, tasarruf ve kanal performansı verileri henüz paylaşılmamıştır                                                          09 / 12
+      rota                                                                                                                 EKİP
+
+
+
+
+Ürünü kuran ekip,
+operasyonu da kapsıyor
+
+
+4                                                                    2   Yazılım
+                                                                         Karar motoru, veri altyapısı ve ürün deneyimi
+
+
+
+
+                               kurucu                                1   Lojistik
+                                                                         Taşıyıcı operasyonu ve teslimat süreçleri
+
+
+Yazılım, lojistik ve satış
+aynı kurucu ekibinde.                                                1   Satış
+                                                                         Satıcı ihtiyacı, müşteri kazanımı ve büyüme
+
+
+
+
+Kaynak: Rota girişim verileri · Kurucu sayısı ve uzmanlık dağılımı                                                       10 / 12
+       rota                                                                                                                                             1 8 AY L I K P L A N
+
+
+
+
+Bu tur, ölçeklemenin
+kanıtlarını finanse edecek
+ÖNERİLEN KİLOMETRE TAŞLARI · SÜRELER TAHMİN
+
+
+
+
+0-6 ay                                                                                 7-12 ay                            13-18 ay
+Ölçüm ve ürün                                                                          Elde tutma ve kanal                Seçici ölçekleme
+Öneri kalitesini ve satıcının                                                          Kohort takibi ve ortak             Verimli kanallara yatırım.
+sağladığı faydayı izleyen                                                              satış kanallarıyla                 Hacim artarken hizmet
+ölçüm altyapısı.                                                                       edinim denemeleri.                 kalitesi ve marj takibi.
+
+B A Ş A R I Ö LÇ Ü T Ü                                                                 B A Ş A R I Ö LÇ Ü T Ü             B A Ş A R I Ö LÇ Ü T Ü
+Doğrulanmış müşteri faydası                                                            Tekrarlanabilir müşteri kazanımı   Büyümeye hazır satış modeli
+
+
+
+
+Yatırım sonrası plan önerisidir · Sayısal KPI eşikleri, kohort ve maliyet baz çizgileriyle belirlenecek                                                            11 / 12
+      rota                                                                                                                                             YAT I R I M TA L E B İ
+
+
+
+
+1,2
+TOHUM YATIRIM TURU                                                                                                ÖNERİLEN KAYNAK KULLANIMI · TAHMİN
+
+
+                                                                                                                  Ürün ve mühendislik                               %50
+
+                                                                                                                  Satış ve dağıtım                                  %25
+
+                                                                                                                                                                    %15
+milyon USD                                                                                                        Lojistik ve müşteri başarısı
+
+                                                                                                                  Operasyon rezervi                                 %10
+18 ay hedeflenen pist
+Türkiye’de KOBİ e-ticaretinin
+teslimat kararlarını birlikte                                                                                     Önce ölçülen müşteri faydası.
+daha iyi hâle getirelim.                                                                                          Ardından verimli büyüme.
+
+
+
+
+Talep ve pist: Rota girişim verileri · Kaynak dağılımı tahminidir; bütçe ve kur varsayımlarıyla doğrulanmalıdır                                                    12 / 12
+

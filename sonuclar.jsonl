@@ -1,0 +1,40 @@
+{"kosu": "t10-kiz-kulesi-detayli/sonnet", "sure_dk": 71.8, "cikis": 1, "modeller": ["claude-sonnet-5-5"], "girdi": 256, "cache_okuma": 40211551, "cache_yazma": 1315660, "cikti": 332039, "tur": 182, "cli_maliyet_usd": 16.63, "is_error": true}
+{"kosu": "t10-kiz-kulesi-detayli/astra", "sure_dk": 25.2, "cikis": 0, "girdi": 200646, "cache_okuma": 4267648, "cikti": 52446, "akil_yurutme": 16276, "tahmini_usd": 8.9}
+{"kosu": "t11-cengiz-han-serbest/sonnet", "sure_dk": 29.3, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 166, "cache_okuma": 14954229, "cache_yazma": 269749, "cikti": 180866, "tur": 102, "cli_maliyet_usd": 5.88, "is_error": false}
+{"kosu": "t11-cengiz-han-serbest/astra", "sure_dk": 31.5, "cikis": 0, "girdi": 126920, "cache_okuma": 4714240, "cikti": 51456, "akil_yurutme": 15073, "tahmini_usd": 8.56}
+{"kosu": "t12-orvant-tanitim-serbest/sonnet", "sure_dk": 32.0, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 122, "cache_okuma": 9120010, "cache_yazma": 232783, "cikti": 134299, "tur": 66, "cli_maliyet_usd": 4.1, "is_error": false}
+{"kosu": "t12-orvant-tanitim-serbest/astra", "sure_dk": 17.0, "cikis": 0, "girdi": 116829, "cache_okuma": 3555328, "cikti": 27171, "akil_yurutme": 6485, "tahmini_usd": 6.08}
+{"kosu": "t1b-short-kesit/sonnet", "sure_dk": 20.0, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 82, "cache_okuma": 3773738, "cache_yazma": 130408, "cikti": 60348, "tur": 65, "cli_maliyet_usd": 1.88, "is_error": false}
+{"kosu": "t1b-short-kesit/astra", "sure_dk": 17.1, "cikis": 0, "girdi": 147092, "cache_okuma": 3680384, "cikti": 24093, "akil_yurutme": 8907, "tahmini_usd": 6.36}
+{"kosu": "t1-short-kurgu/sonnet", "sure_dk": 35.5, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 114, "cache_okuma": 5879226, "cache_yazma": 164027, "cikti": 77270, "tur": 79, "cli_maliyet_usd": 2.6, "is_error": false}
+{"kosu": "t1-short-kurgu/astra", "sure_dk": 28.7, "cikis": 0, "girdi": 174821, "cache_okuma": 8082176, "cikti": 44555, "akil_yurutme": 18602, "tahmini_usd": 12.06}
+{"kosu": "t2-urun-tanitim/sonnet", "sure_dk": 18.7, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 98, "cache_okuma": 8177083, "cache_yazma": 252007, "cikti": 100344, "tur": 68, "cli_maliyet_usd": 3.65, "is_error": false}
+{"kosu": "t2-urun-tanitim/astra", "sure_dk": 15.1, "cikis": 0, "girdi": 134547, "cache_okuma": 4136704, "cikti": 25318, "akil_yurutme": 4448, "tahmini_usd": 6.75}
+{"kosu": "t3-sato/sonnet", "sure_dk": 163.7, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 416, "cache_okuma": 50454328, "cache_yazma": 365604, "cikti": 241818, "tur": 214, "cli_maliyet_usd": 13.97, "is_error": false}
+{"kosu": "t3-sato/astra", "sure_dk": 74.7, "cikis": 0, "girdi": 230938, "cache_okuma": 13064576, "cikti": 92377, "akil_yurutme": 52621, "tahmini_usd": 19.99}
+{"kosu": "t4-lansman-sayfasi/sonnet", "sure_dk": 29.4, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 96, "cache_okuma": 8671689, "cache_yazma": 278504, "cikti": 189748, "tur": 69, "cli_maliyet_usd": 4.75, "is_error": false}
+{"kosu": "t4-lansman-sayfasi/astra", "sure_dk": 33.2, "cikis": 0, "girdi": 166405, "cache_okuma": 4120320, "cikti": 53351, "akil_yurutme": 18674, "tahmini_usd": 8.45}
+{"kosu": "t5-konu-animasyonu/sonnet", "sure_dk": 52.1, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 190, "cache_okuma": 20900546, "cache_yazma": 306348, "cikti": 154860, "tur": 117, "cli_maliyet_usd": 6.95, "is_error": false}
+{"kosu": "t5-konu-animasyonu/astra", "sure_dk": 19.9, "cikis": 0, "girdi": 154951, "cache_okuma": 6480512, "cikti": 30742, "akil_yurutme": 6364, "tahmini_usd": 9.57}
+{"kosu": "t6-kapadokya/sonnet", "sure_dk": 72.2, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 348, "cache_okuma": 53234441, "cache_yazma": 460949, "cikti": 337825, "tur": 183, "cli_maliyet_usd": 15.87, "is_error": false}
+{"kosu": "t6-kapadokya/astra", "sure_dk": 31.7, "cikis": 0, "girdi": 107045, "cache_okuma": 4143232, "cikti": 50763, "akil_yurutme": 14760, "tahmini_usd": 7.75}
+{"kosu": "t7-maskot-3d/sonnet", "sure_dk": 169.6, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 156, "cache_okuma": 18645751, "cache_yazma": 327339, "cikti": 234728, "tur": 102, "cli_maliyet_usd": 7.39, "is_error": false}
+{"kosu": "t7-maskot-3d/astra", "sure_dk": 59.4, "cikis": 0, "girdi": 201213, "cache_okuma": 10186240, "cikti": 66866, "akil_yurutme": 39112, "tahmini_usd": 15.54}
+{"kosu": "t8-diorama-serbest/sonnet", "sure_dk": 59.7, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 282, "cache_okuma": 40873800, "cache_yazma": 753822, "cikti": 314676, "tur": 154, "cli_maliyet_usd": 14.34, "is_error": false}
+{"kosu": "t8-diorama-serbest/astra", "sure_dk": 27.3, "cikis": 0, "girdi": 102365, "cache_okuma": 2942976, "cikti": 45522, "akil_yurutme": 14400, "tahmini_usd": 6.24}
+{"kosu": "t9-diorama-detayli/sonnet", "sure_dk": 73.0, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 322, "cache_okuma": 48199125, "cache_yazma": 1305833, "cikti": 382793, "tur": 246, "cli_maliyet_usd": 18.69, "is_error": false}
+{"kosu": "t9-diorama-detayli/astra", "sure_dk": 41.0, "cikis": 0, "girdi": 207983, "cache_okuma": 6663552, "cikti": 68210, "akil_yurutme": 24974, "tahmini_usd": 12.15}
+{"kosu": "ta-carousel/sonnet", "sure_dk": 20.2, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 86, "cache_okuma": 7146640, "cache_yazma": 258914, "cikti": 142041, "tur": 76, "cli_maliyet_usd": 3.89, "is_error": false}
+{"kosu": "ta-carousel/astra", "sure_dk": 16.6, "cikis": 0, "girdi": 81850, "cache_okuma": 1452032, "cikti": 28950, "akil_yurutme": 4176, "tahmini_usd": 3.72}
+{"kosu": "tb-banner-seti/sonnet", "sure_dk": 10.4, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 56, "cache_okuma": 2746251, "cache_yazma": 126855, "cikti": 65010, "tur": 47, "cli_maliyet_usd": 1.71, "is_error": false}
+{"kosu": "tb-banner-seti/astra", "sure_dk": 18.9, "cikis": 0, "girdi": 84169, "cache_okuma": 1585536, "cikti": 32954, "akil_yurutme": 11217, "tahmini_usd": 4.07}
+{"kosu": "tc-pitch-deck/sonnet", "sure_dk": 9.9, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 60, "cache_okuma": 3159201, "cache_yazma": 150524, "cikti": 77757, "tur": 56, "cli_maliyet_usd": 2.01, "is_error": false}
+{"kosu": "tc-pitch-deck/astra", "sure_dk": 13.3, "cikis": 0, "girdi": 82977, "cache_okuma": 983936, "cikti": 24317, "akil_yurutme": 4065, "tahmini_usd": 3.03}
+{"kosu": "td-excel-rapor/sonnet", "sure_dk": 27.6, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 130, "cache_okuma": 12828142, "cache_yazma": 307207, "cikti": 216686, "tur": 90, "cli_maliyet_usd": 5.96, "is_error": false}
+{"kosu": "td-excel-rapor/astra", "sure_dk": 33.8, "cikis": 0, "girdi": 191458, "cache_okuma": 6157440, "cikti": 55290, "akil_yurutme": 11561, "tahmini_usd": 10.84}
+{"kosu": "te-marka-kiti/sonnet", "sure_dk": 25.2, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 210, "cache_okuma": 16785774, "cache_yazma": 282810, "cikti": 176817, "tur": 108, "cli_maliyet_usd": 6.26, "is_error": false}
+{"kosu": "te-marka-kiti/astra", "sure_dk": 23.1, "cikis": 0, "girdi": 101864, "cache_okuma": 1463808, "cikti": 41846, "akil_yurutme": 9634, "tahmini_usd": 4.57}
+{"kosu": "z0-kalite-kapisi-1453/sonnet", "sure_dk": 21.5, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 42, "cache_okuma": 2092265, "cache_yazma": 116046, "cikti": 83173, "tur": 3, "cli_maliyet_usd": 1.71, "is_error": false}
+{"kosu": "z0-kalite-kapisi-1453/astra", "sure_dk": 22.5, "cikis": 0, "girdi": 89598, "cache_okuma": 2647936, "cikti": 38546, "akil_yurutme": 15852, "tahmini_usd": 5.47}
+{"kosu": "z1-tek-ajan-1453/sonnet", "sure_dk": 14.8, "cikis": 0, "modeller": ["claude-sonnet-5-5"], "girdi": 64, "cache_okuma": 3374845, "cache_yazma": 167675, "cikti": 99442, "tur": 47, "cli_maliyet_usd": 2.34, "is_error": false}
+{"kosu": "z1-tek-ajan-1453/astra", "sure_dk": 22.1, "cikis": 0, "girdi": 89776, "cache_okuma": 2200448, "cikti": 38348, "akil_yurutme": 14304, "tahmini_usd": 5.02}

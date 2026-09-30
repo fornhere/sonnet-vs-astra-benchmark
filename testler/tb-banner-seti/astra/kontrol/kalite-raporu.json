@@ -1,0 +1,113 @@
+{
+  "pngCount": 10,
+  "html5Count": 5,
+  "localLinksValid": true,
+  "browserChecksPassed": true,
+  "files": [
+    {
+      "size": "300x250",
+      "pngDimensions": [
+        300,
+        250
+      ],
+      "mode": "RGB",
+      "pngBytes": 33933,
+      "svgAllVector": true,
+      "html5ZipBytes": 9791
+    },
+    {
+      "size": "336x280",
+      "pngDimensions": [
+        336,
+        280
+      ],
+      "mode": "RGB",
+      "pngBytes": 41538,
+      "svgAllVector": true
+    },
+    {
+      "size": "728x90",
+      "pngDimensions": [
+        728,
+        90
+      ],
+      "mode": "RGB",
+      "pngBytes": 26534,
+      "svgAllVector": true,
+      "html5ZipBytes": 9266
+    },
+    {
+      "size": "970x250",
+      "pngDimensions": [
+        970,
+        250
+      ],
+      "mode": "RGB",
+      "pngBytes": 76068,
+      "svgAllVector": true,
+      "html5ZipBytes": 10670
+    },
+    {
+      "size": "300x600",
+      "pngDimensions": [
+        300,
+        600
+      ],
+      "mode": "RGB",
+      "pngBytes": 62487,
+      "svgAllVector": true,
+      "html5ZipBytes": 10705
+    },
+    {
+      "size": "160x600",
+      "pngDimensions": [
+        160,
+        600
+      ],
+      "mode": "RGB",
+      "pngBytes": 44920,
+      "svgAllVector": true
+    },
+    {
+      "size": "320x50",
+      "pngDimensions": [
+        320,
+        50
+      ],
+      "mode": "RGB",
+      "pngBytes": 6626,
+      "svgAllVector": true
+    },
+    {
+      "size": "1080x1080",
+      "pngDimensions": [
+        1080,
+        1080
+      ],
+      "mode": "RGB",
+      "pngBytes": 202094,
+      "svgAllVector": true,
+      "html5ZipBytes": 13268
+    },
+    {
+      "size": "1080x1920",
+      "pngDimensions": [
+        1080,
+        1920
+      ],
+      "mode": "RGB",
+      "pngBytes": 267357,
+      "svgAllVector": true
+    },
+    {
+      "size": "1200x628",
+      "pngDimensions": [
+        1200,
+        628
+      ],
+      "mode": "RGB",
+      "pngBytes": 163538,
+      "svgAllVector": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "KIT_objects_materials_world_unchanged": true,
+  "KIT_camera_trajectory_unchanged": true,
+  "camera_sample_frames": [
+    1,
+    601,
+    1141,
+    1365,
+    1590,
+    2221,
+    3300
+  ],
+  "other_era_collections": {
+    "C1_MO660_Byzantion": 0,
+    "C2_537_Ayasofya": 0,
+    "C4_1900_Vapurlar": 0,
+    "C5_2026_Gece": 0,
+    "C6_2126_Hayal": 0
+  },
+  "C3_object_count": 91,
+  "all_added_objects_only_in_C3": true,
+  "frame": 1365,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "percentage": 100,
+  "external_assets": "None; procedural geometry/materials; packed local typeface",
+  "historical_checklist": {
+    "Ayasofya_raised_dome_buttresses_no_minarets": true,
+    "Hagia_Irene": true,
+    "sea_walls_and_towers": true,
+    "Galata_enceinte_and_tower": true,
+    "Golden_Horn_chain": true,
+    "Ottoman_oared_ships_inside_Horn": true,
+    "sparse_ruined_Byzantine_city": true,
+    "smoke_and_eastern_dawn_light": true,
+    "no_people_flags_violence_modern_mosques": true
+  },
+  "final_png": {
+    "width": 1920,
+    "height": 1080,
+    "sha256": "c03b688cc0289e599b338b6dd0fcc0431760e764788484f24a59f1e4bf976007",
+    "identical_to_kit_render": true
+  },
+  "blend_sha256": "63907f29d5b1734434c1b42bba4e1229a284eec93724a2f29e6ef10e81284e1b"
+}

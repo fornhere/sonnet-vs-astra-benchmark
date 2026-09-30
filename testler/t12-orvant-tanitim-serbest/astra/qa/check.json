@@ -1,0 +1,204 @@
+{
+  "ok": true,
+  "strict": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 7
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 3,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 1.857,
+        "selector": "#s1-b",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 795.91,
+          "right": 499.7,
+          "bottom": 891.91,
+          "width": 399.7,
+          "height": 96
+        },
+        "containerSelector": "#s1-art",
+        "text": "Operatör hâlâ",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 795.91,
+          "width": 399.7,
+          "height": 96
+        },
+        "firstSeen": 1.857,
+        "lastSeen": 1.857,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 1.857,
+        "selector": "#s1-b > span:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 100,
+          "top": 874.3,
+          "right": 309.63,
+          "bottom": 970.3,
+          "width": 209.63,
+          "height": 96
+        },
+        "containerSelector": "#s1-art",
+        "text": "sensin.",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 874.3,
+          "width": 209.63,
+          "height": 96
+        },
+        "firstSeen": 1.857,
+        "lastSeen": 1.857,
+        "occurrences": 1,
+        "heldMs": 0
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 1.857,
+        "selector": "#s1-b",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 100,
+          "top": 804.91,
+          "right": 1150,
+          "bottom": 961.69,
+          "width": 1050,
+          "height": 156.78
+        },
+        "containerSelector": "div.mask",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 100,
+          "top": 594.91,
+          "right": 1150,
+          "bottom": 765.69,
+          "width": 1050,
+          "height": 170.78
+        },
+        "overflow": {
+          "bottom": 196
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 100,
+          "y": 804.91,
+          "width": 1050,
+          "height": 156.78
+        },
+        "firstSeen": 1.857,
+        "lastSeen": 1.857,
+        "occurrences": 1,
+        "heldMs": 0
+      }
+    ],
+    "duration": 52,
+    "samples": [
+      1.857,
+      5.571,
+      9.286,
+      13,
+      16.714,
+      20.429,
+      24.143,
+      27.857,
+      31.571,
+      35.286,
+      39,
+      42.714,
+      46.429,
+      50.143
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 3,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.857,
+      13,
+      24.143,
+      35.286,
+      50.143
+    ],
+    "checked": 52,
+    "passed": 52
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      "snapshots/frame-00-at-1.9s.png",
+      "snapshots/frame-01-at-13.0s.png",
+      "snapshots/frame-02-at-24.1s.png",
+      "snapshots/frame-03-at-35.3s.png",
+      "snapshots/frame-04-at-50.1s.png"
+    ],
+    "times": [
+      1.857,
+      13,
+      24.143,
+      35.286,
+      50.143
+    ],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.91",
+    "latestVersion": "0.8.86",
+    "updateAvailable": false
+  }
+}

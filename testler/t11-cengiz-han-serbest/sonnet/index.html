@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cengiz Han Atlı Heykeli — Tsonjin Boldog</title>
+<style>
+:root{--gold:#e9c477;--ink:#f4ede0;--dim:rgba(244,237,224,.66);--serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:"Inter","Helvetica Neue","Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#000;color:var(--ink);font-family:var(--sans);overflow:hidden;-webkit-font-smoothing:antialiased}
+#stage,#stage canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#fade{position:fixed;inset:0;background:#000;opacity:1;transition:opacity 1.1s ease;pointer-events:none;z-index:50}
+/* cinematic bars */
+#bars i{position:fixed;left:0;right:0;height:0;background:#000;z-index:5;transition:height 1.4s cubic-bezier(.2,.7,.1,1);pointer-events:none}
+#bars i:first-child{top:0}#bars i:last-child{bottom:0}
+body[data-mode=tour] #bars i{height:7.2vh}
+/* intro */
+#intro{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,.05),rgba(0,0,0,.62) 78%),linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.1) 40%,rgba(0,0,0,.65));transition:opacity 1.2s ease,visibility 1.2s}
+#intro.gone{opacity:0;visibility:hidden;pointer-events:none}
+#intro .place{font-size:12px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;opacity:0;animation:up 1.6s .3s forwards}
+#intro h1{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(46px,9vw,132px);letter-spacing:.14em;text-transform:uppercase;line-height:.95;text-shadow:0 4px 60px rgba(0,0,0,.6);opacity:0;animation:up 1.8s .55s forwards}
+#intro h2{margin:18px 0 0;font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(20px,3.2vw,42px);letter-spacing:.32em;color:var(--dim);opacity:0;animation:up 1.8s .85s forwards}
+#intro .rule{width:1px;height:64px;margin:34px 0 26px;background:linear-gradient(var(--gold),transparent);opacity:0;animation:up 1.8s 1.1s forwards}
+#intro .actions{display:flex;gap:16px;opacity:0;transform:translateY(8px);transition:all 1s .2s;pointer-events:none;flex-wrap:wrap;justify-content:center}
+#intro.ready .actions{opacity:1;transform:none;pointer-events:auto}
+#intro .loader{position:absolute;bottom:9vh;width:min(320px,60vw);text-align:center;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--dim);transition:opacity .6s}
+#intro.ready .loader{opacity:0}
+#loadwrap{height:1px;background:rgba(255,255,255,.18);margin-top:12px}#loadbar{height:1px;width:0;background:var(--gold);transition:width .4s}
+.btn{padding:16px 34px;border:1px solid rgba(233,196,119,.6);font-size:12px;letter-spacing:.3em;text-transform:uppercase;transition:all .35s;backdrop-filter:blur(6px);background:rgba(0,0,0,.25)}
+.btn:hover{background:var(--gold);color:#16120a;border-color:var(--gold)}
+.btn.ghost{border-color:rgba(255,255,255,.28)}
+#intro .hint{position:absolute;bottom:4vh;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,237,224,.4)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* HUD */
+#hud{position:fixed;inset:0;z-index:10;pointer-events:none;opacity:0;transition:opacity 1s}
+body:not([data-mode]) #hud,body[data-mode=idle] #hud{opacity:0}
+body[data-mode=tour] #hud,body[data-mode=explore] #hud{opacity:1}
+#topbar{position:absolute;top:0;left:0;right:0;padding:22px 30px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}
+body[data-mode=tour] #topbar{top:7.2vh}
+#brand{font-family:var(--serif);font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+#brand b{color:var(--ink);font-weight:500}
+#tools{display:flex;gap:6px;pointer-events:auto}
+#tools button{width:38px;height:38px;border:1px solid rgba(255,255,255,.2);border-radius:50%;font-size:11px;letter-spacing:.08em;background:rgba(0,0,0,.28);backdrop-filter:blur(8px);transition:all .25s}
+#tools button:hover{border-color:var(--gold);color:var(--gold)}
+#snd.off{opacity:.5}
+#snd svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;vertical-align:middle}
+#chapter{position:absolute;left:clamp(24px,5vw,80px);bottom:calc(7.2vh + 74px);max-width:min(470px,80vw);opacity:0;transform:translateY(16px);transition:opacity .9s,transform .9s;text-shadow:0 2px 24px rgba(0,0,0,.65)}
+#chapter.on{opacity:1;transform:none}#chapter.out{opacity:0;transform:translateY(-10px)}
+body[data-mode=explore] #chapter{display:none}
+#c-num{font-family:var(--serif);font-size:15px;letter-spacing:.4em;color:var(--gold)}
+#c-num:after{content:"";display:inline-block;width:54px;height:1px;background:var(--gold);vertical-align:middle;margin-left:16px;opacity:.7}
+#c-title{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,62px);line-height:1.02;margin:10px 0 14px;letter-spacing:.01em}
+#c-text{font-size:15px;line-height:1.65;color:rgba(244,237,224,.86);margin:0;max-width:440px}
+#c-stats{display:flex;gap:30px;margin-top:20px}
+#c-stats div{display:flex;flex-direction:column}
+#c-stats b{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1;color:var(--gold)}
+#c-stats span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+/* timeline */
+#tlwrap{position:absolute;left:clamp(24px,5vw,80px);right:clamp(24px,5vw,80px);bottom:calc(7.2vh + 22px);display:flex;align-items:center;gap:18px;pointer-events:auto}
+body[data-mode=explore] #tlwrap{display:none}
+#pp{width:30px;font-size:11px;color:var(--ink);letter-spacing:-.1em}
+#tl{position:relative;flex:1;height:26px;cursor:pointer}
+#tl:before{content:"";position:absolute;left:0;right:0;top:12px;height:1px;background:rgba(255,255,255,.28)}
+#tlfill{position:absolute;left:0;top:11px;height:3px;background:var(--gold);width:0;box-shadow:0 0 12px rgba(233,196,119,.7)}
+.tick{position:absolute;top:7px;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:#0a0a0a;border:1px solid rgba(255,255,255,.6);transition:all .2s}
+.tick:hover{border-color:var(--gold);transform:scale(1.35)}
+.tick:after{content:attr(data-n);position:absolute;top:-17px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.2em;color:var(--dim)}
+#skip{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);white-space:nowrap;transition:color .2s}#skip:hover{color:var(--gold)}
+/* explore panel */
+#explore{position:absolute;right:30px;bottom:34px;width:270px;padding:20px 22px;background:rgba(8,10,14,.5);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(14px);pointer-events:auto;display:none}
+body[data-mode=explore] #explore{display:block}
+#explore h4{margin:0 0 10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+#views{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:18px}
+#views button{padding:9px 6px;border:1px solid rgba(255,255,255,.16);font-size:11px;letter-spacing:.1em;transition:all .2s}
+#views button:hover{border-color:var(--gold);color:var(--gold)}
+#hourr{width:100%;accent-color:var(--gold)}
+#hourlab{display:flex;justify-content:space-between;font-size:10px;color:var(--dim);letter-spacing:.16em;margin-top:2px}
+#to-tour{margin-top:16px;width:100%;padding:11px;border:1px solid rgba(233,196,119,.5);font-size:10px;letter-spacing:.26em;text-transform:uppercase}#to-tour:hover{background:var(--gold);color:#111}
+/* end card */
+#endcard{position:fixed;inset:0;z-index:12;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0),rgba(0,0,0,.55));opacity:0;visibility:hidden;transition:opacity 1.6s,visibility 1.6s;pointer-events:none}
+body.ended #chapter{opacity:0!important}
+#endcard{justify-content:flex-start;padding-top:22vh}
+#endcard.on{opacity:1;visibility:visible;pointer-events:auto}
+#endcard h3{font-family:var(--serif);font-weight:300;font-size:clamp(34px,6vw,84px);letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px}
+#endcard p{margin:0 0 30px;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+#endcard .row{display:flex;gap:14px}
+@media (max-width:720px){#explore{left:14px;right:14px;width:auto;bottom:14px}#c-text{font-size:13px}#brand{display:none}}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="bars"><i></i><i></i></div>
+
+<div id="hud">
+  <div id="topbar">
+    <div id="brand"><b data-i="title">Cengiz Han</b> · Tsonjin Boldog</div>
+    <div id="tools">
+      <button id="snd" title="Sound"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg></button>
+      <button id="lang">EN</button>
+    </div>
+  </div>
+  <div id="chapter">
+    <div id="c-num">01</div>
+    <div id="c-title"></div>
+    <p id="c-text"></p>
+    <div id="c-stats"></div>
+  </div>
+  <div id="tlwrap">
+    <button id="pp">❚❚</button>
+    <div id="tl"><div id="tlfill"></div></div>
+    <button id="skip" data-i="explore">Serbest Keşif</button>
+  </div>
+  <div id="explore">
+    <h4 data-i="views">Bakış noktaları</h4>
+    <div id="views"></div>
+    <h4 data-i="hour">Saat</h4>
+    <input id="hourr" type="range" min="4.6" max="23" step="0.01" value="9.3">
+    <div id="hourlab"><span>04:36</span><span>12:00</span><span>23:00</span></div>
+    <button id="to-tour" data-i="replay">Turu yeniden oynat</button>
+  </div>
+</div>
+
+<div id="endcard">
+  <h3 data-i="endTitle">Tsonjin Boldog</h3>
+  <p>2008 · 40 m · 250 t</p>
+  <div class="row"><button class="btn" id="end-explore" data-i="end">Serbest keşfe geç</button><button class="btn ghost" id="replay" data-i="replay">Turu yeniden oynat</button></div>
+</div>
+
+<div id="intro">
+  <div class="place" data-i="place">Tsonjin Boldog · Moğolistan</div>
+  <h1 data-i="title">Cengiz Han</h1>
+  <h2 data-i="subtitle">Atlı Heykeli</h2>
+  <div class="rule"></div>
+  <div class="actions">
+    <button class="btn" id="btn-begin" data-i="begin">Yolculuğu Başlat</button>
+    <button class="btn ghost" id="btn-explore" data-i="explore">Serbest Keşif</button>
+  </div>
+  <div class="loader"><span data-i="loading">Çelik dökülüyor…</span><div id="loadwrap"><div id="loadbar"></div></div></div>
+  <div class="hint" data-i="hint">Ses açık, tam ekran önerilir</div>
+</div>
+<div id="fade"></div>
+<script src="app.js"></script>
+</body>
+</html>

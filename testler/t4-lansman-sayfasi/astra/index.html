@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efede7">
+  <meta name="description" content="aure 01. Sesin saf hâli. Heykelsi tasarım, sizi saran ses ve gün boyu özgürlük. Yeni bir dinleme ritüelini keşfedin.">
+  <title>aure 01 — Sesin saf hâli.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="sound" viewBox="0 0 24 24"><path d="M3 10h4l5-4v12l-5-4H3zM16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+  </svg>
+  <a class="skip-link" href="#tasarim">İçeriğe geç</a>
+  <header class="header" id="header">
+    <a class="wordmark" href="#" aria-label="aure ana sayfa">aure<span>®</span></a>
+    <nav class="desktop-nav" aria-label="Ana menü">
+      <a href="#tasarim">Tasarım</a>
+      <a href="#akustik">Sesin içinde</a>
+      <a href="#detaylar">Teknik detaylar</a>
+    </nav>
+    <a class="header-order" href="#sana-ait">Aure 01'i keşfet <svg class="icon"><use href="#diagonal"/></svg></a>
+  </header>
+
+  <main>
+    <div class="story" id="story">
+      <div class="stage" id="stage" aria-label="aure 01 üç boyutlu ürün görünümü" role="img">
+        <div class="stage-background"></div>
+        <div class="orbit-word" aria-hidden="true">01</div>
+        <div id="scene" class="scene"></div>
+        <img class="scene-fallback" src="assets/product-sand.png" alt="" aria-hidden="true" width="1000" height="1000">
+        <div class="scene-grain"></div>
+        <div class="stage-progress" aria-hidden="true"><span id="chapter-number">01</span><i><b id="chapter-progress"></b></i><span>03</span></div>
+      </div>
+
+      <section class="chapter hero" id="baslangic" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="orange-dot"></span> SESLE YENİ BİR BAĞ</div>
+          <h1 id="hero-title">Sesin<br> saf <em>hâli.</em></h1>
+          <p>Bir hoparlörden fazlası.<br>Yaşam alanının yeni ritmiyle tanış.</p>
+          <a class="round-link" href="#tasarim"><span class="round-icon"><svg class="icon"><use href="#arrow"/></svg></span> Aure 01'i keşfet</a>
+        </div>
+        <div class="hero-product-label"><span>AURE 01</span><span>KABLOSUZ Hİ-Fİ HOPARLÖR</span></div>
+        <div class="hero-product-hit" id="hero-drag" aria-label="Ürünü döndürmek için sürükleyin"></div>
+        <div class="hero-color-selector" aria-label="Ürün rengi">
+          <div class="swatches" data-swatches>
+            <button class="swatch selected" data-color="sand" style="--swatch:#b6a38b" aria-label="Kum rengini seç" aria-pressed="true"></button>
+            <button class="swatch" data-color="night" style="--swatch:#424845" aria-label="Gece rengini seç" aria-pressed="false"></button>
+            <button class="swatch" data-color="copper" style="--swatch:#af6449" aria-label="Bakır rengini seç" aria-pressed="false"></button>
+          </div>
+          <span><b data-color-name>Kum</b> <span class="color-separator">/</span> Üç farklı karakter</span>
+        </div>
+        <div class="hero-bottom">
+          <a href="#tasarim" class="scroll-cue"><span class="scroll-mouse"><i></i></span> BİRAZ KAYDIR. ÇOK ŞEY HİSSET.</a>
+          <div class="hero-features"><span><b>360°</b> saran ses</span><i></i><span><b>24 saat</b> özgürlük</span><i></i><span><b>Tek</b> dokunuş</span></div>
+        </div>
+      </section>
+
+      <section class="chapter design" id="tasarim" aria-labelledby="design-title">
+        <div class="chapter-copy design-copy reveal">
+          <div class="eyebrow"><span class="section-index">01 /</span> SAF TASARIM</div>
+          <h2 id="design-title">Göze hitap eder.<br><em>Hayata karışır.</em></h2>
+          <p>Fazlalıklardan arındırılmış tek bir form. İncelikle işlenen alüminyum ve dokunmak isteyeceğin akustik doku. Her açıdan, tam olması gerektiği gibi.</p>
+          <div class="material-details"><div><span class="material-chip metal"></span><span>Eloksallı alüminyum<small>İnce işçilik. Kalıcı karakter.</small></span></div><div><span class="material-chip fabric"></span><span>Özel akustik örgü<small>Sesi özgür bırakan bir doku.</small></span></div></div>
+          <span class="small-note"><span class="orange-dot"></span> Az şey söyler. Çok şey hissettirir.</span>
+        </div>
+        <div class="design-annotation"><span>Tek parça. Sonsuz detay.</span><i></i><b>01 — FORM</b></div>
+      </section>
+
+      <section class="chapter acoustic" id="akustik" aria-labelledby="acoustic-title">
+        <div class="chapter-copy acoustic-copy reveal">
+          <div class="eyebrow"><span class="section-index">02 /</span> DERİNLİĞİ KEŞFET</div>
+          <h2 id="acoustic-title">Küçük bir form.<br><em>Koca bir dünya.</em></h2>
+          <p>İlk notadan son titreşime. Güçlü baslar, berrak vokaller ve odanın her köşesine eşit yayılan ses. Müziği sadece duyma; içinde ol.</p>
+          <div class="acoustic-stat"><b>60<span>W</span></b><span>Saf akustik güç.<br>Sıfır dikkat dağınıklığı.</span></div>
+          <div class="sound-bars" aria-hidden="true"></div>
+          <button class="sound-button" id="sound-toggle" aria-pressed="false"><svg class="icon"><use href="#sound"/></svg><span>Bir an dur. Dinle.</span><span class="sound-state">SESİ AÇ</span></button>
+          <small class="audio-note">Dijital bir ses eskizi. En iyi deneyim için kulaklık.</small>
+        </div>
+        <div class="exploded-labels" aria-hidden="true"><span><b>01</b> Akustik örgü</span><span><b>02</b> Geniş bant sürücü</span><span><b>03</b> Rezonans gövdesi</span></div>
+        <div class="acoustic-footer"><span>HER KATMANIN BİR AMACI VAR.</span><span>Tıpkı her notanın olduğu gibi.</span></div>
+      </section>
+    </div>
+
+    <section class="ritual" id="hayatin-icinde" aria-labelledby="ritual-title">
+      <div class="ritual-heading reveal"><div class="eyebrow"><span class="section-index">03 /</span> SENİN RİTMİN</div><h2 id="ritual-title">Bir yerden çok,<br><em>bir hisse ait.</em></h2><p>Sabahın ilk kahvesi. Uzayan bir akşam.<br>Yaşamın nerede akıyorsa, aure orada.</p></div>
+      <div class="lifestyle reveal">
+        <img src="assets/interior.jpg" alt="Gün ışığıyla dolan, doğal dokular ve sıcak renklerle tasarlanmış bir yaşam alanı" loading="lazy" width="2200" height="1650">
+        <div class="lifestyle-shade"></div>
+        <div class="lifestyle-caption"><span>DAHA AZ GÜRÜLTÜ. DAHA ÇOK SEN.</span><p>Ev dediğin,<br><em>hissettiğin.</em></p></div>
+        <div class="room-tag"><span class="orange-dot"></span><div>PAZAR, 09.41<small>Acelesi olmayan şarkılar.</small></div><svg class="icon"><use href="#sound"/></svg></div>
+      </div>
+      <div class="benefits">
+        <article class="reveal"><span class="benefit-number">01</span><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="13" width="26" height="15" rx="3"/><path d="M35 17v7M11 18v5m5-5v5m5-5v5m5-5v5"/></svg><h3>Prizlerden bağımsız.</h3><p>24 saate kadar çalma süresi.<br>Günün ritmini yarıda bırakma.</p></article>
+        <article class="reveal"><span class="benefit-number">02</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 10 28 28 20 35V5l8 7-17 18"/></svg><h3>Bir anda, bağlantıda.</h3><p>Bluetooth 5.3 ile zahmetsiz eşleşme.<br>Sevdiğin müzik, bir dokunuş ötede.</p></article>
+        <article class="reveal"><span class="benefit-number">03</span><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="7"/><path d="M9 10a15 15 0 0 0 0 20m22-20a15 15 0 0 1 0 20M20 2v5m0 26v5"/></svg><h3>İkisi, bambaşka.</h3><p>İki aure ile gerçek stereo deneyimi.<br>Sesin sınırlarını birlikte genişlet.</p></article>
+      </div>
+    </section>
+
+    <section class="purchase" id="sana-ait" aria-labelledby="purchase-title">
+      <div class="purchase-viewer"><div class="viewer-word" aria-hidden="true">aure</div><div id="config-scene" role="region" tabindex="0" aria-roledescription="3D ürün görünümü" aria-label="Aure 01. Döndürmek için sürükleyin veya sağ ve sol ok tuşlarını kullanın."></div><span class="viewer-hint"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M4 10c1-5 15-5 16 0s-15 7-16 2M4 7v5h5M20 17v-5h-5"/></svg> 360° İNCELEMEK İÇİN SÜRÜKLE</span><button class="reset-view" id="reset-view" aria-label="Ürün görünümünü sıfırla">↺</button></div>
+      <div class="purchase-copy reveal">
+        <div class="eyebrow"><span class="orange-dot"></span> SENİN AURE'N</div>
+        <h2 id="purchase-title">İyi ses.<br><em>Senin renginde.</em></h2>
+        <p>Üç karakter. Aynı saf ses.<br>Hayatında yer açacağın aure'yi seç.</p>
+        <div class="color-options" role="group" aria-label="aure 01 renk seçimi">
+          <button class="color-option selected" data-color="sand" aria-pressed="true"><span style="--swatch:#b6a38b"></span>Kum</button>
+          <button class="color-option" data-color="night" aria-pressed="false"><span style="--swatch:#424845"></span>Gece</button>
+          <button class="color-option" data-color="copper" aria-pressed="false"><span style="--swatch:#af6449"></span>Bakır</button>
+        </div>
+        <div class="purchase-price"><span>aure 01 <small data-color-name>Kum</small></span><b>₺12.900</b></div>
+        <button class="primary-button" id="reserve-button">Ön kayıt listesine katıl <svg class="icon"><use href="#arrow"/></svg></button>
+        <div class="purchase-note"><span>Lansmandan ilk sen haberdar ol.</span><span>Ödeme gerekmez.</span></div>
+        <div class="included"><svg class="icon"><use href="#check"/></svg> Aure 01, USB-C kablo ve güzel bir başlangıç.</div>
+      </div>
+    </section>
+
+    <section class="specs" id="detaylar" aria-labelledby="specs-title">
+      <div class="specs-heading"><div class="eyebrow">HER DETAYIYLA AURE 01</div><h2 id="specs-title">Merak edenlere.</h2></div>
+      <div class="spec-list">
+        <details><summary>Ses & akustik <svg class="icon"><use href="#plus"/></svg></summary><div class="spec-content"><div><span>Toplam güç</span><b>60 W — Class-D amplifikatör</b></div><div><span>Sürücüler</span><b>1 × 3,5″ geniş bant · 2 × pasif radyatör</b></div><div><span>Frekans aralığı</span><b>45 Hz – 20 kHz</b></div><div><span>Ses deneyimi</span><b>360° yayılım · İkili stereo eşleşme</b></div></div></details>
+        <details><summary>Boyut & malzeme <svg class="icon"><use href="#plus"/></svg></summary><div class="spec-content"><div><span>Boyutlar</span><b>220 × 230 × 150 mm</b></div><div><span>Ağırlık</span><b>1,8 kg</b></div><div><span>Gövde</span><b>Eloksallı alüminyum, akustik örgü</b></div><div><span>Renkler</span><b>Kum, Gece, Bakır</b></div></div></details>
+        <details><summary>Bağlantı & pil <svg class="icon"><use href="#plus"/></svg></summary><div class="spec-content"><div><span>Kablosuz bağlantı</span><b>Bluetooth 5.3 · AAC / SBC</b></div><div><span>Pil ömrü</span><b>24 saate kadar, %50 ses seviyesinde</b></div><div><span>Şarj</span><b>USB-C PD · Yaklaşık 3 saat</b></div><div><span>Kontrol</span><b>Dokunmatik üst yüzey</b></div></div></details>
+        <details><summary>Kutunun içinde <svg class="icon"><use href="#plus"/></svg></summary><div class="spec-content"><p>Aure 01 hoparlör, 1,5 m USB-C şarj kablosu ve hızlı başlangıç kılavuzu. Güç adaptörü ayrı temin edilir. Ambalaj, geri dönüştürülebilir kâğıt esaslı malzemelerle tasarlanmıştır.</p></div></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-top"><a class="wordmark" href="#" aria-label="Başa dön">aure<span>®</span></a><p>Hayatın bir sesi var.<br><em>Ona kulak ver.</em></p><a class="back-top" href="#">BAŞA DÖN <svg class="icon"><use href="#diagonal"/></svg></a></div><div class="footer-bottom"><span>© 2026 aure — Bir ses, bir his.</span><span>Bağımsız ürün konsepti. Teknik özellikler ve fiyat kurgusaldır.</span><button id="privacy-button">Gizlilik</button></div></footer>
+
+  <dialog id="reserve-dialog" class="modal"><button class="modal-close" data-close aria-label="Pencereyi kapat">×</button><div id="reserve-form-view"><span class="eyebrow"><span class="orange-dot"></span> İLK DUYAN SEN OL</span><h2>Güzel bir<br><em>başlangıç.</em></h2><p><strong>aure 01 · <span data-color-name>Kum</span></strong><br>Lansman listesindeki yerini ayır.</p><form id="reserve-form"><label for="name">Adın</label><input type="text" id="name" name="name" placeholder="Sana nasıl seslenelim?" autocomplete="given-name" required maxlength="70"><label for="email">E-posta adresin</label><input type="email" id="email" name="email" placeholder="sen@ornek.com" autocomplete="email" required maxlength="160"><label class="consent"><input type="checkbox" name="consent" required><span>Bu konsept deneyiminde bilgilerimin yalnızca bu tarayıcıda saklanacağını anlıyorum.</span></label><button type="submit" class="primary-button">Yerimi ayır <svg class="icon"><use href="#arrow"/></svg></button><small>Bu bir demo kaydıdır. Bilgilerin bir sunucuya gönderilmez; ödeme ya da gerçek sipariş oluşturulmaz.</small></form></div><div id="reserve-success" hidden><div class="success-icon"><svg class="icon"><use href="#check"/></svg></div><span class="eyebrow">GÜZEL BİR BAŞLANGIÇ</span><h2>Artık bu<br><em>ritmin içindesin.</em></h2><p id="success-message"></p><p class="success-note">Demo kaydın bu tarayıcıya kaydedildi. E-posta gönderilmedi.</p><button class="primary-button" data-close>Keşfetmeye devam et <svg class="icon"><use href="#arrow"/></svg></button></div></dialog>
+  <dialog id="privacy-dialog" class="modal privacy-modal"><button class="modal-close" data-close aria-label="Pencereyi kapat">×</button><span class="eyebrow">GİZLİLİK</span><h2>Bilgilerin,<br><em>sende kalır.</em></h2><p>Bu sayfa, hayali aure markası için hazırlanmış etkileşimli bir ürün tasarımıdır. Analitik veya reklam çerezi kullanılmaz.</p><p>Ön kayıt formu yalnızca adını, e-posta adresini ve renk seçimini bu cihazın tarayıcı belleğinde saklar. Herhangi bir sunucuya veri göndermez ve gerçek bir sipariş oluşturmaz.</p><button class="primary-button" id="clear-data">Bu tarayıcıdaki demo kaydımı sil <svg class="icon"><use href="#arrow"/></svg></button><p id="privacy-status" role="status"></p></dialog>
+  <div class="sr-only" id="color-announcement" aria-live="polite"></div>
+  <noscript><div class="noscript">3D ürün deneyimi için JavaScript'i etkinleştirin. Ürün bilgilerini aşağıda inceleyebilirsiniz.</div></noscript>
+</body>
+</html>

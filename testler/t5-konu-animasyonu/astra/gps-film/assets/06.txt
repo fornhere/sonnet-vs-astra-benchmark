@@ -1,0 +1,1 @@
+Zamanlama çok hassastır. Saniyenin yalnızca milyonda biri kadar ölçüm hatası, yaklaşık üç yüz metre mesafe hatası demektir. Bu yüzden uydularda atom saatleri kullanılır.

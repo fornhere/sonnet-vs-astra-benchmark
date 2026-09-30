@@ -1,0 +1,38 @@
+{
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frame_range": [
+    1,
+    192
+  ],
+  "objects": 61,
+  "materials": 8,
+  "packed_images": [
+    "karakter-sayfasi.png"
+  ],
+  "packed_fonts": [
+    "Liberation Sans Bold"
+  ],
+  "packed_sounds": [
+    "forn-ses.wav"
+  ],
+  "shape_keys": [
+    "Basis",
+    "Göz kırp",
+    "Merak"
+  ],
+  "sampled_actual_surface_bounds": {
+    "min": [
+      0.10689263289299149,
+      0.052433795346698196
+    ],
+    "max": [
+      0.7250221597817617,
+      0.9602989407214597
+    ]
+  },
+  "sampled_actual_surface_outside_camera": []
+}

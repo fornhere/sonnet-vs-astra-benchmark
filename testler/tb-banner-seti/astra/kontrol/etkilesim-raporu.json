@@ -1,0 +1,8 @@
+{
+  "click": {
+    "url": "https://demlik.com.tr/?kampanya=demini-al-test",
+    "openerIsNull": true
+  },
+  "localPreview": true,
+  "jsDisabledFallbackHref": "https://demlik.com.tr"
+}

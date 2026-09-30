@@ -1,0 +1,16 @@
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-01.wav (9.61s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-01.json (18 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-02.wav (9.27s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-02.json (20 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-03.wav (10.74s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-03.json (20 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-04.wav (9.61s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-04.json (18 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-05.wav (12.43s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-05.json (26 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-06.wav (11.70s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-06.json (23 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-07.wav (10.50s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-07.json (20 words)
+· using voice 00e3d285aba44b27a83c47c02c9c2d9c
+✓ /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-08.wav (11.31s) · /home/forn/sonnet-vs-astra/t5-konu-animasyonu/astra/gps-film/assets/vo-08.json (21 words)

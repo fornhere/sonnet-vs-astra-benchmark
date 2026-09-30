@@ -1,0 +1,147 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.8000000000000003,
+    "text": " Telefonundaki o küçük mavinokta."
+  },
+  {
+    "start": 2.8000000000000003,
+    "end": 5.32,
+    "text": " Uzaydan seni izleyen bir kameramı."
+  },
+  {
+    "start": 5.32,
+    "end": 7.32,
+    "text": " Hayır. GPS."
+  },
+  {
+    "start": 7.32,
+    "end": 9.64,
+    "text": " Aslında zamanı ölçerek yerini bulur."
+  },
+  {
+    "start": 9.64,
+    "end": 12.4,
+    "text": " Uydular sürekli iki bilgi yayınlar."
+  },
+  {
+    "start": 12.4,
+    "end": 14.200000000000001,
+    "text": " Neredeyim ve saat kaç?"
+  },
+  {
+    "start": 14.200000000000001,
+    "end": 16.2,
+    "text": " Telefonun bu sinyalleri dinler."
+  },
+  {
+    "start": 16.2,
+    "end": 19.400000000000002,
+    "text": " Konum bulmak için uyduya cevap göndermesi gerekmez."
+  },
+  {
+    "start": 19.400000000000002,
+    "end": 22.400000000000002,
+    "text": " Sinyal, ışık hızında yollalır."
+  },
+  {
+    "start": 22.400000000000002,
+    "end": 25.400000000000002,
+    "text": " Telefon, sinyalın geliş süresine ölçer."
+  },
+  {
+    "start": 25.400000000000002,
+    "end": 27.6,
+    "text": " Bu süreyi ışık hızıyla çarpar."
+  },
+  {
+    "start": 27.6,
+    "end": 31.0,
+    "text": " Böylece uyduya olan uzaklığını hesaplar."
+  },
+  {
+    "start": 31.0,
+    "end": 33.800000000000004,
+    "text": " Tek bir uzaklık, tek bir adres vermez."
+  },
+  {
+    "start": 33.800000000000004,
+    "end": 36.400000000000006,
+    "text": " Aynı uzaklıktaki bütün noktalar olasıdır."
+  },
+  {
+    "start": 36.400000000000006,
+    "end": 41.0,
+    "text": " Diğer uyduların ölçümleri eklendikçe, olasılıklar darılır."
+  },
+  {
+    "start": 41.0,
+    "end": 44.2,
+    "text": " Gerçekte bu temberler üç boyutluk ürelerdir."
+  },
+  {
+    "start": 44.2,
+    "end": 47.400000000000006,
+    "text": " Telefonun saatindeki hata da hesaba katılır."
+  },
+  {
+    "start": 47.400000000000006,
+    "end": 50.0,
+    "text": " Üç konum bilgisi ve saat hatası."
+  },
+  {
+    "start": 50.0,
+    "end": 53.8,
+    "text": " Dört bilinmeyen için en az dört uydu gerekir."
+  },
+  {
+    "start": 53.8,
+    "end": 55.8,
+    "text": " Zamanlama çok hassastır."
+  },
+  {
+    "start": 55.800000000000004,
+    "end": 62.400000000000006,
+    "text": " Saniyenin yalnızca milyon da biri kadar ölçüm hatası yaklaşık 300 metre mesafe hatası demektir."
+  },
+  {
+    "start": 62.400000000000006,
+    "end": 65.80000000000001,
+    "text": " Bu yüzden uydular da atom saatleri kullanılır."
+  },
+  {
+    "start": 65.80000000000001,
+    "end": 68.4,
+    "text": " Yüksek binalar sinyalı yansıtabilir."
+  },
+  {
+    "start": 68.4,
+    "end": 72.0,
+    "text": " Telefon, uzayan yolu daha büyük bir mesafe sanır."
+  },
+  {
+    "start": 72.0,
+    "end": 76.80000000000001,
+    "text": " Haritadaki mavi noktanın bazen sıçramasının nedenlerinden biri budur."
+  },
+  {
+    "start": 76.80000000000001,
+    "end": 79.2,
+    "text": " Kısacası GPS seni görmez."
+  },
+  {
+    "start": 79.2,
+    "end": 81.0,
+    "text": " Uyduların saatlerini dinler."
+  },
+  {
+    "start": 81.0,
+    "end": 84.0,
+    "text": " Zamanı mesafeyi mesafeleri konuma çevirir."
+  },
+  {
+    "start": 84.0,
+    "end": 87.6,
+    "text": " O küçük mavi noktanın arkasında işte bu hesap var."
+  }
+]

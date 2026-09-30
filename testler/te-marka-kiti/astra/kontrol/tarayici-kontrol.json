@@ -1,0 +1,81 @@
+{
+  "issues": [],
+  "images": [
+    {
+      "src": "logo/demlik-logotip-ters.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-ikon-ters.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-ana.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-ana.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-ikon-ters.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay-ters.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay-tek-renk.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay-ters.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay.svg",
+      "ok": true
+    },
+    {
+      "src": "uygulamalar/ambalaj-maket.svg",
+      "ok": true
+    },
+    {
+      "src": "uygulamalar/bardak-maket.svg",
+      "ok": true
+    },
+    {
+      "src": "uygulamalar/tabela-maket.svg",
+      "ok": true
+    },
+    {
+      "src": "uygulamalar/kartvizit-maket.svg",
+      "ok": true
+    },
+    {
+      "src": "uygulamalar/kampanya-maket.svg",
+      "ok": true
+    },
+    {
+      "src": "logo/demlik-yatay-ters.svg",
+      "ok": true
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "documentWidth": 390
+  }
+}
